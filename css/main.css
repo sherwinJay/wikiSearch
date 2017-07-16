@@ -1,0 +1,72 @@
+*:focus{
+	outline: none;
+}
+.cfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .cfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+a{
+	text-decoration: none;
+}
+h1, h2, h3, p, a{
+	display: block;
+}
+h1, .logo h1 a{
+	color: #fff;
+}
+h2{
+	font-size: 42px;
+	color: #3a4248;
+	line-height: 50px;
+}
+body {
+	background: #2e2e2e;
+	width: 100%;
+	height: 100%;
+	font-family: Helvetica, sans-serif;
+	font-size:14px;
+	line-height:24px;
+	color: #8c8c8c;
+}
+ul, ol{
+	list-style: none;
+}
+.tc{
+	text-align: center;
+}
+.col-left{
+	float: left;
+}
+.col-right{
+	float: right;
+}
+.quoteContainer{
+	width: 600px;
+	padding: 20px 30px;
+	margin: 0 auto;
+	border: 1px solid #dedede;
+	background-color: #fff
+}
+.quoteContainer p{
+	text-align: center;
+}
+.quote{
+	font-family: 'josefin_sanslight';
+	font-size: 24px;
+}
+.button{
+	display: inline-block;
+	padding: 5px 12px;
+	background-color: #800;
+	color: #fff;
+	border-radius: 3px;
+}
+.twitterButton, .fb-button{
+	display: inline-block;
+}
