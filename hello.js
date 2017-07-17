@@ -16,7 +16,7 @@ $(document).ready(function() {
 			   url: "https://en.wikipedia.org/w/api.php?action=query&titles="+inputVal+"&prop=revisions&rvprop=content&format=json",//"https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal,
 	           type: "POST",
 	           dataType: "jsonp",
-		   header: {"Api-User-Agent" : "wikiSearch"}
+		   header: {"Api-User-Agent" : "wikiSearch"},
 	           success: function(data){
 			console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
 	           }
