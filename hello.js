@@ -24,7 +24,7 @@ $(document).ready(function() {
 				   //console.log(lists.length);
 				   const lists = data.query.allcategories; 
 				   for(let i = 0; i <= lists.length; i++ ){
-					dataList += "<li class='listBg'>" + data.query.allcategories[i] + "</li>";
+					dataList += "<li class='listBg'>" + data.query.allcategories[0][i] + "</li>";
 				   }
 				   dataList += "</ul>";
 				   formContainer.innerHTML = formContainer.innerHTML + dataList;	          		 }
