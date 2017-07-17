@@ -13,13 +13,13 @@ $(document).ready(function() {
 			var inputVal = $(this).val();
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
-			   url: "https://en.wikipedia.org/w/api.php?action=query&titles="+inputVal+"&prop=revisions&rvprop=content&format=json",//"https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal,
-	           type: "POST",
-	           dataType: "jsonp",
-		   header: {"Api-User-Agent" : "wikiSearch"},
-	           success: function(data){
-			console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
-	           }
+			   url: "https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal + "&format=json",
+			   type: "POST",
+			   dataType: "jsonp",
+			   header: {"Api-User-Agent" : "wikiSearch"},
+			   success: function(data){
+				console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
+	          		 }
 			});
 		});
 	}  
