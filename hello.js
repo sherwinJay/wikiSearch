@@ -22,12 +22,12 @@ $(document).ready(function() {
 			   success: function(data){
 				//console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
 				   console.log(data.query.allcategories[0]);
-				  /** const lists = data.query.allcategories; 
+				  const lists = data.query.allcategories; 
 				   for(let i = 0; i <= lists.length; i++ ){
-					dataList += "<li class='listBg'>" + data.query.allcategories[0][i] + "</li>";
+					dataList += "<li class='listBg'>" + data.query.allcategories[i]["*"] + "</li>";
 				   }
 				   dataList += "</ul>";
-				   formContainer.innerHTML = formContainer.innerHTML + dataList;	**/          		 }
+				   formContainer.innerHTML = formContainer.innerHTML + dataList      		 }
 			});
 		});
 	}  
