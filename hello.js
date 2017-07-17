@@ -11,6 +11,8 @@ $(document).ready(function() {
 	function randomQuote(){
 		$("form").on("keyup", "input", function(){
 			var inputVal = $(this).val();
+			var dataList = "<ul>";
+			var formContainer = document.getElementById("formWrapper");
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
 			   url: "https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal + "&format=json",
@@ -19,9 +21,13 @@ $(document).ready(function() {
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
 				//console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
-				   var lists = data.query.allcategories; 
 				   console.log(lists.length);
-	          		 }
+				   const lists = data.query.allcategories; 
+				   for(let i = 0; i <= lists.length; i++ ){
+					dataList += "<li class='listBg'>" + data.query.allcategories[i] + "</li>";
+				   }
+				   dataList += "</ul>";
+				   formContainer.innerHTML = formContainer.innerHTML + dataList;	          		 }
 			});
 		});
 	}  
