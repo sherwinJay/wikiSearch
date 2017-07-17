@@ -18,7 +18,8 @@ $(document).ready(function() {
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
-				console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
+				//console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
+				   console.log(data.query.allcategories[3]);
 	          		 }
 			});
 		});
