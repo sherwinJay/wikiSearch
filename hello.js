@@ -15,12 +15,12 @@ $(document).ready(function() {
 			var formContainer = document.getElementById("formWrapper");
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
-			   url: "https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acfrom" + inputVal + "&format=json",
+			   url: "https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acfrom=" + inputVal + "&format=json",
 			   type: "POST",
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
-				console.log("https://en.wikipedia.org/w/api.php?action=query&list=allpages&apfrom=" + inputVal);
+				//console.log("https://en.wikipedia.org/w/api.php?action=query&list=allpages&apfrom=" + inputVal);
 				   
 				  const lists = data.query.allcategories; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
