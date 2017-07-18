@@ -28,7 +28,7 @@ $(document).ready(function() {
 					console.log(data.query.allcategories[i]["*"]);
 				   }**/
 				   lists.forEach(function(item){
-				   	dataList += "<li class='listBg'>" + item["*"] + "</li>";
+				   	dataList += "<li class='listBg'>" + item["title"] + "</li>";
 				   });
 				   dataList += "</ul>";
 				   document.getElementById("formWrapper").innerHTML = dataList;      		 }
