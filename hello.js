@@ -15,20 +15,20 @@ $(document).ready(function() {
 			var formContainer = document.getElementById("formWrapper");
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
-			   url: "https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acfrom=" + inputVal + "&format=json",
+			   url: "https://en.wikipedia.org/w/api.php?action=query&list=allpages&apfrom=" + inputVal + "&format=json",
 			   type: "POST",
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
 				//console.log("https://en.wikipedia.org/w/api.php?action=query&list=allpages&apfrom=" + inputVal);
 				   
-				  const lists = data.query.allcategories; 
+				  const lists = data.query.allpages; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
 					//dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
 					console.log(data.query.allcategories[i]["*"]);
 				   }**/
 				   lists.forEach(function(item){
-				   	dataList += "<li class='listBg'>" + item["*"] + "</li>";
+				   	dataList += "<li class='listBg'>" + item.title + "</li>";
 				   });
 				   dataList += "</ul>";
 				   document.getElementById("formWrapper").innerHTML = dataList;      		 }
