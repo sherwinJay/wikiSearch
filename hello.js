@@ -21,11 +21,12 @@ $(document).ready(function() {
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
 				//console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
-				   console.log(data.query.allcategories[i]["*"]);
+				   
 				  const lists = data.query.allcategories; 
-				  /**for(let i = 0; i <= lists.length; i++ ){
-					dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
-				   }**/
+				 for(let i = 0; i <= lists.length; i++ ){
+					//dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
+					console.log(data.query.allcategories[i]["*"]);
+				   }
 				   data.query.allcategories.forEach(function(item){
 				   	dataList += "<li class='listBg'>" + item["*"] + "</li>";
 				   });
