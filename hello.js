@@ -23,9 +23,12 @@ $(document).ready(function() {
 				//console.log("https://en.wikipedia.org/w/api.php?action=query&list=allcategories&acprefix=" + inputVal);
 				   //console.log(data.query.allcategories[0]["*"]);
 				  const lists = data.query.allcategories; 
-				  for(let i = 0; i <= lists.length; i++ ){
+				  /**for(let i = 0; i <= lists.length; i++ ){
 					dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
-				   }
+				   }**/
+				   data.query.allcategories.forEach(function(item){
+				   	dataList + "<li class='listBg'>" + item["*"] + "</li>";
+				   });
 				   dataList += "</ul>";
 				   document.getElementById("formWrapper").innerHTML = dataList;      		 }
 			});
