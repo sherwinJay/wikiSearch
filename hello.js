@@ -27,7 +27,7 @@ $(document).ready(function() {
 					dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
 				   }**/
 				   data.query.allcategories.forEach(function(item){
-				   	dataList + "<li class='listBg'>" + item["*"] + "</li>";
+				   	dataList += "<li class='listBg'>" + item["*"] + "</li>";
 				   });
 				   dataList += "</ul>";
 				   document.getElementById("formWrapper").innerHTML = dataList;      		 }
