@@ -27,8 +27,8 @@ $(document).ready(function() {
 					//dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
 					console.log(data.query.allcategories[i]["*"]);
 				   }**/
+				   lists.toLowerCase();
 				   lists.forEach(function(item){
-					lists.toLowerCase();
 				   	dataList += "<li class='listBg'>" + item["*"] + "</li>";
 				   });
 				   dataList += "</ul>";
