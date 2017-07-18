@@ -20,7 +20,7 @@ $(document).ready(function() {
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
-				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=mostviewed&gapfrom=" + inputVal);
+				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&gapfrom=" + inputVal);
 				   
 				  const lists = data.query.allpages; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
