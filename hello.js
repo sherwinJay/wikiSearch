@@ -1,26 +1,20 @@
 $(document).ready(function() {
 	//call randomQuote function
-	randomQuote();
-	//load the randomQuote function everytime  .button is click
-	/**$(".button").on("click", function(e){
-		e.preventDefault();
-	  $(this).load(randomQuote());
-	     //$.getJSON("http://quotes.stormconsultancy.co.uk/random.json").done(randomQuote);
-	});**/
-	
-	function randomQuote(){
+	dynamicSearch();	
+	function dynamicSearch(){
 		$("form").on("keyup", "input", function(){
 			var inputVal = $(this).val();
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
-			   url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srprop=snippet&srsearch=intitle:" + inputVal + "&format=json",
+			//"https://en.wikipedia.org/w/api.php?action=query&list=search&srprop=snippet&srsearch=intitle:" + inputVal + "&format=json"
+			   url: "https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrprop=snippet&grsearch=intitle:" + inputVal + "&format=json",
 			   type: "POST",
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
-				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=:" + inputVal);
+				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrprop=snippet&grsearch=intitle:" + inputVal);
 				//console.log(data.query.pages.hasOwnProperty("title"));   
 				  const lists = data.query.search; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
