@@ -14,7 +14,7 @@ $(document).ready(function() {
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
-				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=" + inputVal);
+				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrprop=snippet&gsrsearch=" + inputVal);
 				//console.log(data.query.pages.hasOwnProperty("title"));   
 				 const lists = data.query.pages; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
