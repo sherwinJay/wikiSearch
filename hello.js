@@ -15,7 +15,7 @@ $(document).ready(function() {
 			var formContainer = document.getElementById("formWrapper");
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
-			   url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srprop=snippet&srsearch=intitle:" + inputVal.charAt(0) + "&apprefix="+ inputVal + "&apfilterrendir=all&format=json",
+			   url: "https://en.wikipedia.org/w/api.php?action=query&list=search&srprop=snippet&srsearch=intitle:" + inputVal + "&format=json",
 			   type: "POST",
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
