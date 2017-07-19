@@ -30,11 +30,11 @@ $(document).ready(function() {
 				    count++;
 				  }
 				}
-				   lists.forEach(function(item){
+				  // lists.forEach(function(item){
 					for(var j = 0; j < count; j++){
-				   		dataList += "<li class='listBg'>" + item[arr[j]].title + "</li>";
+				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "</li>";
 					}
-				   });
+				 //  });
 				   dataList += "</ul>";
 				   document.getElementById("formWrapper").innerHTML = dataList;      		 }
 			});
