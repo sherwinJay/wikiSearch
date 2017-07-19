@@ -21,7 +21,7 @@ $(document).ready(function() {
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
 				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=" + inputVal);
-				console.log(data.query.pages.this.title);   
+				console.log(data.query.pages.hasOwnProperty("title"));   
 				  const lists = data.query.allpages; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
 					//dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
