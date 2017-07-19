@@ -32,7 +32,7 @@ $(document).ready(function() {
 				}
 				  // lists.forEach(function(item){
 					for(var j = 0; j < count; j++){
-				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "</li>";
+				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
 					}
 				 //  });
 				   dataList += "</ul>";
