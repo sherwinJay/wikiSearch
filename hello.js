@@ -24,7 +24,7 @@ $(document).ready(function() {
 				var arr = [];
 				var i;
 				var count = 0;
-				for(i in a["test"]){
+				for(i in query.pages){
 				  if(query.pages.hasOwnProperty(i)){
 				    arr.push(i);
 				    count++;
