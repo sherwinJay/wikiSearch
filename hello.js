@@ -16,14 +16,14 @@ $(document).ready(function() {
 			   success: function(data){
 				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&grsearch=" + inputVal);
 				//console.log(data.query.pages.hasOwnProperty("title"));   
-				  const lists = data.query.search; 
+				 // const lists = data.query.search; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
 					//dataList += "<li class='listBg'>" + data.query.allcategories[0]["*"] + "</li>";
 					console.log(data.query.allcategories[i]["*"]);
 				   }**/
-				   lists.forEach(function(item){
+				  /** lists.forEach(function(item){
 				   	dataList += "<li class='listBg'>" + item.snippet + "</li>";
-				   });
+				   });**/
 				   dataList += "</ul>";
 				   document.getElementById("formWrapper").innerHTML = dataList;      		 }
 			});
