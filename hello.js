@@ -9,12 +9,12 @@ $(document).ready(function() {
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
 			//"https://en.wikipedia.org/w/api.php?action=query&list=search&srprop=snippet&srsearch=intitle:" + inputVal + "&format=json"
-			   url: "https://en.wikipedia.org/w/api.php?action=query&generator=search&grsearch=" + inputVal + "&format=json",
+			   url: "https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=" + inputVal + "&format=json",
 			   type: "POST",
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
-				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&grsearch=" + inputVal);
+				console.log("https://en.wikipedia.org/w/api.php?action=query&generator=search&gsrsearch=" + inputVal);
 				//console.log(data.query.pages.hasOwnProperty("title"));   
 				 // const lists = data.query.search; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
