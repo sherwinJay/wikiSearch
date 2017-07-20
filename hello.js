@@ -30,9 +30,10 @@ $(document).ready(function() {
 				    count++;
 				  }
 				}**/
+				   console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
-					  console.log(item.extracts);
-					dataList += "<li class='listBg'>" + item.extract + "<p>" + item.index + "</p>" + "</li>";
+					  
+					dataList += "<li class='listBg'>" + item["extract"] + "<p>" + item.index + "</p>" + "</li>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
 					}**/
