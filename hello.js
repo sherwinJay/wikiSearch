@@ -36,7 +36,7 @@ $(document).ready(function() {
 					  if(item.thumbnail == null){
 						  // if not found try to return or create a thumbnail.source obj
 						  console.log("Not Found");
-						  return false;
+						  return true;
 						  
 					     }
 					  //console.log(item.thumbnail.source);
