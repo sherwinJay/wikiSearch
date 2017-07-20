@@ -33,7 +33,7 @@ $(document).ready(function() {
 				  //console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
 					  //console.log(item.thumbnail.source);
-					dataList += "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "'>" + "<li class='listBg'>" + item.title + "<p>" + item.extract + "</p>" + "</li>" + "</a>";
+					dataList += "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target="_blank">" + "<li class='listBg'>" + item.title + "<p>" + item.extract + "</p>" + "</li>" + "</a>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
 					}**/
