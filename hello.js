@@ -32,7 +32,7 @@ $(document).ready(function() {
 				}**/
 				  //console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
-					  if(item.thumbnail = undefined){
+					  if(item.thumbnail == null){
 						  console.log("Not Found");
 					     }
 					  //console.log(item.thumbnail.source);
