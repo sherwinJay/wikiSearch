@@ -34,12 +34,13 @@ $(document).ready(function() {
 				  lists.forEach(function(item){
 					  //find if thumbnail property exists within the pages array of obj
 					  if(item.thumbnail == null){
-						  return item.thumbnail;
+						  
 						  if(item.thumbnail.source == null){
 						  // if not found try to return or create a thumbnail.source obj
 						  console.log("Not Found");
 						  return item.thumbnail.source;
 					  		} 
+						  return item.thumbnail;
 					     }else{
 					  //console.log(item.thumbnail.source);
 					dataList += "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>" + "<li class='listBg'>" + "<img src='" + item.thumbnail.source + "'>" + item.title + "<p>" + item.extract + "</p>" + "</li>" + "</a>";
