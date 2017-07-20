@@ -33,21 +33,24 @@ $(document).ready(function() {
 				  //console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
 					  //find if thumbnail property exists within the pages array of obj
-					  if(item.thumbnail == null){
-						  
-						  if(item.thumbnail.source == null){
+					 try {
+						  if(item.thumbnail == null){
+						  if(item.thumbnail.source.string == ""){
 						  // if not found try to return or create a thumbnail.source obj
 						  console.log("Not Found");
 						  return item.thumbnail.source;
 					  		} 
 						  return item.thumbnail;
-					     }else{
+					     }
+					 } catch e {
+						 
+					 }
+					 
 					  //console.log(item.thumbnail.source);
 					dataList += "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>" + "<li class='listBg'>" + "<img src='" + item.thumbnail.source + "'>" + item.title + "<p>" + item.extract + "</p>" + "</li>" + "</a>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
 					}**/
-					     }
 				  });
 				   dataList += "</ul>";
 				   document.getElementById("formWrapper").innerHTML = dataList;      		 }
