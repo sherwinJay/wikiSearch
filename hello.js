@@ -31,7 +31,7 @@ $(document).ready(function() {
 				  }
 				}**/
 				  lists.forEach(function(item){
-					  console.log(item.extract);
+					  console.log(item.extracts);
 					dataList += "<li class='listBg'>" + item.extract + "<p>" + item.index + "</p>" + "</li>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
