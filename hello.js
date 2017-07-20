@@ -14,7 +14,7 @@ $(document).ready(function() {
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
-				console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputVal + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
+				//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputVal + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
 				//console.log(data.query.pages.hasOwnProperty("title"));   
 				 const lists = data.query.pages; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
@@ -30,9 +30,10 @@ $(document).ready(function() {
 				    count++;
 				  }
 				}**/
-				   console.log(data.query.pages.extract);
-				  lists.forEach(function(item){ 
-					dataList += "<li class='listBg'>"+ '"<img src="' + item.thumbnail.source + '">' + item.title + "<p>" + item.extract + "</p>" + "</li>";
+				  //console.log(data.query.pages.extract);
+				  lists.forEach(function(item){
+					  console.log(item.thumbnail.source);
+					dataList += "<li class='listBg'>" + item.title + "<p>" + item.extract + "</p>" + "</li>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
 					}**/
