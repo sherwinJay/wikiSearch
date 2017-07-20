@@ -32,7 +32,7 @@ $(document).ready(function() {
 				}**/
 				   console.log(data.query.pages.extract);
 				  lists.forEach(function(item){ 
-					dataList += "<li class='listBg'>" + item.title + "<p>" + item.extract + "</p>" + "</li>";
+					dataList += "<li class='listBg'>"+ '"<img src="' + item.thumbnail.source + '"/>' + item.title + "<p>" + item.extract + "</p>" + "</li>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
 					}**/
