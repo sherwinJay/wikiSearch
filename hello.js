@@ -32,7 +32,7 @@ $(document).ready(function() {
 				}**/
 				  //console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
-					  console.log(item.thumbnail.source);
+					  //console.log(item.thumbnail.source);
 					dataList += "<li class='listBg'>" + item.title + "<p>" + item.extract + "</p>" + "</li>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
