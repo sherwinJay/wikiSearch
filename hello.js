@@ -34,7 +34,7 @@ $(document).ready(function() {
 				  lists.forEach(function(item){
 					  //find if thumbnail property exists within the pages array of obj
 					  if(item.thumbnail == null){
-						  return item  = item.thumbnail;
+						  item  = item.thumbnail;
 						  if(item.thumbnail.source == null){
 						  // if not found try to return or create a thumbnail.source obj
 						  console.log("Not Found");
