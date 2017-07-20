@@ -32,6 +32,9 @@ $(document).ready(function() {
 				}**/
 				  //console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
+					  if(item.thumbnail = undefined){
+						  console.log("Not Found");
+					     }
 					  //console.log(item.thumbnail.source);
 					dataList += "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>" + "<li class='listBg'>" + item.title + "<p>" + item.extract + "</p>" + "</li>" + "</a>";
 					/**for(var j = 0; j < count; j++){
