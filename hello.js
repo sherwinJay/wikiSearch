@@ -33,17 +33,12 @@ $(document).ready(function() {
 				  //console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
 					  //find if thumbnail property exists within the pages array of obj
-					
-						  if(item.thumbnail == null){
-						  if(item.thumbnail.source == null){
+					if(item.thumbnail == null){
+						  item.thumbnail.source = "";
 						  // if not found try to return or create a thumbnail.source obj
 						  console.log("Not Found");
-						  return item.thumbnail.source;
-					  		} 
-						  return item.thumbnail;
+						  //return item.thumbnail.source;
 					     }
-					
-					 
 					  //console.log(item.thumbnail.source);
 					dataList += "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>" + "<li class='listBg'>" + "<img src='" + item.thumbnail.source + "'>" + item.title + "<p>" + item.extract + "</p>" + "</li>" + "</a>";
 					/**for(var j = 0; j < count; j++){
