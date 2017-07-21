@@ -16,7 +16,7 @@ function dynamicSearch(inputText){
 		//console.log(inputText.length);
 		const inputLength = 0;
 		let lists =  data.query.pages;
-		if( inputText.length > inputLength ){
+		if( data.batchcomplete === true ){
 			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
