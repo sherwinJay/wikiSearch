@@ -13,11 +13,9 @@ function dynamicSearch(inputText){
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(data){
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
-		//let lists = data.query;
-		console.log(inputText.length);
+		//console.log(inputText.length);
 		const inputLength = 0;
 		let lists =  data.query.pages;
-		//if( inputText.length > 0){	
 			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
@@ -33,8 +31,7 @@ function dynamicSearch(inputText){
 				  + "</a>" + "</li>";
 		  	});
 		   	dataList += "</ul>";
-		   	document.getElementById("formWrapper").innerHTML = dataList; 
-		//}     		 
+		   	document.getElementById("formWrapper").innerHTML = dataList; 		 
 	   }
 	});
 
