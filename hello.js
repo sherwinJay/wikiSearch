@@ -33,9 +33,10 @@ $(document).ready(function() {
 				  //console.log(data.query.pages.extract);
 				  lists.forEach(function(item){
 					  //find if thumbnail property exists within the pages array of obj
-					if(item.thumbnail.source == null){
-							console.log("Not Found");
-						  return item.thumbnail.source = "";
+					if(item.thumbnail == null){
+							//console.log("Not Found");
+						  item.thumbnail = "source";
+							item.thumbnail.source = "";
 						  // if not found try to return or create a thumbnail.source obj
 						  
 						  //return item.thumbnail.source;
