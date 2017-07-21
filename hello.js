@@ -34,7 +34,7 @@ function dynamicSearch(inputText){
 		   	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList; 	
 	  	 }else{
-			return data = {};		 
+			return data = null;		 
 		 }
 	   }
 	});
