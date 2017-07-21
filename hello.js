@@ -21,7 +21,7 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			lists.forEach(function(item){
-			if( item === ""  ){ 
+			if( lists.length == 0 ){ 
 				return false;
 			}else{
 			  //find if thumbnail property exists within the pages array of obj
