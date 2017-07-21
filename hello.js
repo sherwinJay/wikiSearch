@@ -16,9 +16,8 @@ function dynamicSearch(inputText){
 		//let lists = data.query;
 		console.log(inputText.length);
 		const inputLength = 0;
-		 let lists =  data.query; 
-		if( lists.hasOwnProperty() ){	
-			lists = data.query.pages;
+		 let lists =  data.query.pages;
+		if( lists.hasOwnProperty("pages") ){	
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			lists.forEach(function(item){
