@@ -33,8 +33,9 @@ function dynamicSearch(inputText){
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>"
 				  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
 				  + "</a>" + "</li>";
+				}
 			});
-			}
+			
 		   	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList; 	
 	  		
