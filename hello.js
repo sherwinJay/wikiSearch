@@ -19,7 +19,7 @@ function dynamicSearch(inputText){
 			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
-			if(data.hasOwnProperty("error")){
+			if(data.hasOwnProperty("query")){
 				lists.forEach(function(item){
 
 				  //find if thumbnail property exists within the pages array of obj
