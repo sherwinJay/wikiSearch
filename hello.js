@@ -19,7 +19,7 @@ function dynamicSearch(inputText){
 			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
-			if(data.hasOwnProperty("query")){
+			if(data.hasOwnProperty("error")){
 				return true;
 			}else{
 				lists.forEach(function(item){
