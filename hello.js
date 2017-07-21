@@ -2,9 +2,7 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		if($(this).val().length > 0){
-			dynamicSearch(inputVal);   
-		   }
+
 	});
 });
 function dynamicSearch(inputText){
@@ -18,11 +16,11 @@ function dynamicSearch(inputText){
 		//let lists = data.query;
 		console.log(inputText.length);
 		const inputLength = 0;
-		if( inputText.length > inputLength ){
-			
+		 let lists =  data.query; 
+		if( lists.hasOwnProperty() ){	
+			lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
-			let lists =  data.query.pages; 
 			lists.forEach(function(item){
 			  //find if thumbnail property exists within the pages array of obj
 			if(item.thumbnail == null){
