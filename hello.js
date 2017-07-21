@@ -15,13 +15,12 @@ function dynamicSearch(inputText){
 		console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&piprop=thumbnail&pithumbsize=120&rvprop=timestamp");
 		//console.log(inputText.length);
 		const inputLength = 0;
-		
 			let lists =  data.query.pages;
 			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			lists.forEach(function(item){
-			if(item == ""){	
+			if(data.hasOwnProperty("query")){	
 			 console.log("true");
 			}
 			  //find if thumbnail property exists within the pages array of obj
