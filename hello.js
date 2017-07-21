@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	//call randomQuote function
-	dynamicSearch();
+	//dynamicSearch();
 	$("form").on("keyup", "input", function(){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
