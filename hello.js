@@ -20,6 +20,8 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			if(data.hasOwnProperty("query")){
+				return true;
+			}else{
 				lists.forEach(function(item){
 
 				  //find if thumbnail property exists within the pages array of obj
@@ -33,8 +35,6 @@ function dynamicSearch(inputText){
 					  + "</a>" + "</li>";
 
 				});
-			}else{
-				return {};
 			}
 		   	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList; 	
