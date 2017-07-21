@@ -41,5 +41,7 @@ ul, ol{
 .listBg{
 background-color: #fff;
 	margin: 10px 0;
-	padding: 10px;
+}
+.listBg a{
+padding: 10px;
 }
