@@ -32,6 +32,8 @@ function dynamicSearch(inputText){
 				  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
 				  + "</a>" + "</li>";
 				
+				}else{
+					return false;
 				}
 		  	});
 		   	dataList += "</ul>";
