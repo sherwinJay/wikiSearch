@@ -15,7 +15,7 @@ $(document).ready(function() {
 			   header: {"Api-User-Agent" : "wikiSearch"},
 			   success: function(data){
 				console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputVal + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
-				//console.log(data.query.pages.hasOwnProperty("title"));   
+				 
 				 const lists = data.query.pages; 
 				 /**for(let i = 0; i <= lists.length; i++ ){
 					dataList += "<li class='listBg'>" + data.query.pages[i]["extract"] + "</li>";
