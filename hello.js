@@ -2,9 +2,11 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		
+		if(inputVal.length > 0){
 			dynamicSearch(inputVal);
-		
+		}else{
+			return false;
+		}
 	});
 });
 function dynamicSearch(inputText){
