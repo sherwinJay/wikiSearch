@@ -42,9 +42,9 @@ $(document).ready(function() {
 						  //return item.thumbnail.source;
 					     }
 					  //console.log(item.thumbnail.source);
-					dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>"
-						   + "<h3>" item.title + "</h3>" + "<p>" + item.extract + "</p>"
-					          + "</a>" + "</li>";
+					dataList += "<li class='listBg'>" 
+						  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" item.title + "</h3>" + "<p>" + item.extract + "</p>"
+					          + "</li>";
 					/**for(var j = 0; j < count; j++){
 				   		dataList += "<li class='listBg'>" + data.query.pages[arr[j]].title + "<p>" + data.query.pages[arr[j]].snippet + "</li>";
 					}**/
