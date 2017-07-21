@@ -17,7 +17,7 @@ function dynamicSearch(inputText){
 		console.log(inputText.length);
 		const inputLength = 0;
 		let lists =  data.query.pages;
-		if( inputText.length > 0){	
+		//if( inputText.length > 0){	
 			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
@@ -34,7 +34,7 @@ function dynamicSearch(inputText){
 		  	});
 		   	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList; 
-		}     		 
+		//}     		 
 	   }
 	});
 
