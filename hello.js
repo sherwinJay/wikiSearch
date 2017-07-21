@@ -21,9 +21,9 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			lists.forEach(function(item){
-			if( lists.length == 0 ){ 
-				return false;
-			}else{
+			if(item == ""){	
+			 console.log("true");
+			}
 			  //find if thumbnail property exists within the pages array of obj
 			if(item.thumbnail == null){
 				//add objects
@@ -33,7 +33,7 @@ function dynamicSearch(inputText){
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>"
 				  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
 				  + "</a>" + "</li>";
-				}
+				
 			});
 			
 		   	dataList += "</ul>";
