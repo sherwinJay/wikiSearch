@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		e.preventDefault();
+		e.stopPropagation();
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		dynamicSearch(inputVal);
