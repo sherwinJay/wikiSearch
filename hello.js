@@ -21,6 +21,7 @@ function dynamicSearch(inputText){
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
 		   	for(var i =0; i < data.query.pages.length; i++){
+				if( data.query.pages.length > 0 ){
 				if(data.query.pages[i].thumbnail == null){
 					//add objects
 					  data.query.pages[i].thumbnail = "source";
@@ -29,6 +30,9 @@ function dynamicSearch(inputText){
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + data.query.pages[i].pageid + "' target='_blank'>"
 					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" + data.query.pages[i].extract + "</p>"
 					  + "</a>" + "</li>";
+				}else{
+					return false;
+				}
 			}
 				/**lists.forEach(function(item){
 				if(item != "" ){
