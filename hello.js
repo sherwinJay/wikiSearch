@@ -9,7 +9,7 @@ $(document).ready(function() {
 			inputVal= encodeURIComponent(inputVal.trim());
 			$.ajax({
 			//"https://en.wikipedia.org/w/api.php?action=query&list=search&srprop=snippet&srsearch=intitle:" + inputVal + "&format=json"
-			   url: "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputVal + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json",
+			   url: "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputVal + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&piprop=thumbnail&pithumbsize=120&rvprop=timestamp&format=json",
 			   type: "POST",
 			   dataType: "jsonp",
 			   header: {"Api-User-Agent" : "wikiSearch"},
