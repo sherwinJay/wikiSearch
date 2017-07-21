@@ -21,7 +21,7 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			lists.forEach(function(item){
-				if( item !== ""  ){
+			if( item === ""  ){ return false;}
 			  //find if thumbnail property exists within the pages array of obj
 			if(item.thumbnail == null){
 				//add objects
@@ -32,10 +32,6 @@ function dynamicSearch(inputText){
 				  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
 				  + "</a>" + "</li>";
 				
-				}else{
-					return false;
-				}
-		  	});
 		   	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList; 	
 			
