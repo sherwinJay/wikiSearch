@@ -20,21 +20,21 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			if(data.hasOwnProperty("query")){
-			lists.forEach(function(item){
-			
-			  //find if thumbnail property exists within the pages array of obj
-			if(item.thumbnail == null){
-				//add objects
-				  item.thumbnail = "source";
-				  item.thumbnail.source = "";
-			     }
-			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>"
-				  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
-				  + "</a>" + "</li>";
-				
-			});
+				lists.forEach(function(item){
+
+				  //find if thumbnail property exists within the pages array of obj
+				if(item.thumbnail == null){
+					//add objects
+					  item.thumbnail = "source";
+					  item.thumbnail.source = "";
+				     }
+				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>"
+					  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
+					  + "</a>" + "</li>";
+
+				});
 			}else{
-				return false;
+				return {};
 			}
 		   	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList; 	
