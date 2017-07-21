@@ -6,9 +6,6 @@ $(document).ready(function() {
 	});
 });
 function dynamicSearch(inputText){
-	var dataList = "<ul>";
-	var formContainer = document.getElementById("formWrapper");
-
 	$.ajax({
 	   url: "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&piprop=thumbnail&pithumbsize=120&rvprop=timestamp&format=json",
 	   type: "POST",
@@ -16,12 +13,13 @@ function dynamicSearch(inputText){
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(data){
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
-		let lists = data.query;
+		//let lists = data.query;
 		const inputLength = 0;
 		if( inputText.length > 0 ){
-			lists =  data.query.pages;  
-		}
-		lists.forEach(function(item){
+			var dataList = "<ul>";
+			var formContainer = document.getElementById("formWrapper");
+			let lists =  data.query.pages; 
+			lists.forEach(function(item){
 			  //find if thumbnail property exists within the pages array of obj
 			if(item.thumbnail == null){
 				//add objects
@@ -31,9 +29,11 @@ function dynamicSearch(inputText){
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>"
 				  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
 				  + "</a>" + "</li>";
-		  });
-		   dataList += "</ul>";
-		   document.getElementById("formWrapper").innerHTML = dataList;      		 }
+		  	});
+		   	dataList += "</ul>";
+		   	document.getElementById("formWrapper").innerHTML = dataList; 
+		}     		 
+	   }
 	});
 
 }  
