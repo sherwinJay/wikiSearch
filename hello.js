@@ -27,7 +27,7 @@ function dynamicSearch(inputText){
 					  data.query.pages[i].thumbnail.source = "";
 				     }
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + data.query.pages[i].pageid + "' target='_blank'>"
-					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" + item.extract + "</p>"
+					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" + data.query.pages[i].extract + "</p>"
 					  + "</a>" + "</li>";
 			}
 				/**lists.forEach(function(item){
