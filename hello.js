@@ -68,8 +68,8 @@ function dynamicSearch(inputText){
 					}
 				});**/
 			
-		   /**	dataList += "</ul>";
-		   	document.getElementById("formWrapper").innerHTML = dataList; 	**/
+		   dataList += "</ul>";
+		   	document.getElementById("formWrapper").innerHTML = dataList;
 	  		
    		 }
 	});
