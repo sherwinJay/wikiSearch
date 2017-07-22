@@ -31,9 +31,10 @@ function dynamicSearch(inputText){
 		   	for(var i =0; i < data.query.pages.length; i++){
 				if( data.query.pages.length > 0 ){
 				if(data.query.pages[i].thumbnail == null){
+					return false;
 					//add objects
-					  data.query.pages[i].thumbnail = "source";
-					  data.query.pages[i].thumbnail.source = "";
+					  /**data.query.pages[i].thumbnail = "source";
+					  data.query.pages[i].thumbnail.source = "";**/
 				     }
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + data.query.pages[i].pageid + "' target='_blank'>"
 					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" + data.query.pages[i].extract + "</p>"
