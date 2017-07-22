@@ -33,8 +33,8 @@ function dynamicSearch(inputText){
 				if(data.query.pages[i].thumbnail == null){
 					return false;
 					//add objects
-					  /**data.query.pages[i].thumbnail = "source";
-					  data.query.pages[i].thumbnail.source = "";**/
+					  data.query.pages[i].thumbnail = "source";
+					  data.query.pages[i].thumbnail.source = "";
 				     }**/
 				lists.forEach(function(item){				
 			  //find if thumbnail property exists within the pages array of obj
