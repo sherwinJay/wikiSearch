@@ -35,9 +35,9 @@ function dynamicSearch(inputText){
 					//add objects
 					  /**data.query.pages[i].thumbnail = "source";
 					  data.query.pages[i].thumbnail.source = "";**/
-				     }**/lists.forEach(function(item){
-				
-				  //find if thumbnail property exists within the pages array of obj
+				     }**/
+				lists.forEach(function(item){				
+			  //find if thumbnail property exists within the pages array of obj
 				if(item.thumbnail == null){
 					//add objects
 					 // item.thumbnail = "source";
