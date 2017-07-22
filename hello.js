@@ -20,6 +20,10 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
+		   	if( data.query == null ){
+				dataList += "";
+					return false;
+				}
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
 				if( data.query == null ){
