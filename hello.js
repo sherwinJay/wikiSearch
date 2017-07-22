@@ -18,11 +18,15 @@ function dynamicSearch(inputText){
 			return false;
 		}
 		const inputLength = 0;
-			let lists =  data.query.pages;
+			
 			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
+		   	if( inputText.length == 0 ){
+			return false;
+			}
+		   let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
 				if( data.query.pages.length > 0 ){
 				if(data.query.pages[i].thumbnail == null){
