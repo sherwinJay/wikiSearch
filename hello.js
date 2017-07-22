@@ -54,10 +54,10 @@ function dynamicSearch(inputText){
 				dataList += "";
 					}
 				});**/
-			
+			}
 		   dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList;
-	  	}	
+	  		
    	}	 
 	});
 
