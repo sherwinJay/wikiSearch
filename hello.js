@@ -23,11 +23,11 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
-		   	if( inputText.length == 0 ){
-				datalist += "";
+		   	if( data.query == null ){
+				//datalist += "";
 			return false;
 			}
-		   let lists =  data.query.pages;
+		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
 				if( data.query.pages.length > 0 ){
 				if(data.query.pages[i].thumbnail == null){
