@@ -28,7 +28,7 @@ function dynamicSearch(inputText){
 				//dataList += "";
 				console.log("true");
 				data.error.message = "Nothing Found";
-				dataList += "<li class='no-found'>" + data.error.message + "</li>";
+				dataList += "<li class='no-found'>" + data.error.code + "</li>";
 				}
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
