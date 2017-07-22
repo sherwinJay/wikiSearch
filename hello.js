@@ -30,7 +30,7 @@ function dynamicSearch(inputText){
 				console.log(data.error.code);
 				data.error.message = "Nothing Found";
 				dataList += "<li>" + data.error.code + "</li>";
-				}
+				}else{
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
 				if(data.query.pages[i].thumbnail == null){
@@ -42,7 +42,7 @@ function dynamicSearch(inputText){
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + data.query.pages[i].pageid + "' target='_blank'>"
 					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" + data.query.pages[i].extract + "</p>"
 					  + "</a>" + "</li>";
-				
+				}
 				/**lists.forEach(function(item){
 				if(item != "" ){
 				  //find if thumbnail property exists within the pages array of obj
