@@ -29,7 +29,7 @@ function dynamicSearch(inputText){
 				console.log("true");
 				console.log(data.error.code);
 				data.error.message = "Nothing Found";
-				dataList += "<li>" + data.error.code + "</li>";
+				dataList += "<li>" + data.error.message + "</li>";
 				}else{
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
