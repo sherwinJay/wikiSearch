@@ -24,15 +24,16 @@ function dynamicSearch(inputText){
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
 		   let lists =  data.query.pages;
-		   	if( data.query == null ){
+		   	/**if( data.query == null ){
 				//dataList += "";
 				data.error.message = "Nothing Found";
 				dataList += "<li class='no-found'>" + data.error.message + "</li>";
-				}
+				}**/
 		        
 		   	for(var i =0; i < data.query.pages.length; i++){
 				if( data.query == null ){
-					return false;
+					data.error.message = "Nothing Found";
+				dataList += "<li class='no-found'>" + data.error.message + "</li>";
 				}else{
 				if(data.query.pages[i].thumbnail == null){
 					//add objects
