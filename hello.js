@@ -25,7 +25,8 @@ function dynamicSearch(inputText){
 			// try for loop
 		   	if( data.query == null ){
 				//dataList += "";
-					
+				data.error.message = "Nothing Found";
+				dataList += "<li class='no-found'>" + data.error.message + "</li>";
 				}
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
