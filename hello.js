@@ -28,13 +28,21 @@ function dynamicSearch(inputText){
 			return false;
 			}
 		        let lists =  data.query.pages;
-		   	for(var i =0; i < data.query.pages.length; i++){
+		   	/*for(var i =0; i < data.query.pages.length; i++){
 				if( data.query.pages.length > 0 ){
 				if(data.query.pages[i].thumbnail == null){
 					return false;
 					//add objects
 					  /**data.query.pages[i].thumbnail = "source";
 					  data.query.pages[i].thumbnail.source = "";**/
+				     }**/lists.forEach(function(item){
+				
+				  //find if thumbnail property exists within the pages array of obj
+				if(item.thumbnail == null){
+					//add objects
+					 // item.thumbnail = "source";
+					  //item.thumbnail.source = "";
+					return false;
 				     }
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + data.query.pages[i].pageid + "' target='_blank'>"
 					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" + data.query.pages[i].extract + "</p>"
