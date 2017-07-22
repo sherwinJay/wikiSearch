@@ -23,7 +23,7 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
-		   	let lists =  data.query.pages;
+		   	
 		   	if( data.query == null ){
 				//dataList += "";
 				console.log("true");
@@ -31,7 +31,7 @@ function dynamicSearch(inputText){
 				data.error.message = "Nothing Found";
 				dataList += "<li class='no-found'>" + data.error.code + "</li>";
 				}
-		        
+		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
 				if(data.query.pages[i].thumbnail == null){
 					//add objects
