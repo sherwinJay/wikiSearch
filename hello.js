@@ -21,8 +21,8 @@ function dynamicSearch(inputText){
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
 		   	if( data.query == null ){
-				dataList += "";
-					return false;
+				//dataList += "";
+					return dynamicSearch();
 				}
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
