@@ -10,7 +10,7 @@ $(document).ready(function() {
 });
 function dynamicSearch(inputText){
 	$.ajax({
-	   url: "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json",
+	   url: "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json",
 	   type: "POST",
 	   dataType: "jsonp",
 	   header: {"Api-User-Agent" : "wikiSearch"},
