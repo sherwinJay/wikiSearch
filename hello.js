@@ -25,7 +25,7 @@ function dynamicSearch(inputText){
 			// try for loop
 		   	if( data.query == null ){
 				//dataList += "";
-					return dynamicSearch();
+					
 				}
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
