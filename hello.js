@@ -1,7 +1,5 @@
 $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
-		e.preventDefault();
-		e.stopPropagation();
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		dynamicSearch(inputVal);
@@ -16,6 +14,9 @@ function dynamicSearch(inputText){
 	   success: function(data){
 		console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=extracts|pageimages&redirects=&exintro=true&exsentences=2&explaintext=true&piprop=thumbnail&pithumbsize=120&rvprop=timestamp");
 		//console.log(inputText.length);
+		if( inputText.length == 0 ){
+			return false;
+		}
 		const inputLength = 0;
 			let lists =  data.query.pages;
 			//lists = data.query.pages;
