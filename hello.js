@@ -24,12 +24,12 @@ function dynamicSearch(inputText){
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
 		   	
-		   	if( data.query == null && data.continue == null){
+		   	if( data.query == null || data.continue == null){
 				//dataList += "";
 				console.log("true");
 				console.log(data.error.code);
-				data.error.message = "Nothing Found";
-				dataList += "<li>" + data.error.message + "</li>";
+				data.errors = "Nothing Found";
+				dataList += "<li>" + data.errors + "</li>";
 				}else{
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
