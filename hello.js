@@ -26,6 +26,7 @@ function dynamicSearch(inputText){
 		   
 		   	if( data.query == null ){
 				//dataList += "";
+				console.log("true");
 				data.error.message = "Nothing Found";
 				dataList += "<li class='no-found'>" + data.error.message + "</li>";
 				}
