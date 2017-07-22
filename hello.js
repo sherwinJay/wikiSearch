@@ -26,7 +26,7 @@ function dynamicSearch(inputText){
 			}
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
-				if( data.query == null ){
+				if( data.query.pages[i] == null ){
 					return false;
 				}else{
 				if(data.query.pages[i].thumbnail == null){
