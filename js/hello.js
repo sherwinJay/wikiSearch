@@ -27,7 +27,7 @@ function dynamicSearch(inputText){
 	   type: "POST",
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(result)
-	   {
+	   {console.log(result);
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 		   	if( result.query == null || result.continue == null )
