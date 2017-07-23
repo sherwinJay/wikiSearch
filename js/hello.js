@@ -45,10 +45,9 @@ function dynamicSearch(inputText){
 					{
 						
 					lists[i].thumbnail = "source";
-					lists[i].thumbnail.source = "images/no-thumbnail.jpg";
-						/**if(lists[i].thumbnail.source == undefined){
-						lists[i].thumbnail.source = "<img src='images/no-thumbnail.jpg'>";
-						}**/
+						if(lists[i].thumbnail.source == undefined){
+						lists[i].thumbnail.source = "images/no-thumbnail.jpg";
+						}
 						
 					}else{
 						dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
