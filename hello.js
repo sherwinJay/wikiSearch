@@ -8,10 +8,10 @@ $(document).ready(function() {
 function dynamicSearch(inputText){
 	//try to make the full url into objects!
 	//"https://en.wikipedia.org/w/api.php?
-	var url = "https://en.wikipedia.org/w/api.php?";
+	var $url = "https://en.wikipedia.org/w/api.php?";
 	$.ajax({
 		//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
-	   url: "https://en.wikipedia.org/w/api.php?",
+	   url: $url,
 	   data: {
 	   		action: "query", 
 	   		formatversion: 2, 
@@ -25,8 +25,8 @@ function dynamicSearch(inputText){
 	   		explaintext: true, 
 	   		format: "json"
 	   	},
+	   dataType: "jsonp",	
 	   type: "POST",
-	   dataType: "jsonp",
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(result){
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
