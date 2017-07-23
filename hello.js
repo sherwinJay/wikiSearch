@@ -32,6 +32,7 @@ function dynamicSearch(inputText){
 		const inputLength = 0;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
+		   	var lists =  result.query.pages;
 		   	if( result.query == null || result.continue == null )
 			{
 			console.log("true");
@@ -41,7 +42,6 @@ function dynamicSearch(inputText){
 			}
 			else
 			{
-	        	var lists =  result.query.pages;
 	   			console.log(lists);
 	   			for(var i =0; i < lists.length; i++)
 	   			{
