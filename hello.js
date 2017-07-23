@@ -9,20 +9,19 @@ function dynamicSearch(inputText){
 	//try to make the full url into objects!
 	//"https://en.wikipedia.org/w/api.php?
 	var $url = "https://en.wikipedia.org/w/api.php?";
-	$.ajax({
-		/**prop: "pageimages|extracts", 
-	   		piprop: "thumbnails", 
-	   		pithumbsize: 120, 
-	   		exintro: true, 
-	   		exsentences: 2, 
-	   		explaintext: true, **/
-		//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
+	$.ajax({//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
 	   url: $url,
 	   data: {
 	   		action: "query", 
 	   		formatversion: 2, 
 	   		generator: "prefixsearch", 
-	   		gpssearch: $("input").val(), 
+	   		gpssearch: inputText, 
+		   	prop: "pageimages|extracts", 
+	   		piprop: "thumbnail", 
+	   		pithumbsize: 120, 
+	   		exintro: "true", 
+	   		exsentences: 2, 
+	   		explaintext: "true",
 	   		format: "json"
 	   	},
 	   dataType: "jsonp",	
