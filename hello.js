@@ -16,7 +16,7 @@ function dynamicSearch(inputText){
 	   		action: "query", 
 	   		formatversion: 2, 
 	   		generator: "prefixsearch", 
-	   		gpssearch: inputText, 
+	   		gpssearch: $("input").val(), 
 	   		prop: "pageimages|extracts", 
 	   		piprop: "thumbnails", 
 	   		pithumbsize: 120, 
