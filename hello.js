@@ -20,7 +20,6 @@ function dynamicSearch(inputText){
 	   		prop: "pageimages|extracts", 
 	   		piprop: "thumbnails", 
 	   		pithumbsize: 120, 
-	   		redirects: "", 
 	   		exintro: true, 
 	   		exsentences: 2, 
 	   		explaintext: true, 
@@ -32,7 +31,6 @@ function dynamicSearch(inputText){
 	   success: function(result){
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
 		//console.log(inputText.length);
-		   console.log(result.query.pages.title);
 		const inputLength = 0;
 			
 			//lists = data.query.pages;
@@ -45,6 +43,7 @@ function dynamicSearch(inputText){
 				}
 		        let lists =  result.query.pages;
 		   	for(var i =0; i < result.query.pages.length; i++){
+				console.log(result.query.pages[i].title);
 				if( result.query == null ){
 					return false;
 				}else{
