@@ -32,7 +32,6 @@ function dynamicSearch(inputText){
 		const inputLength = 0;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
-		   	var lists =  result.query.pages;
 		   	if( result.query == null || result.continue == null )
 			{
 			console.log("true");
@@ -42,19 +41,20 @@ function dynamicSearch(inputText){
 			}
 			else
 			{
-	   			console.log(lists);
-	   			for(var i =0; i < lists.length; i++)
-	   			{
-				if(lists[i].thumbnail == null)
-				{
-				//add objects
-				lists[i].thumbnail = "source";
-				lists[i].thumbnail.source = "";
-				}
-				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
-				+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>" + "<p>" 
-				+ lists.pages[i].extract + "</p>" + "</a>" + "</li>";
-				}
+			let lists =  result.query.pages;
+			console.log(lists);
+			for(var i =0; i < lists.length; i++)
+			{
+			if(lists[i].thumbnail == null)
+			{
+			//add objects
+			lists[i].thumbnail = "source";
+			lists[i].thumbnail.source = "";
+			}
+			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
+			+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>" + "<p>" 
+			+ lists[i].extract + "</p>" + "</a>" + "</li>";
+			}
 			}
 		  	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList;	  		
