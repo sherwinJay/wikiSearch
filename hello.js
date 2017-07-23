@@ -32,6 +32,7 @@ function dynamicSearch(inputText){
 	   success: function(result){
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
 		//console.log(inputText.length);
+		   console.log(result);
 		const inputLength = 0;
 			
 			//lists = data.query.pages;
