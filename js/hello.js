@@ -32,9 +32,7 @@ function dynamicSearch(inputText){
 			var formContainer = document.getElementById("formWrapper");
 		   	if( result.query == null || result.continue == null )
 			{
-				console.log("true");
 				result.errors = "Nothing Found";
-				console.log(result.errors);
 				dataList += "<li>" + result.errors + "</li>";
 			}
 			else
@@ -43,17 +41,18 @@ function dynamicSearch(inputText){
 				console.log(lists);
 				for(var i =0; i < lists.length; i++)
 				{
-					if(lists[i].thumbnail.source == null)
+					if(lists[i].thumbnail == null)
 					{
 						//add objects
 						lists[i].thumbnail = "source";
 						console.log(lists[i].thumbnail);
-						//lists[i].thumbnail.source = "<img src='images/no-thumbnail.jpg'>";
+						lists[i].thumbnail.source = "<img src='images/no-thumbnail.jpg'>";
 						
+					}else{
+						dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
+						+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>"
+						+ "<p>" + lists[i].extract + "</p>" + "</a>" + "</li>";
 					}
-					dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
-					+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>"
-					+ "<p>" + lists[i].extract + "</p>" + "</a>" + "</li>";
 				}
 			}
 		  	dataList += "</ul>";
