@@ -41,6 +41,11 @@ function dynamicSearch(inputText){
 				console.log(lists);
 				for(var i =0; i < lists.length; i++)
 				{
+					for( key in lists.thumbnail ){
+						if(lists.thumbnail == "" ){
+							console.log("true");
+						}
+					}    
 					if(lists[i].thumbnail == null)
 					{
 					lists[i].thumbnail = "source";	
