@@ -43,7 +43,7 @@ function dynamicSearch(inputText){
 				}
 		        let lists =  result.query.pages;
 		   	for(var i =0; i < result.query.pages.length; i++){
-				console.log(result.query.pages[i].title);
+				
 				if( result.query == null ){
 					return false;
 				}else{
@@ -52,7 +52,7 @@ function dynamicSearch(inputText){
 					  result.query.pages[i].thumbnail = "source";
 					  result.query.pages[i].thumbnail.source = "";
 				     }
-				
+				console.log(result.query.pages[i].title);
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + result.query.pages[i].pageid + "' target='_blank'>"
 					  + "<img src='" + result.query.pages[i].thumbnail.source + "'>" + "<h3>" + result.query.pages[i].title + "</h3>" + "<p>" 
 					  + result.query.pages[i].extract + "</p>" + "</a>" + "</li>";
