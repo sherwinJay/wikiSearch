@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function(e) {
+	e.preventDefault();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
