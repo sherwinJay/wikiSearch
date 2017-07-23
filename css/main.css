@@ -46,27 +46,8 @@ ul, ol{
 .col-right{
 	float: right;
 }
-.quoteContainer{
-	width: 600px;
-	padding: 20px 30px;
-	margin: 0 auto;
-	border: 1px solid #dedede;
-	background-color: #fff
-}
-.quoteContainer p{
-	text-align: center;
-}
-.quote{
-	font-family: 'josefin_sanslight';
-	font-size: 24px;
-}
-.button{
-	display: inline-block;
-	padding: 5px 12px;
-	background-color: #800;
-	color: #fff;
-	border-radius: 3px;
-}
-.twitterButton, .fb-button{
-	display: inline-block;
+.listBg{
+background-color: #fff;
+margin: 7px 0;
+padding: 10px;
 }
