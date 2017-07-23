@@ -41,7 +41,7 @@ function dynamicSearch(inputText){
 			}
 			else
 			{
-	        	let lists =  result.query.pages;
+	        	var lists =  result.query.pages;
 	   			console.log(lists);
 	   			for(var i =0; i < lists.length; i++)
 	   			{
