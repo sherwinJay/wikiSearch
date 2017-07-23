@@ -27,7 +27,8 @@ function dynamicSearch(inputText){
 	   dataType: "jsonp",	
 	   type: "POST",
 	   header: {"Api-User-Agent" : "wikiSearch"},
-	   success: function(result){
+	   success: function(result)
+	   {
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
 		//console.log(inputText.length);
 		const inputLength = 0;
@@ -36,33 +37,31 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
-		   	/**if( result.query == null ){
+		   	if( result.query == null )
+		   		{
 				//dataList += "";
-					return dynamicSearch();
-				}**/
-		        let lists =  result.query.pages;
-		   	console.log(lists);
-		   	for(var i =0; i < result.query.pages.length; i++){
-				
-				if( result.query == null ){
-					console.log("true");
-					result.errors.message = "Nothing Found";
-					dataList += "<li>" + result.errors.message + "</li>";
-				}else{
-				if(result.query.pages[i].thumbnail == null){
-					//add objects
-					  result.query.pages[i].thumbnail = "source";
-					  result.query.pages[i].thumbnail.source = "";
-				     }
-			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + result.query.pages[i].pageid + "' target='_blank'>"
-					  + "<img src='" + result.query.pages[i].thumbnail.source + "'>" + "<h3>" + result.query.pages[i].title + "</h3>" + "<p>" 
-					  + result.query.pages[i].extract + "</p>" + "</a>" + "</li>";
+				result.errors.message = "Nothing Found";
+				dataList += "<li>" + result.errors.message + "</li>";
+				}
+			else
+			{
+	        	let lists =  result.query.pages;
+	   			console.log(lists);
+	   			for(var i =0; i < result.query.pages.length; i++)
+	   			{
+					if(result.query.pages[i].thumbnail == null)
+					{
+						//add objects
+					  	result.query.pages[i].thumbnail = "source";
+					  	result.query.pages[i].thumbnail.source = "";
+				    }
+					dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + result.query.pages[i].pageid + "' target='_blank'>"
+				  	+ "<img src='" + result.query.pages[i].thumbnail.source + "'>" + "<h3>" + result.query.pages[i].title + "</h3>" + "<p>" 
+				  	+ result.query.pages[i].extract + "</p>" + "</a>" + "</li>";
 				}
 			}
 		   dataList += "</ul>";
-		   	document.getElementById("formWrapper").innerHTML = dataList;
-	  		
-   	}	 
+		   	document.getElementById("formWrapper").innerHTML = dataList;	  		
+   		}	 
 	});
-
-}  
+}
