@@ -46,6 +46,7 @@ function dynamicSearch(inputText){
 				
 				if( result.query == null ){
 					result.errors.message = "Nothing Found";
+					dataList += "<li>" + result.errors.message + "</li>";
 				}else{
 				if(result.query.pages[i].thumbnail == null){
 					//add objects
