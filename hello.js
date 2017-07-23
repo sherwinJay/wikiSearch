@@ -2,20 +2,22 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		if( inputVal.length > 0 ){
-		dynamicSearch();	
-		}
 		dynamicSearch(inputVal);
 	});
 });
 function dynamicSearch(inputText){
+	//try to make the full url into objects!
+	//"https://en.wikipedia.org/w/api.php?
+	var url = "https://en.wikipedia.org/w/api.php?";
 	$.ajax({
-	   url: "https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json",
+		//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
+	   url: "https://en.wikipedia.org/w/api.php?",
+	   data: {action: "query", formatversion: 2, generator: "prefixsearch", gpssearch: inputText, prop: "pageimages|extracts", piprop: "thumbnails", pithumbsize: 120, redirects: "", exintro: true, exsentences: 2, explaintext: true, format: "json"},
 	   type: "POST",
 	   dataType: "jsonp",
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(data){
-		console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
+		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
 		//console.log(inputText.length);
 		const inputLength = 0;
 			
@@ -23,15 +25,15 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
-		   	
-		   	if( data.query == null || data.continue == null){
+		   	if( data.query == null ){
 				//dataList += "";
-				console.log("true");
-				data.errors = "Nothing Found";
-				dataList += "<li>" + data.errors + "</li>";
-				}else{
+					return dynamicSearch();
+				}
 		        let lists =  data.query.pages;
 		   	for(var i =0; i < data.query.pages.length; i++){
+				if( data.query == null ){
+					return false;
+				}else{
 				if(data.query.pages[i].thumbnail == null){
 					//add objects
 					  data.query.pages[i].thumbnail = "source";
@@ -39,8 +41,8 @@ function dynamicSearch(inputText){
 				     }
 				
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + data.query.pages[i].pageid + "' target='_blank'>"
-					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" + data.query.pages[i].extract + "</p>"
-					  + "</a>" + "</li>";
+					  + "<img src='" + data.query.pages[i].thumbnail.source + "'>" + "<h3>" + data.query.pages[i].title + "</h3>" + "<p>" 
+					  + data.query.pages[i].extract + "</p>" + "</a>" + "</li>";
 				}
 				/**lists.forEach(function(item){
 				if(item != "" ){
@@ -65,3 +67,4 @@ function dynamicSearch(inputText){
 	});
 
 }  
+
