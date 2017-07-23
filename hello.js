@@ -12,9 +12,9 @@ function dynamicSearch(inputText){
 	$.ajax({
 		//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
 	   url: "https://en.wikipedia.org/w/api.php?",
-	   data: {action: "query", formatversion: 2, generator: "prefixsearch", gpssearch: inputText, prop: "pageimages|extracts", piprop: "thumbnails", pithumbsize: 120, redirects: "", exintro: true, exsentences: 2, explaintext: true, format: "json"},
-	   type: "POST",
-	   dataType: "jsonp",
+	   data: {action: "query", formatversion: 2, generator: "prefixsearch", gpssearch: inputText, prop: "pageimages|extracts", piprop: "thumbnails", pithumbsize: 120,  exintro: true, exsentences: 2, explaintext: true, format: "json"},
+	  dataType: "jsonp",
+	  type: "POST", 
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(data){
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
@@ -30,10 +30,10 @@ function dynamicSearch(inputText){
 					return dynamicSearch();
 				}
 		        let lists =  data.query.pages;
-		   	for(var i =0; i < data.query.pages.length; i++){
+		   	/**for(var i =0; i < data.query.pages.length; i++){
 				if( data.query == null ){
 					return false;
-				}else{
+				}else{**/
 				if(data.query.pages[i].thumbnail == null){
 					//add objects
 					  data.query.pages[i].thumbnail = "source";
@@ -59,7 +59,7 @@ function dynamicSearch(inputText){
 				dataList += "";
 					}
 				});**/
-			}
+			//}
 		   dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList;
 	  		
