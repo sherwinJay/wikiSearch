@@ -10,6 +10,12 @@ function dynamicSearch(inputText){
 	//"https://en.wikipedia.org/w/api.php?
 	var $url = "https://en.wikipedia.org/w/api.php?";
 	$.ajax({
+		/**prop: "pageimages|extracts", 
+	   		piprop: "thumbnails", 
+	   		pithumbsize: 120, 
+	   		exintro: true, 
+	   		exsentences: 2, 
+	   		explaintext: true, **/
 		//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
 	   url: $url,
 	   data: {
@@ -17,12 +23,6 @@ function dynamicSearch(inputText){
 	   		formatversion: 2, 
 	   		generator: "prefixsearch", 
 	   		gpssearch: $("input").val(), 
-	   		prop: "pageimages|extracts", 
-	   		piprop: "thumbnails", 
-	   		pithumbsize: 120, 
-	   		exintro: true, 
-	   		exsentences: 2, 
-	   		explaintext: true, 
 	   		format: "json"
 	   	},
 	   dataType: "jsonp",	
