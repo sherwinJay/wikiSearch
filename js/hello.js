@@ -43,11 +43,12 @@ function dynamicSearch(inputText){
 				console.log(lists);
 				for(var i =0; i < lists.length; i++)
 				{
-					if(lists[i].thumbnail == null)
+					if(lists[i].thumbnail.source == null)
 					{
 						//add objects
 						//lists[i].thumbnail = "source";
-						lists[i].thumbnail = "<img src='images/no-thumbnail.jpg'>";
+						lists[i].thumbnail.source = "<img src='images/no-thumbnail.jpg'>";
+						
 					}
 					dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
 					+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>"
