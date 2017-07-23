@@ -45,7 +45,7 @@ function dynamicSearch(inputText){
 					{
 						
 					lists[i].thumbnail = "source";
-						if(lists[i].thumbnail.source == undefined){
+						if(lists[i].thumbnail.source === undefined){
 						lists[i].thumbnail.source = "images/no-thumbnail.jpg";
 						console.log(lists[i].thumbnail.source);	
 						}
