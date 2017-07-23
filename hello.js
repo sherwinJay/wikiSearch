@@ -6,23 +6,21 @@ $(document).ready(function() {
 	});
 });
 function dynamicSearch(inputText){
-	//try to make the full url into objects!
-	//"https://en.wikipedia.org/w/api.php?
 	var $url = "https://en.wikipedia.org/w/api.php?";
 	$.ajax({//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
 	   url: $url,
 	   data: {
-	   		action: "query", 
-	   		formatversion: 2, 
-	   		generator: "prefixsearch", 
-	   		gpssearch: inputText, 
-		   	prop: "pageimages|extracts", 
-	   		piprop: "thumbnail", 
-	   		pithumbsize: 120, 
-	   		exintro: "true", 
-	   		exsentences: 2, 
-	   		explaintext: "true",
-	   		format: "json"
+		action: "query", 
+		formatversion: 2, 
+		generator: "prefixsearch", 
+		gpssearch: inputText, 
+		prop: "pageimages|extracts", 
+		piprop: "thumbnail", 
+		pithumbsize: 120, 
+		exintro: "true", 
+		exsentences: 2, 
+		explaintext: "true",
+		format: "json"
 	   	},
 	   dataType: "jsonp",	
 	   type: "POST",
@@ -32,37 +30,33 @@ function dynamicSearch(inputText){
 		//console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp");
 		//console.log(inputText.length);
 		const inputLength = 0;
-			
-			//lists = data.query.pages;
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
-			// try for loop
-		   	if( result.query == null )
-		   		{
-				//dataList += "";
-				console.log("true");
-				result.errors = "Nothing Found";
-				console.log(result.errors);
-				dataList += "<li>" + result.errors + "</li>";
-				}
+		   	if( result.query == null || result.continue == null )
+			{
+			console.log("true");
+			result.errors = "Nothing Found";
+			console.log(result.errors);
+			dataList += "<li>" + result.errors + "</li>";
+			}
 			else
 			{
 	        	let lists =  result.query.pages;
 	   			console.log(lists);
-	   			for(var i =0; i < result.query.pages.length; i++)
+	   			for(var i =0; i < lists.length; i++)
 	   			{
-					if(result.query.pages[i].thumbnail == null)
-					{
-						//add objects
-					  	result.query.pages[i].thumbnail = "source";
-					  	result.query.pages[i].thumbnail.source = "";
-				    }
-					dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + result.query.pages[i].pageid + "' target='_blank'>"
-				  	+ "<img src='" + result.query.pages[i].thumbnail.source + "'>" + "<h3>" + result.query.pages[i].title + "</h3>" + "<p>" 
-				  	+ result.query.pages[i].extract + "</p>" + "</a>" + "</li>";
+				if(lists[i].thumbnail == null)
+				{
+				//add objects
+				lists[i].thumbnail = "source";
+				lists[i].thumbnail.source = "";
+				}
+				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
+				+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>" + "<p>" 
+				+ lists.pages[i].extract + "</p>" + "</a>" + "</li>";
 				}
 			}
-		   dataList += "</ul>";
+		  	dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList;	  		
    		}	 
 	});
