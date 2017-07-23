@@ -42,7 +42,7 @@ function dynamicSearch(inputText){
 				for(var i =0; i < lists.length; i++)
 				{console.log(lists[i].thumbnail);
 					for( key in lists.thumbnail ){
-						if(lists[i].thumbnail == "" ){
+						if(lists[i].thumbnail == undefined ){
 							console.log("true");
 						}
 					}    
