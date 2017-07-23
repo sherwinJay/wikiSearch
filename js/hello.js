@@ -41,7 +41,7 @@ function dynamicSearch(inputText){
 				console.log(lists);
 				for(var i =0; i < lists.length; i++)
 				{console.log(lists[i].thumbnail);
-					for( key in lists.thumbnail ){
+					for( key in lists ){
 						if(lists[key].thumbnail == undefined ){
 							console.log("true");
 						}
