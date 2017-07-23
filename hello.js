@@ -40,6 +40,7 @@ function dynamicSearch(inputText){
 		   	if( result.query == null )
 		   		{
 				//dataList += "";
+				console.log("true");
 				result.errors.message = "Nothing Found";
 				dataList += "<li>" + result.errors.message + "</li>";
 				}
