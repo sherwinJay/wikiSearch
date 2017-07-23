@@ -43,6 +43,7 @@ function dynamicSearch(inputText){
 				console.log("true");
 				result.errors = "message";
 				result.errors.message = "Nothing Found";
+				console.log(result.errors);
 				dataList += "<li>" + result.errors.message + "</li>";
 				}
 			else
