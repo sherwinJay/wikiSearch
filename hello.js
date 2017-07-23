@@ -41,10 +41,9 @@ function dynamicSearch(inputText){
 		   		{
 				//dataList += "";
 				console.log("true");
-				result.errors = "message";
-				result.errors.message = "Nothing Found";
+				result.errors = "Nothing Found";
 				console.log(result.errors);
-				dataList += "<li>" + result.errors.message + "</li>";
+				dataList += "<li>" + result.errors + "</li>";
 				}
 			else
 			{
