@@ -43,7 +43,7 @@ function dynamicSearch(inputText){
 				{
 					if(lists[i].thumbnail == null)
 					{
-						
+					lists[i].thumbnail = "source";	
 					lists[i].thumbnail.source = "HI";
 						console.log(lists[i].thumbnail.source);
 						/**if(lists[i].thumbnail.source === "undefined"){
