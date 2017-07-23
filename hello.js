@@ -37,11 +37,12 @@ function dynamicSearch(inputText){
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
 			// try for loop
-		   	if( result.query == null ){
+		   	/**if( result.query == null ){
 				//dataList += "";
 					return dynamicSearch();
-				}
+				}**/
 		        let lists =  result.query.pages;
+		   	console.log(lists);
 		   	for(var i =0; i < result.query.pages.length; i++){
 				
 				if( result.query == null ){
@@ -52,26 +53,10 @@ function dynamicSearch(inputText){
 					  result.query.pages[i].thumbnail = "source";
 					  result.query.pages[i].thumbnail.source = "";
 				     }
-				console.log(result.query.pages[i].title);
 			dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + result.query.pages[i].pageid + "' target='_blank'>"
 					  + "<img src='" + result.query.pages[i].thumbnail.source + "'>" + "<h3>" + result.query.pages[i].title + "</h3>" + "<p>" 
 					  + result.query.pages[i].extract + "</p>" + "</a>" + "</li>";
 				}
-				/**lists.forEach(function(item){
-				if(item != "" ){
-				  //find if thumbnail property exists within the pages array of obj
-				if(item.thumbnail == null){
-					//add objects
-					  item.thumbnail = "source";
-					  item.thumbnail.source = "";
-				     }
-				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + item.pageid + "' target='_blank'>"
-					  + "<img src='" + item.thumbnail.source + "'>" + "<h3>" + item.title + "</h3>" + "<p>" + item.extract + "</p>"
-					  + "</a>" + "</li>";
-					}else{
-				dataList += "";
-					}
-				});**/
 			}
 		   dataList += "</ul>";
 		   	document.getElementById("formWrapper").innerHTML = dataList;
