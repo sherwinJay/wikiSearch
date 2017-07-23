@@ -45,6 +45,7 @@ function dynamicSearch(inputText){
 		   	for(var i =0; i < result.query.pages.length; i++){
 				
 				if( result.query == null ){
+					console.log("true");
 					result.errors.message = "Nothing Found";
 					dataList += "<li>" + result.errors.message + "</li>";
 				}else{
