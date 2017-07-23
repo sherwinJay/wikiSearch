@@ -48,7 +48,6 @@ function dynamicSearch(inputText){
 						//add objects
 						//lists[i].thumbnail = "source";
 						lists[i].thumbnail = "<img src='images/no-thumbnail.jpg'>";
-						console.log(lists[i].thumbnail.source);
 					}
 					dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
 					+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>"
