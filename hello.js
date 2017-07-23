@@ -45,7 +45,7 @@ function dynamicSearch(inputText){
 		   	for(var i =0; i < result.query.pages.length; i++){
 				
 				if( result.query == null ){
-					return false;
+					result.errors.message = "Nothing Found";
 				}else{
 				if(result.query.pages[i].thumbnail == null){
 					//add objects
