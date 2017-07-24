@@ -3,8 +3,8 @@ $(document).ready(function() {
 		e.preventDefault();
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		if(inputVal.length){
-			dynamicSearch(inputVal.length > 0);
+		if(inputVal.length > 0){
+			dynamicSearch(inputVal);
 		}else{
 			$("#formWrapper").empty();
 		}		
