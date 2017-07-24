@@ -44,6 +44,7 @@ function dynamicSearch(inputText){
 					for( key in lists ){
 						if(lists[key].thumbnail == undefined ){
 							console.log("true");
+							lists[key].thumbnail.source = "images/no-thumbnail.jpg";
 						}
 					}    
 					/**if(lists[i].thumbnail == null)
