@@ -62,6 +62,6 @@ margin: 0 10px;
 width: 1100px;
 margin: 0 auto;
 }
-.listBg img{
+.listBg a img{
 flex-shrink: 0;
 }
