@@ -52,8 +52,8 @@ function dynamicSearch(inputText){
 						}
 					}   
 				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
-				+ "<img src='" + lists[i].thumbnail.source + "'>" + "<h3>" + lists[i].title + "</h3>"
-				+ "<p>" + lists[i].extract + "</p>" + "</a>" + "</li>";
+				+ "<img src='" + lists[i].thumbnail.source + "'>" + "<div class='snippet-container'>" + "<h3>" + lists[i].title + "</h3>"
+				+ "<p>" + lists[i].extract + "</p>" + "</div>" + "</a>" + "</li>";
 					
 				}
 			}
