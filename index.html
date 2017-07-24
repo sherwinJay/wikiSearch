@@ -7,11 +7,16 @@
         <link rel="stylesheet" type="text/css" href="css/fonts/fonts.css"/>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/hello.js"></script>
+        <script>
+            function formSubmit(){
+                document.forms["myForm"].submit();            
+            }
+        </script>
     </head>
 
     <body>
         <div class="formWrapper">
-            <form action="/sherwinjay.github.io/wikiSearch/" method="get">
+            <form id="myForm" action="/sherwinjay.github.io/wikiSearch/" method="get">
                 <input name="search" type="text">
             </form>
             <div id="formWrapper">
