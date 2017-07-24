@@ -64,3 +64,9 @@ margin: 0 auto;
 flex-shrink: 0;
 align-self: center;
 }
+#myForm input{
+width: 100%;
+ padding: 15px;
+ box-shadow: #333 0 0 10px 4px;
+  border:none;
+}
