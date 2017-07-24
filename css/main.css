@@ -55,6 +55,6 @@ flex-direction: row;
 display: flex;
 flex-direction: row;
 }
-.snippet{
+.snippet-container{
 margin: 0 10px;
 }
