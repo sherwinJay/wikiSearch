@@ -23,7 +23,7 @@ function dynamicSearch(inputText){
 		piprop: "thumbnail", 
 		pithumbsize: 120, 
 		exintro: "true", 
-		exsentences: 4, 
+		exsentences: 2, 
 		explaintext: "true",
 		format: "json"
 	   	},
