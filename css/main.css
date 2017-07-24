@@ -48,4 +48,9 @@ ul, ol{
 background-color: #fff;
 margin: 7px 0;
 padding: 10px;
+display: flex;
+flex-direction: row;
+}
+.listBg img{
+
 }
