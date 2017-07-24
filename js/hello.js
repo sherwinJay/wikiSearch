@@ -3,7 +3,11 @@ $(document).ready(function() {
 		e.preventDefault();
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		dynamicSearch(inputVal);
+		if(inputVal.length){
+		dynamicSearch(inputVal.length > 0);
+		}else{
+		$("#formWrapper").empty();
+		}		
 	});
 });
 function dynamicSearch(inputText){
