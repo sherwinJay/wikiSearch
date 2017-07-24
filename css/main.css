@@ -58,3 +58,7 @@ flex-direction: row;
 .snippet-container{
 margin: 0 10px;
 }
+.formWrapper{
+width: 1100px;
+margin: 0 auto;
+}
