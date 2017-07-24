@@ -1,55 +1,53 @@
 *:focus{
-	outline: none;
+outline: none;
 }
 .cfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-	}
+visibility: hidden;
+display: block;
+font-size: 0;
+content: " ";
+clear: both;
+height: 0;
+}
 * html .cfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 a{
-	text-decoration: none;
+text-decoration: none;
 }
 h1, h2, h3, p, a{
-	display: block;
+display: block;
 }
 h1, .logo h1 a{
-	color: #fff;
+color: #fff;
 }
 h2{
-	font-size: 42px;
-	color: #3a4248;
-	line-height: 50px;
+font-size: 42px;
+color: #3a4248;
+line-height: 50px;
 }
 body {
-	background: #2e2e2e;
-	font-family: Helvetica, sans-serif;
-	font-size:14px;
-	line-height:24px;
-	color: #8c8c8c;
+background: #2e2e2e;
+font-family: Helvetica, sans-serif;
+font-size:14px;
+line-height:24px;
+color: #8c8c8c;
 }
 ul, ol{
-	list-style: none;
+list-style: none;
 }
 .tc{
-	text-align: center;
+text-align: center;
 }
 .col-left{
-	float: left;
+float: left;
 }
 .col-right{
-	float: right;
+float: right;
 }
 .listBg{
 background-color: #fff;
 margin: 7px 0;
 padding: 10px;
-display: flex;
-flex-direction: row;
 }
 .listBg a{
 display: flex;
@@ -64,4 +62,5 @@ margin: 0 auto;
 }
 .listBg a img{
 flex-shrink: 0;
+align-self: center;
 }
