@@ -4,9 +4,9 @@ $(document).ready(function() {
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(inputVal.length){
-		dynamicSearch(inputVal.length > 0);
+			dynamicSearch(inputVal.length > 0);
 		}else{
-		$("#formWrapper").empty();
+			$("#formWrapper").empty();
 		}		
 	});
 });
