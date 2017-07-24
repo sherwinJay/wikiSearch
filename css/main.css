@@ -51,6 +51,7 @@ padding: 10px;
 display: flex;
 flex-direction: row;
 }
-.listBg img{
-
+.listBg a{
+display: flex;
+flex-direction: row;
 }
