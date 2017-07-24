@@ -55,3 +55,6 @@ flex-direction: row;
 display: flex;
 flex-direction: row;
 }
+.snippet{
+margin: 0 10px;
+}
