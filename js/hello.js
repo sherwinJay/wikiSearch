@@ -13,8 +13,8 @@ function dynamicSearch(inputText){
 	   data: {
 		action: "query", 
 		formatversion: 2, 
-		generator: "prefixsearch", 
-		gpssearch: inputText, 
+		generator: "search", 
+		gsrsearch: inputText, 
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
 		pithumbsize: 120, 
