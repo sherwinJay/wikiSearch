@@ -30,7 +30,7 @@ function dynamicSearch(inputText){
 	   {console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true");
 			var dataList = "<ul>";
 			var formContainer = document.getElementById("formWrapper");
-		   	if( result.query == null )
+		   	if( result.query == null || result.continue == null)
 			{
 				result.errors = "Nothing Found";
 				dataList += "<li>" + result.errors + "</li>";
