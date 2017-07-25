@@ -113,7 +113,7 @@ margin: 0 auto;
 #myForm input{
 width: 100%;
 padding: 12px;
-box-shadow: #333 0 2px 10px 1px;
+box-shadow: #ccc 0 2px 10px 1px;
 border:none;
 font-size: 18px;
 line-height: 26px;
