@@ -9,7 +9,7 @@ $(document).ready(function() {
 			$("#formWrapper").empty();
 		}		
 	});
-	$(window).on("resize", function()){
+	$(window).on("resize", function(){
 		var windowHeight = $(this).innerHeight();
 		$(".formWrapper").css({
 			"height" : windowHeight		
