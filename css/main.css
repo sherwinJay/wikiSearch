@@ -85,7 +85,6 @@ float: left;
 .col-right{
 float: right;
 }
-
 .listBg{
 background-color: #fff;
 margin: 7px 0;
@@ -112,9 +111,9 @@ margin: 0 auto;
 }
 #myForm input{
 width: 100%;
- padding: 15px;
- box-shadow: #333 0 0 10px 4px;
-  border:none;
-	font-size: 18px;
-	line-height: 26px;
+padding: 12px;
+box-shadow: #333 0 0 10px 4px;
+border:none;
+font-size: 18px;
+line-height: 26px;
 }
