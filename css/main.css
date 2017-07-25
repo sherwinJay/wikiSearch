@@ -97,7 +97,9 @@ margin: 0 10px;
 }
 .formWrapper{
 width: 1100px;
-margin: 0 auto;
+dispay: flex;
+flex-direction: column;
+justify-content: center;
 }
 .listBg a img{
 flex-shrink: 0;
