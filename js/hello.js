@@ -9,6 +9,12 @@ $(document).ready(function() {
 			$("#formWrapper").empty();
 		}		
 	});
+	$(window).on("resize", function()){
+		var windowHeight = $(this).innerHeight();
+		$(".formWrapper").css({
+			"height" : windowHeight		
+		});
+	}
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
@@ -62,3 +68,4 @@ function dynamicSearch(inputText){
    		}	 
 	});
 }
+
