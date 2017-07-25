@@ -14,7 +14,7 @@ $(document).ready(function() {
 		$(".formWrapper").css({
 			"height" : windowHeight		
 		});
-	}
+	});
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
