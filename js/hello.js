@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	formWrapHeight();
 	$("form").on("keyup", "input", function(e){
 		e.preventDefault();
 		var inputVal = $(this).val();
@@ -10,11 +11,9 @@ $(document).ready(function() {
 		}		
 	});
 	$(window).on("resize", function(){
-		var windowHeight = $(this).innerHeight();
-		$(".formWrapper").css({
-			"height" : windowHeight		
-		});
+		formWrapHeight();
 	});
+	
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
@@ -68,4 +67,9 @@ function dynamicSearch(inputText){
    		}	 
 	});
 }
-
+function formWrapHeight(){
+	let windowHeight = $(this).innerHeight();
+	return $(".formWrapper").css({
+		"height" : windowHeight		
+	});
+}
