@@ -114,6 +114,7 @@ width: 650px;
 margin: 0 auto;
 }
 #myForm input{
+width: 100%;
 padding: 12px;
 box-shadow: #ccc 0 2px 4px 1px;
 border:none;
