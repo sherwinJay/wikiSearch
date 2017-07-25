@@ -53,9 +53,6 @@ text-decoration: none;
 h1, h2, h3, p, a{
 display: block;
 }
-h1, .logo h1 a{
-color: #fff;
-}
 h1{
 font-size: 50px;
 line-height: 65px;
@@ -118,6 +115,20 @@ border:none;
 font-size: 18px;
 line-height: 26px;
 }
-#myForm input:placeholder{
-color: #ccc;	
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ccc;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ccc;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ccc;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #ccc;
 }
