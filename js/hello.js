@@ -1,12 +1,11 @@
 $(document).ready(function() {
 	formConHeight();
 	$("form").on("keyup", "input", function(e){
-		e.preventDefault();
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(inputVal.length > 0){
 			e.preventDefault();
-		   	if(e.keyCode === 13){
+		   	if(inputVal.keyCode == 13){
 				e.preventDefault();
 				console.log("true");
 			   	dynamicSearch(inputVal);
