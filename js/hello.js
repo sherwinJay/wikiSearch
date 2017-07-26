@@ -64,7 +64,7 @@ function dynamicSearch(inputText){
 				}
 			}
 		  	dataList += "</ul>";
-		   	document.getElementById("listContainer").innerHTML = dataList;	  		
+		   	listContainer.innerHTML = dataList;	  		
    		}	 
 	});
 }
