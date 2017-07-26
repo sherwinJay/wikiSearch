@@ -67,6 +67,7 @@ color: #3a4248;
 line-height: 50px;
 }
 body {
+height: 100%;
 font-family: 'Montserrat', sans-serif;
 font-size:14px;
 line-height:24px;
