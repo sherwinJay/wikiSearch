@@ -3,11 +3,18 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		if( inputVal.length > 0){
+		if(inputVal.length > 0){
+		   	if(e.keyCode === 13){
+			   	dynamicSearch(inputVal);
+			   }
+		}else{
+			$("#listContainer").empty();
+		}
+		/**if( inputVal.length > 0){
 		dynamicSearch(inputVal);
 		}else{
 		$("#listContainer").empty();
-		}
+		}**/
 				
 	});
 	$(window).on("resize", function(){
