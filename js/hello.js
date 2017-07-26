@@ -4,8 +4,9 @@ $(document).ready(function() {
 		e.preventDefault();
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		$("#listContainer").empty();
-		if(inputVal.length > 0){
+		if(inputVal.length === 0){
+			$("#listContainer").empty();
+		}else{
 			dynamicSearch(inputVal);
 		}		
 	});
