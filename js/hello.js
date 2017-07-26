@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	formConHeight();
 	$("form").on("keyup", "input", function(e){
-		e.preventDefault();
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(inputVal.length === 0){
