@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	formWrapHeight();
+	formConHeight();
 	$("form").on("keyup", "input", function(e){
 		e.preventDefault();
 		var inputVal = $(this).val();
@@ -7,11 +7,11 @@ $(document).ready(function() {
 		if(inputVal.length > 0){
 			dynamicSearch(inputVal);
 		}else{
-			$("#formWrapper").empty();
+			$("#listContainer").empty();
 		}		
 	});
 	$(window).on("resize", function(){
-		formWrapHeight();
+		formConHeight();
 	});
 	
 });
@@ -38,7 +38,7 @@ function dynamicSearch(inputText){
 	   success: function(result)
 	   {console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true");
 			var dataList = "<ul>";
-			var formContainer = document.getElementById("formWrapper");
+			var listContainer = document.getElementById("listContainer");
 		   	if( result.query == null || result.continue == null)
 			{
 				result.errors = "Nothing Found";
@@ -63,13 +63,13 @@ function dynamicSearch(inputText){
 				}
 			}
 		  	dataList += "</ul>";
-		   	document.getElementById("formWrapper").innerHTML = dataList;	  		
+		   	document.getElementById("listContainer").innerHTML = dataList;	  		
    		}	 
 	});
 }
-function formWrapHeight(){
+function formConHeight(){
 	let windowHeight = $(this).innerHeight();
-	return $("#myForm").css({
+	return $(".formContainer").css({
 		"min-height" : windowHeight		
 	});
 }
