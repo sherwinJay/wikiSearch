@@ -69,7 +69,7 @@ function dynamicSearch(inputText){
 }
 function formWrapHeight(){
 	let windowHeight = $(this).innerHeight();
-	return $("#formWrapper").css({
+	return $("#myForm").css({
 		"min-height" : windowHeight		
 	});
 }
