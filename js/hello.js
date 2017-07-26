@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	formWrapHeight();
+	//formWrapHeight();
 	
 	$("form").on("keyup", "input", function(e){
 		e.preventDefault();
