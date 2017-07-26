@@ -88,6 +88,11 @@ float: right;
 .mainContainer{
 width: 1100px;
 margin: 0 auto;
+position: relative;
+}
+listContainer{
+position: absolute;
+top: 50%;
 }
 .listBg{
 background-color: #efefef;
@@ -124,6 +129,7 @@ box-shadow: #ccc 0 1px 4px 1px;
 border:none;
 font-size: 18px;
 line-height: 26px;
+margin-bottom: 70px;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
