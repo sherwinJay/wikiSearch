@@ -1,13 +1,14 @@
 $(document).ready(function() {
 	formConHeight();
-	$("form").on("keyup", "input", function(e){
+	$("form").on("keydown", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		if(inputVal.length === 0){
-			$(".listBg").css({"display" : "none"});
+		if( inputVal.length > 0){
+		dynamicSearch(inputVal);
 		}else{
-			dynamicSearch(inputVal);
-		}		
+		$("#listContainer").empty();
+		}
+				
 	});
 	$(window).on("resize", function(){
 		formConHeight();
