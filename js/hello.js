@@ -24,7 +24,7 @@ function dynamicSearch(inputText){
 		formatversion: 2, 
 		generator: "search", 
 		gsrsearch: inputText,
-		gpslimit: 5,
+		gsrlimit: 5,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
 		pithumbsize: 120, 
