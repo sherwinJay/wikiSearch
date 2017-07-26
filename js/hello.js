@@ -5,7 +5,9 @@ $(document).ready(function() {
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(inputVal.length > 0){
+			e.preventDefault();
 		   	if(e.keyCode === 13){
+				e.preventDefault();
 				console.log("true");
 			   	dynamicSearch(inputVal);
 			   }
