@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	//formWrapHeight();
+	formWrapHeight();
 	
 	$("form").on("keyup", "input", function(e){
 		e.preventDefault();
@@ -11,9 +11,9 @@ $(document).ready(function() {
 			$("#formWrapper").empty();
 		}		
 	});
-	/**$(window).on("resize", function(){
+	$(window).on("resize", function(){
 		formWrapHeight();
-	});**/
+	});
 	
 });
 function dynamicSearch(inputText){
@@ -70,7 +70,7 @@ function dynamicSearch(inputText){
 }
 function formWrapHeight(){
 	let windowHeight = $(this).innerHeight();
-	return $(".formWrapper").css({
+	return $("body").css({
 		"height" : windowHeight		
 	});
 }
