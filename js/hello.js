@@ -11,9 +11,9 @@ $(document).ready(function() {
 			$("#formWrapper").empty();
 		}		
 	});
-	$(window).on("resize", function(){
+	/**$(window).on("resize", function(){
 		formWrapHeight();
-	});
+	});**/
 	
 });
 function dynamicSearch(inputText){
