@@ -72,6 +72,9 @@ font-family: 'Montserrat', sans-serif;
 font-size:14px;
 line-height:24px;
 color: #8c8c8c;
+	display: flex;
+flex-direction: column;
+justify-content: center;
 }
 ul, ol{
 list-style: none;
