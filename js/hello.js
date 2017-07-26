@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	formConHeight();
-	$("form").on("keydown", "input", function(e){
+	$("form").on("keypress", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if( inputVal.length > 0){
