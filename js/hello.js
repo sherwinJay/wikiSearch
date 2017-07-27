@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	formConHeight();
+	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
@@ -79,7 +80,6 @@ function formConHeight(){
 	});
 }
 
-submitBtn();
 function submitBtn(){
 		
 			$(".srchBtn").on("click", function(){
