@@ -12,7 +12,7 @@ $(document).ready(function() {
 		}**/if(e.keyCode == 13){
 				e.preventDefault();
 				console.log("true");
-			   	$("button").click().fadeUp();
+			   	$("button").fadeUp().click();
 			   }else{
 			$("#listContainer").empty();
 		}
