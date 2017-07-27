@@ -21,8 +21,8 @@ $(document).ready(function() {
 	});
 	$("button").on("click", function(e){
 	e.preventDefault();
-		$("this").closest(".mainContainer").find("#listContainer").slideUp();
-		dynamicSearch();	
+		$("this").closest(".mainContainer").find("#listContainer").slideUp(dynamicSearch());
+		
 	});
 	
 });
