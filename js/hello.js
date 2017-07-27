@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	formConHeight();
-	submitBtn();
 	$("button").on("click", function(e){
 		e.preventDefault();
 		$(dynamicSearch()).fadeIn("slow");
@@ -23,8 +22,9 @@ $(document).ready(function() {
 	$(window).on("resize", function(){
 		formConHeight();
 	});
-	
-	
+	$(".srchBtn").on("click", function(){
+		submitBtn();
+	}
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
@@ -86,9 +86,7 @@ function formConHeight(){
 	});
 }
 function submitBtn(){
-	$(".srchBtn").on("click", function(){
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".centerLayout").removeClass("centerLayout");
 		$mainContainer.find(".formContainer")addClass(".topLayout");
-	});
 }
