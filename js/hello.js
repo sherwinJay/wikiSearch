@@ -12,7 +12,7 @@ $(document).ready(function() {
 		}**/if(e.keyCode == 13){
 				e.preventDefault();
 				console.log("true");
-			   	dynamicSearch(inputVal);
+			   	$("button").click();
 			   }else{
 			$("#listContainer").empty();
 		}
@@ -25,6 +25,10 @@ $(document).ready(function() {
 	});
 	$(window).on("resize", function(){
 		formConHeight();
+	});
+	$("button").on("click", function(e){
+	e.preventDefault();
+		dynamicSearch(inputVal);
 	});
 	
 });
