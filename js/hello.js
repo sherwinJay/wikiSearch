@@ -24,7 +24,7 @@ $(document).ready(function() {
 	});
 	$(".srchBtn").on("click", function(){
 		submitBtn();
-	}
+	});
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
