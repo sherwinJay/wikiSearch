@@ -6,7 +6,7 @@ $(document).ready(function() {
 		if(e.keyCode == 13){
 				e.preventDefault();
 				console.log("true");
-			   	$("button").slideUp("slow").click();
+			   	$("button").click().slideUp("slow");
 			   }else{
 			$("#listContainer").empty();
 		}
