@@ -14,7 +14,6 @@ $(document).ready(function() {
 		}**/
 				
 	});
-	console.log($("#listContainer").length);
 	$(window).on("resize", function(){
 		formConHeight();
 	});
@@ -89,5 +88,6 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
+		console.log($("#listContainer").length);
 	});
 }
