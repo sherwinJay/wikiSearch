@@ -88,5 +88,5 @@ function formConHeight(){
 function submitBtn(){
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".centerLayout").removeClass("centerLayout");
-		$mainContainer.find(".formContainer")addClass(".topLayout");
+		$mainContainer.find(".formContainer").addClass(".topLayout");
 }
