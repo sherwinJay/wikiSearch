@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	formConHeight();
-	dynamicSearch();
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
