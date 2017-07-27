@@ -4,7 +4,6 @@ $(document).ready(function() {
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-				$("this").closest(".mainContainer").find("#listContainer").slideUp();
 			   	$("button").click();
 			   }else{
 			$("#listContainer").empty();
@@ -21,7 +20,7 @@ $(document).ready(function() {
 	});
 	$("button").on("click", function(e){
 	e.preventDefault();
-		$("this").closest(".mainContainer").find("#listContainer").slideUp("slow ", function(){dynamicSearch();});
+		$("this").closest(".mainContainer").find("#listContainer").slideUp("slow ", dynamicSearch());
 		
 	});
 	
