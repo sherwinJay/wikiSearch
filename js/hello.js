@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	formConHeight();
+	submitBtn();
 	$("button").on("click", function(e){
 		e.preventDefault();
 		$(dynamicSearch()).fadeIn("slow");
@@ -8,7 +9,7 @@ $(document).ready(function() {
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-			   	$("button").click();
+			   	submitBtn();
 			   }else{
 			$("#listContainer").empty();
 		}
@@ -82,5 +83,12 @@ function formConHeight(){
 	let windowHeight = $(this).innerHeight();
 	return $(".formContainer").css({
 		"min-height" : windowHeight		
+	});
+}
+function submitBtn(){
+	$(".srchBtn").on("click", function(){
+		var $mainContainer = $(this).closest(".mainContainer");
+		$(".centerLayout").removeClass("centerLayout");
+		$mainContainer.find(".formContainer")addClass(".topLayout");
 	});
 }
