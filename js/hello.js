@@ -88,6 +88,6 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
-		console.log($("#listContainer").length);
+		console.log($("li").length);
 	});
 }
