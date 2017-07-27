@@ -3,13 +3,7 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		/**if(inputVal.length > 0){
-		   	if(e.keyCode == 13){
-				e.preventDefault();
-				console.log("true");
-			   	dynamicSearch(inputVal);
-			   }
-		}**/if(e.keyCode == 13){
+		if(e.keyCode == 13){
 				e.preventDefault();
 				console.log("true");
 			   	$("button").slideUp("slow").click();
