@@ -87,10 +87,6 @@ function formConHeight(){
 function submitBtn(){
 		
 	$(".srchBtn").on("click", function(){
-		if($("input").val() == 0){
-		$("#listContainer").empty();
-		}else{
 		dynamicSearch();
-		}
 	});
 }
