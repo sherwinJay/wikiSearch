@@ -4,10 +4,8 @@ $(document).ready(function() {
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-				e.preventDefault();
-				console.log("true");
-			   	$("button").click();
 				$("this").closest(".mainContainer").find("#listContainer").slideUp();
+			   	$("button").click();
 			   }else{
 			$("#listContainer").empty();
 		}
@@ -23,8 +21,8 @@ $(document).ready(function() {
 	});
 	$("button").on("click", function(e){
 	e.preventDefault();
-		dynamicSearch();
 		$("this").closest(".mainContainer").find("#listContainer").slideUp();
+		dynamicSearch();	
 	});
 	
 });
