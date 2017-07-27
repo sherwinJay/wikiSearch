@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	formConHeight();
+	$("button").on("click", function(e){
+		e.preventDefault();
+		$(dynamicSearch()).fadeIn("slow");
+	});
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
@@ -18,10 +22,7 @@ $(document).ready(function() {
 	$(window).on("resize", function(){
 		formConHeight();
 	});
-	$("button").on("click", function(e){
-		e.preventDefault();
-		$(dynamicSearch()).fadeIn("slow");
-	});
+	
 	
 });
 function dynamicSearch(inputText){
