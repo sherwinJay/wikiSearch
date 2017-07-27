@@ -21,7 +21,7 @@ $(document).ready(function() {
 	$("button").on("click", function(e){
 		
 	e.preventDefault();
-		dynamicSeach();
+		dynamicSearch();
 		$("this").closest(".mainContainer").find("#listContainer").slideUp("slow ");
 		
 		
