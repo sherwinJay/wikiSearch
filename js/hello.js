@@ -12,7 +12,7 @@ $(document).ready(function() {
 		}**/if(e.keyCode == 13){
 				e.preventDefault();
 				console.log("true");
-			   	$("button").fadeUp("slow").click();
+			   	$("button").slideUp("slow").click();
 			   }else{
 			$("#listContainer").empty();
 		}
@@ -28,7 +28,7 @@ $(document).ready(function() {
 	});
 	$("button").on("click", function(e){
 	e.preventDefault();
-		dynamicSearch().fadeUp();
+		dynamicSearch().slideUp();
 	});
 	
 });
