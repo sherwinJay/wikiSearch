@@ -1,9 +1,5 @@
 $(document).ready(function() {
 	formConHeight();
-	$("button").on("click", function(e){
-		e.preventDefault();
-		$(dynamicSearch()).fadeIn("slow");
-	});
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
@@ -82,6 +78,7 @@ function formConHeight(){
 		"min-height" : windowHeight		
 	});
 }
+
 submitBtn();
 function submitBtn(){
 		
