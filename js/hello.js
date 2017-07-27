@@ -18,9 +18,7 @@ $(document).ready(function() {
 	$(window).on("resize", function(){
 		formConHeight();
 	});
-	$("button").on("click", function(e){
-		
-	e.preventDefault();
+	$("button").on("click", function(){
 		$(dynamicSearch()).slideUp("slow ");
 	});
 	
