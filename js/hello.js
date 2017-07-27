@@ -17,15 +17,12 @@ $(document).ready(function() {
 	$(window).on("resize", function(){
 		formConHeight();
 	});
-	/**
-	var $mainContainer = $(this).closest(".mainContainer");
-		$(".centerLayout").removeClass("centerLayout");
-		$mainContainer.find(".formContainer").addClass(".topLayout");
-	**/
+	
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
-	$.ajax({//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
+	$.ajax({
+//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
 	   url: $url,
 	   data: {
 		action: "query", 
@@ -45,10 +42,16 @@ function dynamicSearch(inputText){
 	   type: "POST",
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(result)
-	   {console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true");
-			var dataList = "<ul>";
+	   {
+console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true");
+		//put css new layout here!!
+		/**
+		var $mainContainer = $(this).closest(".mainContainer");
+			$(".centerLayout").removeClass("centerLayout");
+			$mainContainer.find(".formContainer").addClass(".topLayout");
+		**/		
+	    var dataList = "<ul>";
 			var listContainer = document.getElementById("listContainer");
-	    		console.log($("li").length);
 		   	if( result.query == null || result.continue == null)
 			{
 				result.errors = "Nothing Found";
@@ -83,9 +86,7 @@ function formConHeight(){
 		"min-height" : windowHeight		
 	});
 }
-
 function submitBtn(){
-		
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
