@@ -86,7 +86,8 @@ function formConHeight(){
 
 function submitBtn(){
 		
-	$(".srchBtn").on("click", function(){
+	$(".srchBtn").on("click", function(e){
+		e.preventDefault();
 		dynamicSearch();
 	});
 }
