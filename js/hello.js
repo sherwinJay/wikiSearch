@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	formConHeight();
+	dynamicSearch();
+	searchBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
