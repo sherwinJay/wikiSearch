@@ -19,8 +19,11 @@ $(document).ready(function() {
 		formConHeight();
 	});
 	$("button").on("click", function(e){
+		
 	e.preventDefault();
-		$("this").closest(".mainContainer").find("#listContainer").slideUp("slow ", dynamicSearch());
+		dynamicSeach();
+		$("this").closest(".mainContainer").find("#listContainer").slideUp("slow ");
+		
 		
 	});
 	
