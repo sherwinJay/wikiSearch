@@ -21,10 +21,7 @@ $(document).ready(function() {
 	$("button").on("click", function(e){
 		
 	e.preventDefault();
-		dynamicSearch();
-		$("this").closest(".mainContainer").find("#listContainer").slideUp("slow ");
-		
-		
+		dynamicSearch().slideUp("slow ");
 	});
 	
 });
