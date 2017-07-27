@@ -19,7 +19,7 @@ $(document).ready(function() {
 		formConHeight();
 	});
 	$("button").on("click", function(){
-		$(dynamicSearch()).fadeIn("slow");
+		dynamicSearch().fadeIn("slow");
 	});
 	
 });
