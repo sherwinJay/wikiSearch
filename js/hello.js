@@ -95,6 +95,6 @@ function submitBtn(){
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").removeClass("centerLayout");
-		$mainContainer.find(".formContainer").addClass(".topLayout");
+		$mainContainer.find(".formContainer").addClass("topLayout");
 	});
 }
