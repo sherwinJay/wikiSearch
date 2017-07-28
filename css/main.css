@@ -112,6 +112,7 @@ flex-direction: column;
 justify-content: center;
 }
 .topLayout{
+display: flex;
 flex-direction: row; 
 justify-content: start; 
 background-color: #333; 
