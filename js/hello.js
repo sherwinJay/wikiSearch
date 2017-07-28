@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	formConHeight();
 	submitBtn();
+	formConHeight();
 	$(window).on("resize", function(){
 		formConHeight();
 	});
@@ -84,9 +84,10 @@ function formConHeight(){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
+		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").removeClass("centerLayout");
 		$mainContainer.find(".formContainer").addClass("topLayout");
-		dynamicSearch();
+		
 	});
 }
