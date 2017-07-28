@@ -89,7 +89,7 @@ float: right;
 width: 1100px;
 margin: 0 auto;
 position: relative;
-transition: 035s all ease-in-out;
+transition: 0.35s all ease-in-out;
 }
 #listContainer{
 position: absolute;
