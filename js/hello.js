@@ -94,7 +94,7 @@ function submitBtn(){
 		e.preventDefault();
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
-		$mainContainer.find(".centerLayout").slideUp().removeClass("centerLayout");
+		$mainContainer.find(".centerLayout").removeClass("centerLayout").slideUp();
 		$mainContainer.find(".formContainer").addClass("topLayout");
 	});
 }
