@@ -77,7 +77,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 }
 function formConHeight(){
 	let windowHeight = $(window).innerHeight();
-	return $(".formContainer").filter(".centerLayout").css({
+	return $(".centerLayout").css({
 		"min-height" : windowHeight		
 	});
 }
