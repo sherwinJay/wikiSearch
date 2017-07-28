@@ -8,16 +8,8 @@ $(document).ready(function() {
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-			   	submitBtn();
-			
-			
-			   }
-		/**if( inputVal.length > 0){
-		dynamicSearch(inputVal);
-		}else{
-		$("#listContainer").empty();
-		}**/
-				
+			 submitBtn();
+		   }			
 	});
 	
 });
@@ -92,9 +84,9 @@ function formConHeight(){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").removeClass("centerLayout");
 		$mainContainer.find(".formContainer").addClass("topLayout");
+		dynamicSearch();
 	});
 }
