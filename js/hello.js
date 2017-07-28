@@ -1,19 +1,6 @@
 $(document).ready(function() {
 	formConHeight();
 	submitBtn();
-	$("form").on("keyup", "input", function(e){
-		var inputVal = $(this).val();
-		inputVal= encodeURIComponent(inputVal.trim());
-		if(e.keyCode == 13){
-			   	submitBtn();
-			   }
-		/**if( inputVal.length > 0){
-		dynamicSearch(inputVal);
-		}else{
-		$("#listContainer").empty();
-		}**/
-				
-	});
 	$(window).on("resize", function(){
 		formConHeight();
 	});
@@ -49,7 +36,23 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 		var $mainContainer = $(this).closest(".mainContainer");
 			$(".centerLayout").removeClass("centerLayout");
 			$mainContainer.find(".formContainer").addClass(".topLayout");
-		**/		
+		**/	
+		$("form").on("keyup", "input", function(e){
+		var inputVal = $(this).val();
+		inputVal= encodeURIComponent(inputVal.trim());
+		if(e.keyCode == 13){
+			   	submitBtn();
+			var $mainContainer = $(this).closest(".mainContainer");
+			$(".centerLayout").removeClass("centerLayout");
+			$mainContainer.find(".formContainer").addClass(".topLayout");
+			   }
+		/**if( inputVal.length > 0){
+		dynamicSearch(inputVal);
+		}else{
+		$("#listContainer").empty();
+		}**/
+				
+	});
 	    var dataList = "<ul>";
 			var listContainer = document.getElementById("listContainer");
 		   	if( result.query == null || result.continue == null)
