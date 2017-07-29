@@ -92,7 +92,7 @@ position: relative;
 position: absolute;
 top: 100%;
 }
-.centerLayout, .topLayout{
+.centerLayout, .topLayout, #listContainer{
 transition: all 0.35s ease-in-out;
 }
 .listBg{
@@ -115,9 +115,9 @@ justify-content: center;
 .topLayout{
 display: flex !important;
 flex-direction: row; 
-justify-content: start; 
-background-color: #333;
+justify-content: start;
 min-height: 100% !important;
+background-color: #333;
 position: relative;
 z-index: 1;
 padding: 10px;
