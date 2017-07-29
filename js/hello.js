@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	formConHeight();
 	submitBtn();
+	formConHeight();	
 	$(window).on("resize", function(){
 		formConHeight();
 	});
