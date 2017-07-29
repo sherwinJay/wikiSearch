@@ -87,12 +87,8 @@ function submitBtn(){
 		e.preventDefault();
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
-		$mainContainer.find(".centerLayout").css({
-			"margin-top" : "-100px",
-			"opacity" : "0"
-		});
-		$(".centerLayout").removeClass("centerLayout");
-		$mainContainer.addclass("topLayout");
+		$(".centerLayout").fadeOut().removeClass("centerLayout");
+		$mainContainer.find(".formContainer").addclass("topLayout");
 		
 	});
 }
