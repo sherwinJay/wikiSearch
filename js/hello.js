@@ -88,9 +88,10 @@ function submitBtn(){
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").css({
-			"transition" : "all 0.90s ease-in-out",
+			
 			"justify-content" : "start",
-			"display" : "none"
+			"display" : "none",
+			"transition" : "all 0.90s ease-in-out"
 		});
 		//$mainContainer.find(".formContainer").addClass("topLayout");
 		
