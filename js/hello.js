@@ -90,7 +90,8 @@ function submitBtn(){
 		$mainContainer.find(".centerLayout").css({
 			
 			"justify-content" : "start",
-			"display" : "none",
+			"opacity" : "0",
+			"height": "0",
 			"transition" : "all 0.90s ease-in-out"
 		});
 		//$mainContainer.find(".formContainer").addClass("topLayout");
