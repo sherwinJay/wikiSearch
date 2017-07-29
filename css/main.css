@@ -116,8 +116,9 @@ justify-content: center;
 display: flex;
 flex-direction: row; 
 justify-content: start; 
-background-color: #333; 
-padding: 10px;
+background-color: #333;
+opacity: 0;
+height: 0;
 }
 .centerLayout h1{
 margin-top: -100px;
