@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	submitBtn();
 	formConHeight();
+	submitBtn();
 	$(window).on("resize", function(){
 		formConHeight();
 	});
@@ -89,7 +89,7 @@ function submitBtn(){
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").css({
 			
-			"justify-content" : "start",
+			"margin-top" : "-100px",
 			"opacity" : "0",
 			"height": "0",
 			"transition" : "all 0.90s ease-in-out"
