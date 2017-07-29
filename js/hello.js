@@ -98,7 +98,7 @@ function submitBtn(){
 			"height" : "100%",
 			"display" : "block",
 			"position" : "relative",
-			"z-index" " "1"
+			"z-index" " : "1"
 		});
 		
 	});
