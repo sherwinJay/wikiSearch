@@ -96,7 +96,9 @@ function submitBtn(){
 			"padding" : "10px",
 			"opacity" : "1",
 			"height" : "100%",
-			"display" : "block"
+			"display" : "block",
+			"position" : "relative",
+			"z-index" " "1"
 		});
 		
 	});
