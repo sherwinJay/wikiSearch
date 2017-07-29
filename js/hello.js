@@ -94,7 +94,11 @@ function submitBtn(){
 			"min-height": "0",
 			//"transition" : "all 0.90s ease-in-out"
 		});
-		$mainContainer.find("header").addClass("topLayout");
+		$mainContainer.find(".topLayout").css({
+			"padding" : "10px",
+			"opacity" : "1px",
+			"height" : "100%"
+		});
 		
 	});
 }
