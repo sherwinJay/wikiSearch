@@ -95,7 +95,8 @@ function submitBtn(){
 		$mainContainer.find(".topLayout").css({
 			"padding" : "10px",
 			"opacity" : "1",
-			"height" : "100%"
+			"height" : "100%",
+			"display" : "block"
 		});
 		
 	});
