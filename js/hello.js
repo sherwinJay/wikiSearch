@@ -88,11 +88,9 @@ function submitBtn(){
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").css({
-			
 			"margin-top" : "-100px",
 			"opacity" : "0",
-			"min-height": "0",
-			//"transition" : "all 0.90s ease-in-out"
+			"min-height": "0"
 		});
 		$mainContainer.find(".topLayout").css({
 			"padding" : "10px",
