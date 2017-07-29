@@ -85,13 +85,6 @@ function submitBtn(){
 	//put dynamic height function here..
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		formConheight();
-		let windowHeight = $(window).innerHeight();
-		let formHeight(){
-			return $(".centerLayout").css({
-			"min-height" : windowHeight		
-			});
-		}
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").removeClass("centerLayout");
