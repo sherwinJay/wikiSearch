@@ -22,7 +22,7 @@ function dynamicSearch(inputText){
 		action: "query", 
 		formatversion: 2, 
 		generator: "search", 
-		gsrsearch: $("input").val(),
+		gsrsearch: $(".formContainer").find("input").val(),
 		gsrlimit: 5,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
