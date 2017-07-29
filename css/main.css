@@ -89,11 +89,13 @@ float: right;
 width: 1100px;
 margin: 0 auto;
 position: relative;
-transition: 0.35s all ease-in-out;
 }
 #listContainer{
 position: absolute;
 top: 50%;
+}
+.centerLayout, .topLayout{
+transition: all 0.35s ease-in-out;
 }
 .listBg{
 background-color: #efefef;
