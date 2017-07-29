@@ -22,7 +22,7 @@ function dynamicSearch(inputText){
 		action: "query", 
 		formatversion: 2, 
 		generator: "search", 
-		gsrsearch:inputText,
+		gsrsearch:$("input").val(),
 		gsrlimit: 5,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
@@ -89,17 +89,10 @@ function submitBtn(){
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").css({
 			"margin-top" : "-100px",
-			"opacity" : "0",
-			"min-height": "0"
+			"opacity" : "0"
 		});
-		$mainContainer.find(".topLayout").css({
-			"padding" : "10px",
-			"opacity" : "1",
-			"height" : "100%",
-			"display" : "block",
-			"position" : "relative",
-			"z-index"  : "1"
-		});
+		$(".centerLayout").removeClass("centerLayout");
+		$mainContainer.addclass("topLayout");
 		
 	});
 }
