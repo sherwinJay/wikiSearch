@@ -4,12 +4,12 @@ $(document).ready(function() {
 	$(window).on("resize", function(){
 		formConHeight();
 	});
-			$("form").on("keyup", "input", function(e){
+	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-			 submitBtn();
-		   }			
+			submitBtn();
+		}			
 	});
 	
 });
@@ -91,10 +91,10 @@ function submitBtn(){
 			
 			"margin-top" : "-100px",
 			"opacity" : "0",
-			"height": "0",
-			"transition" : "all 0.90s ease-in-out"
+			"min-height": "0",
+			//"transition" : "all 0.90s ease-in-out"
 		});
-		//$mainContainer.find(".formContainer").addClass("topLayout");
+		$mainContainer.find("header").addClass("topLayout");
 		
 	});
 }
