@@ -95,18 +95,6 @@ top: 100%;
 .centerLayout, .topLayout, #listContainer{
 transition: all 0.35s ease-in-out;
 }
-.centerLayout #myForm{
-width: 650px;
-}
-.centerLayout input{
-width: 100%;
-padding: 12px;
-box-shadow: #ccc 0 1px 4px 1px;
-border:none;
-font-size: 18px;
-line-height: 26px;
-margin-bottom: 15px;
-}
 .centerLayout{
 display: flex;
 flex-direction: column;
@@ -114,6 +102,20 @@ justify-content: center;
 }
 .centerLayout h1{
 margin-top: -100px;
+}
+.centerLayout #myForm{
+width: 650px;
+}
+.centerLayout input{
+flex-gorw: 1;
+padding: 12px;
+box-shadow: #ccc 0 1px 4px 1px;
+border:none;
+font-size: 18px;
+line-height: 26px;
+}
+.centerLayout button{
+margin-top: 15px;
 }
 .topLayout #myForm, .centerLayout #myForm{
 margin: 0 auto;
@@ -166,6 +168,8 @@ align-self: center;
 #inputWrap{
 position: relative;
 box-sizing: border-box;
+display: flex;
+flex-basis: 0;
 }
 #inputWrap::before, #inputWrap::after{
 box-sizing: inherit;
@@ -174,6 +178,7 @@ width: 0;
 height: 0;
 content: "";
 position: absolute;
+z-index: -1;
 }
 #inputWrap::before{
 top: 0;
@@ -199,6 +204,10 @@ border-left-color: #2e2e2e;
 transition: border-color 0s ease-out 0.5s,
       width 0.25s ease-out 0.5s,
       height 0.25s ease-out 0.75s;
+}
+.centerLayout input:focus{
+border:#2e2e2e 1px solid;
+transition: 0.75s ease-out;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
