@@ -209,7 +209,7 @@ transition: border-color 0.75s ease-out 1s;
 margin: 0;
 }
 .centerLayout input:hover, .centerLayout input:focus{
-box-shadow: 0;
+box-shadow: none;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
