@@ -163,7 +163,7 @@ margin: 0 10px;
 flex-shrink: 0;
 align-self: center;
 }
-#inputWrap:focus{
+input:focus{
 border: #2e2e2e 1px solid;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
