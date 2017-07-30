@@ -163,12 +163,19 @@ margin: 0 10px;
 flex-shrink: 0;
 align-self: center;
 }
+#inputWrap{
+position: relative;
+}
 #inputWrap::before, #inputWrap::after{
 border: 2px solid transparent;
 width: 0;
 height: 0;
 content: "";
 position: absolute;
+}
+#inputWrap::before{
+top: 0;
+left: 0;
 }
 #inputWrap::after{
 bottom: 0;
