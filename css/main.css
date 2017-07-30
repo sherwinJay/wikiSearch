@@ -163,10 +163,7 @@ margin: 0 10px;
 flex-shrink: 0;
 align-self: center;
 }
-#inputWrap input{
-position: relative;
-}
-#inputWrap input::before{
+#inputWrap::before{
 content: "";
 position: absolute;
 top: 100%;
