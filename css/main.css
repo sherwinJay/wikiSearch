@@ -191,7 +191,7 @@ height: 100%;
 border-top-color: #2e2e2e;
 border-right-color: #2e2e2e;
 transition: width 0.25s ease-out, 
-	height 0.25s ease-out;
+	height 0.25s ease-out 0.25s;
 }
 #inputWrap:hover::after{
 border-bottom-color: #2e2e2e;
@@ -200,21 +200,6 @@ transition: border-color 0s ease-out 0.5s,
       width 0.25s ease-out 0.5s,
       height 0.25s ease-out 0.75s;
 }
-/**input::before{
-content: "";
-position: absolute;
-top: 100%;
-left: 0;
-bottom: 0;
-right: 100%;
-background: #2e2e2e;
-height: 1px;
-transition: all 0.45s ease-in-out;
-}
-input:focus:before{
-top: 0;
-right: 0;
-}**/
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
 }
