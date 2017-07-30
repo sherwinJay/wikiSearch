@@ -210,6 +210,7 @@ margin: 0;
 }
 .centerLayout input:hover, .centerLayout input:focus{
 box-shadow: none;
+transition: all .25s ease-out;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
