@@ -167,7 +167,7 @@ align-self: center;
 border: 2px solid transparent;
 width: 0;
 height: 0;
-conttent: "";
+content: "";
 position: absolute;
 }
 #inputWrap::after{
