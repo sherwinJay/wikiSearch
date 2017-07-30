@@ -174,7 +174,7 @@ background: #2e2e2e;
 height: 1px;
 transition: all 0.45s ease-in-out;
 }
-input:focus:before{
+#inputWrap:focus:before{
 top: 0;
 right: 0;
 }
