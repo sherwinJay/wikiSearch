@@ -50,7 +50,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 		   	if( result.query == null || result.continue == null)
 			{
 				result.errors = "Nothing Found";
-				dataList += "<li class='nothingFound'>" + result.errors + "</li>";
+				dataList += "<li class='nothingFound tc'>" + result.errors + "</li>";
 			}
 			else
 			{
