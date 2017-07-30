@@ -143,9 +143,9 @@ margin: 0;
 }
 #listContainer{
 width: 1000px;
-top: 0;
 right: 0;
 left: 0;
+margin: auto;
 }
 .listBg{
 background-color: #efefef;
