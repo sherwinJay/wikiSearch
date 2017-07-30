@@ -170,11 +170,11 @@ top: 100%;
 left: 0;
 bottom: 0;
 right: 100%;
-border: #2e2e2e 1px solid;
+background: #2e2e2e;
+height: 1px;
 transition: all 0.45s ease-in-out;
 }
 input:focus:before{
-height: 1px;
 top: 0;
 right: 0;
 }
