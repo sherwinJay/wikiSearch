@@ -107,7 +107,7 @@ margin-top: -100px;
 width: 650px;
 }
 .centerLayout input{
-flex-gorw: 1;
+flex-grow: 1;
 padding: 12px;
 box-shadow: #ccc 0 1px 4px 1px;
 border:none;
@@ -206,7 +206,8 @@ transition: border-color 0s ease-out 0.5s,
       height 0.25s ease-out 0.75s;
 }
 .centerLayout input:focus{
-border:#2e2e2e 1px solid;
+border:#2e2e2e 2px solid;
+box-shadow: 0;
 transition: 0.75s ease-out;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
