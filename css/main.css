@@ -168,6 +168,7 @@ position: relative;
 box-sizing: border-box;
 }
 #inputWrap::before, #inputWrap::after{
+box-sizing: inherit;
 border: 2px solid transparent;
 width: 0;
 height: 0;
@@ -189,7 +190,9 @@ height: 100%;
 #inputWrap:hover::before{
 border-top-color: #2e2e2e;
 border-right-color: #2e2e2e;
-transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
+transition: border-color 0s ease-out 0.5s,
+	width 0.25s ease-in-out, 
+	height 0.25s ease-in-out;
 }
 #inputWrap:hover::after{
 border-bottom-color: #2e2e2e;
