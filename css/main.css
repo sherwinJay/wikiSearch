@@ -209,7 +209,7 @@ transition: border-color 0s ease-out 0.5s,
 .centerLayout input:focus{
 border:#2e2e2e 2px solid;
 box-shadow: none;
-transition: border 0.75s ease-out;
+transition: border-color 0.75s ease-out;
 margin: 0;
 }
 input:hover{
