@@ -210,6 +210,9 @@ border:#2e2e2e 2px solid;
 box-shadow: 0;
 transition: 0.75s ease-out;
 }
+input:hover{
+box-shadow: 0;
+}
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
 }
