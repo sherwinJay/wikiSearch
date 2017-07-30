@@ -163,8 +163,20 @@ margin: 0 10px;
 flex-shrink: 0;
 align-self: center;
 }
-input:focus{
+input{
+position: relative;
+}
+input::before{
+content: "";
+position: absolute;
+top: 100%;
+left: 0;
+bottom: 0;
+right:0;
+height: 1px;
 border: #2e2e2e 1px solid;
+}
+input:focus input::before{
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
