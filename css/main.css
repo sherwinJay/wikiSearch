@@ -130,8 +130,8 @@ z-index: 1;
 padding: 10px;
 }
 .topLayout h1{
-font-size: 30px;
-line-height: 35px;
+font-size: 26px;
+line-height: 32px;
 color: #fff;
 }
 .topLayout #myForm{
@@ -144,6 +144,12 @@ margin: 0 5px;
 .topLayout input{
 padding: 0 5px;
 width: 250px;
+border: none; 
+border-radius: 3px;
+}
+.topLayout button{
+border: none;
+border-radius: 3px;
 }
 #listContainer{
 width: 1000px;
