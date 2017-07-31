@@ -213,34 +213,34 @@ position: relative;
 box-sizing: border-box;
 flex-basis: 0;
 }
-#inputWrap::before, #inputWrap::after{
+#inputWrap::before input, #inputWrap::after input{
 box-sizing: inherit;
 border: 2px solid transparent;
 width: 0;
 height: 0;
 content: "";
 position: absolute;
-z-index: -1;
+/*z-index: -1;*/
 }
-#inputWrap::before{
+#inputWrap::before input{
 top: 0;
 left: 0;
 }
-#inputWrap::after{
+#inputWrap::after input{
 bottom: 0;
 right: 0;
 }
-#inputWrap:focus::before, #inputWrap:focus::after{
+#inputWrap::before input:focus, #inputWrap::after input:focus{
 width: 100%;
 height: 100%;
 }
-#inputWrap:focus::before{
+#inputWrap::before input:focus{
 border-top-color: #2e2e2e;
 border-right-color: #2e2e2e;
 transition: width 0.25s ease-out, 
 	height 0.25s ease-out 0.25s;
 }
-#inputWrap:focus::after{
+#inputWrap::after input:focus{
 border-bottom-color: #2e2e2e;
 border-left-color: #2e2e2e;transition: border-color 0s ease-out 0.5s,
       width 0.25s ease-out 0.5s,
