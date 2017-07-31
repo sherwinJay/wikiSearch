@@ -145,11 +145,11 @@ margin: 0 5px;
 padding: 0 5px;
 width: 250px;
 border: none; 
-border-radius: 3px;
+border-radius: 2px;
 }
 .topLayout button{
 border: none;
-border-radius: 3px;
+border-radius: 2px;
 }
 #listContainer{
 width: 1000px;
