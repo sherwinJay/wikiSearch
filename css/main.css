@@ -214,7 +214,7 @@ border-right-color: #333 !important;
 border-bottom-color: #333 !important;
 border-left-color: #333 !important;
 }
-.centerLayout input:hover, .centerLayout input:focus{
+.inputAnimate input{
 box-shadow: none;
 transition: all .25s ease-out;
 }
