@@ -223,18 +223,18 @@ height: 100%;
 }
 #inputWrap:hover::before{
 animation: topLeft;
-border-top-color: #2e2e2e;
-border-right-color: #2e2e2e;
+/**border-top-color: #2e2e2e;
+border-right-color: #2e2e2e;**/
 transition: width 0.25s ease-out, 
 	height 0.25s ease-out 0.25s;
 }
 #inputWrap:hover::after{
 animation: bottomLeft;
-border-bottom-color: #2e2e2e;
-border-left-color: #2e2e2e;
+/**border-bottom-color: #2e2e2e;
+border-left-color: #2e2e2e;**/
 transition: border-color 0s ease-out 0.5s,
       width 0.25s ease-out 0.5s,
-      height 0.5s ease-out 0.75s;
+      height 0.25s ease-out 0.75s;
 }
 .centerLayout input:focus{
 border:#2e2e2e 2px solid;
