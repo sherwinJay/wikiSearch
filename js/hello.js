@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	
+	let windowHeight = $(window).innerHeight();
 	submitBtn();
-	formConHeight();
+	formConHeight(windowHeight);
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
@@ -71,16 +71,16 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
    		}	 
 	});
 }
-function formConHeight(){
-	let windowHeight = $(window).innerHeight();
+function formConHeight(formHeight){
 	return $(".centerLayout").css({
-		"min-height" : windowHeight		
+		"min-height" : formHeight		
 	});
 }
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
+		formConHeight(0);
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout");
 		
