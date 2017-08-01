@@ -82,7 +82,7 @@ function submitBtn(){
 		e.preventDefault();
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
-		$mainContainer.find(".centerLayout").css({"min-height" : "0 !important"});
+		$mainContainer.find(".centerLayout .inputAnimate").css({"border" : "none !important"});
 		$(".centerLayout").removeClass("centerLayout");
 		$mainContainer.find(".formContainer").addClass("topLayout");
 		
