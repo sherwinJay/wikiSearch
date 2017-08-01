@@ -73,7 +73,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 }
 function formConHeight(formHeight){
 	return $(".centerLayout").css({
-		"height" : formHeight + "px"		
+		"min-height" : formHeight + "px"		
 	});
 }
 
@@ -87,7 +87,7 @@ function submitBtn(){
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout").slideUp();
 		
-		$mainContainer.find(".formContainer").addClass("topLayout");
+		$mainContainer.find(".formContainer").addClass("topLayout").slideDown();
 		
 	});
 }
