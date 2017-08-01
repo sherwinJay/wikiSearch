@@ -240,7 +240,7 @@ border-left-color: #2e2e2e;**/
 }
 .centerLayout input:focus{
 border:#2e2e2e 2px solid;
-transition: border-color 0.75s ease-out 1s;
+transition: border-color 0.75s ease-in-out 1s;
 margin: 0;
 }
 .centerLayout input:hover, .centerLayout input:focus{
