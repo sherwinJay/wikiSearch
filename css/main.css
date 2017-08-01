@@ -151,13 +151,15 @@ width: 250px;
 border: none; 
 border-radius: 2px;
 }
-.centerLayout button .topLayout button{
+.centerLayout button, .topLayout button{
 border: none;
 border-radius: 2px;
 }
 .centerLayout button{
 background-color: #333;
 padding: 2px 4px;
+color: #fff;
+align-item center;
 }
 #listContainer{
 width: 1000px;
