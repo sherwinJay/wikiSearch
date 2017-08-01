@@ -13,7 +13,7 @@ $(document).ready(function() {
 	});	
 	
 	$(window).on("resize", function(){
-		formConHeight();
+		formConHeight(windowHeight);
 	});
 });
 function dynamicSearch(inputText){
