@@ -81,10 +81,10 @@ function submitBtn(){
 		e.preventDefault();
 		formConHeight(0);
 		dynamicSearch();
-		$(".inputAnimate").removeClass("inputAnimate");
-		$(".centerLayout").removeClass("centerLayout");
-		
 		var $mainContainer = $(this).closest(".mainContainer");
+		$(".inputAnimate").removeClass("inputAnimate");
+		$(".centerLayout").removeClass("centerLayout").slideUp();
+		
 		$mainContainer.find(".formContainer").addClass("topLayout");
 		
 	});
