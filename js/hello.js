@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	let windowHeight = $(window).innerHeight();
-	let headerHeight = $(".topLayout").innerHeight();
 	formConHeight(windowHeight);
+	let headerHeight = $(".topLayout").innerHeight();
+	
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
