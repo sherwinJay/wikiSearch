@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
 	});	
 	
-	$(window).on("resize", function(){
+	$(window).on("enter", function(){
 		formConHeight();
 	});
 });
