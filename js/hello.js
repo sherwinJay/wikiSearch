@@ -10,7 +10,7 @@ $(document).ready(function() {
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
-	}).on("click", "input", function(){
+	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
 	});	
 });
