@@ -2,18 +2,19 @@ $(document).ready(function() {
 	formConHeight();
 	submitBtn();
 	
-	$(window).on("resize", function(){
-		formConHeight();
-	});
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
-	})/**.on("mouseenter", "input", function(){
+	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
-	})**/;	
+	});	
+	
+	$(window).on("resize", function(){
+		formConHeight();
+	});
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
