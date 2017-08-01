@@ -82,7 +82,7 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
-		formConHeight(headerHeight);
+		formConHeight(52);
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout").slideUp();
