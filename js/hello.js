@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	let windowHeight = $(window).innerHeight();
+	let headerHeight = $(".topLayout").innerHeight();
 	formConHeight(windowHeight);
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
@@ -73,14 +74,14 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 }
 function formConHeight(formHeight){
 	return $(".centerLayout").css({
-		"min-height" : formHeight		
+		"min-height" : formHeight + "px"		
 	});
 }
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		formConHeight($(".topLayout").innerHeight());
 		dynamicSearch();
+		formConHeight(headerHeight);
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout").slideUp();
