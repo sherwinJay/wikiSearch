@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	let windowHeight = $(window).innerHeight();
-	submitBtn();
 	formConHeight(windowHeight);
+	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
@@ -79,8 +79,8 @@ function formConHeight(formHeight){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		dynamicSearch();
 		formConHeight(0);
+		dynamicSearch();
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout");
 		
