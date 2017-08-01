@@ -8,7 +8,7 @@ $(document).ready(function() {
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
-	}).on("mouseenter", "input", function(){
+	}).on("click", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
 	});	
 	
@@ -78,11 +78,10 @@ function formConHeight(formHeight){
 }
 
 function submitBtn(){
-	let headerHeight = $(".topLayout").innerHeight();
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
-		formConHeight(52);
+		formConHeight(0);
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout").slideUp();
