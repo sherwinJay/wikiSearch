@@ -26,7 +26,7 @@ function dynamicSearch(inputText){
 		formatversion: 2, 
 		generator: "search", 
 		gsrsearch:$("input").val(),
-		gsrlimit: 5,
+		gsrlimit: 10,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
 		pithumbsize: 120, 
@@ -80,9 +80,9 @@ function formConHeight(){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
+		$(".centerLayout").removeClass("centerLayout");
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
-		$(".centerLayout").removeClass("centerLayout");
 		$mainContainer.find(".formContainer").addClass("topLayout");
 		
 	});
