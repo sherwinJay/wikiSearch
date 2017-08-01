@@ -85,7 +85,7 @@ function submitBtn(){
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout").slideUp();
 		
-		$mainContainer.find(".formContainer").addClass("topLayout").slideDown();
+		$mainContainer.find(".formContainer").addClass("topLayout").fadeIn();
 		
 	});
 }
