@@ -77,8 +77,8 @@ function formConHeight(formHeight){
 	});
 }
 
-let headerHeight = $(".topLayout").innerHeight();
 function submitBtn(){
+	let headerHeight = $(".topLayout").innerHeight();
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
