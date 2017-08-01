@@ -79,9 +79,9 @@ function formConHeight(){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".centerLayout").removeClass("centerLayout");
+		dynamicSearch();
 		$mainContainer.find(".formContainer").addClass("topLayout");
 		
 	});
