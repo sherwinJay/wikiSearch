@@ -11,9 +11,9 @@ $(document).ready(function() {
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
-	}).on("mouseenter", "input", function(){
+	})/**.on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
-	});	
+	})**/;	
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
@@ -79,9 +79,9 @@ function formConHeight(){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
+		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".centerLayout").removeClass("centerLayout");
-		dynamicSearch();
 		$mainContainer.find(".formContainer").addClass("topLayout");
 		
 	});
