@@ -8,11 +8,11 @@ $(document).ready(function() {
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
-	}).on("hover", "input", function(){
+	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
 	});	
 	
-	$(window).on("enter", function(){
+	$(window).on("resize", function(){
 		formConHeight();
 	});
 });
