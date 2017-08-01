@@ -88,7 +88,7 @@ function submitBtn(){
 		e.preventDefault();
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
-		$(".centerLayout").removeClass("centerLayout").fadeOut();
+		$(".centerLayout").removeClass("centerLayout");
 		$mainContainer.find(".formContainer").addClass("topLayout");
 		
 	});
