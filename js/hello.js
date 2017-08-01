@@ -73,7 +73,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 }
 function formConHeight(formHeight){
 	return $(".centerLayout").css({
-		"min-height" : formHeight + "px"		
+		"height" : formHeight + "px"		
 	});
 }
 
