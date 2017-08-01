@@ -79,7 +79,7 @@ function formConHeight(formHeight){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		formConHeight(0);
+		formConHeight($(".topLayout").innerHeight());
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".inputAnimate").removeClass("inputAnimate");
