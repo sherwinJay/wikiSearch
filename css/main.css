@@ -180,24 +180,6 @@ position: relative;
 box-sizing: border-box;
 flex-basis: 0;
 }
-@keyframe topleft{
-	0%{
-	top: 0;
-	left: 0;	
-	}
-	100%{
-	
-	}
-}
-@keyframe bottomRight{
-	0%{
-	bottom: 0;
-	right: 0;	
-	}
-	100%{
-
-	}
-}
 #inputWrap::before, #inputWrap::after{
 box-sizing: inherit;
 border: 2px solid transparent;
@@ -221,24 +203,24 @@ height: 100%;
 }
 #inputWrap:hover::before{
 animation: topLeft;
-border-top-color: #2e2e2e;
-border-right-color: #2e2e2e;
+border-top-color: #333;
+border-right-color: #333;
 transition: width 0.25s ease-out, 
 	height 0.25s ease-out 0.25s;
 
 }
 #inputWrap:hover::after{
 animation: bottomLeft;
-border-bottom-color: #2e2e2e;
-border-left-color: #2e2e2e;
+border-bottom-color: #333;
+border-left-color: #333;
 transition: border-color 0s ease-out 0.5s,
 	width 0.25s ease-out 0.5s,
 	height 0.25s ease-out 0.75s;
 
 }
 .centerLayout input:focus{
-border:#2e2e2e 2px solid;
-transition: border-color 0.75s ease-in-out;
+border:#333 2px solid;
+transition: border-color 1s ease-in-out;
 margin: 0;
 }
 .centerLayout input:hover, .centerLayout input:focus{
