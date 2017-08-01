@@ -80,8 +80,10 @@ function formConHeight(){
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		$(".centerLayout").removeClass("centerLayout");
 		dynamicSearch();
+		$(".inputAnimate").removeClass("inputAnimate");
+		$(".centerLayout").removeClass("centerLayout");
+		
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".formContainer").addClass("topLayout");
 		
