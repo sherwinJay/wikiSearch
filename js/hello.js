@@ -1,7 +1,7 @@
 $(document).ready(function() {
-	
-	submitBtn();
 	formConHeight();
+	submitBtn();
+	
 	$(window).on("resize", function(){
 		formConHeight();
 	});
@@ -40,13 +40,6 @@ function dynamicSearch(inputText){
 	   success: function(result)
 	   {
 console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true");
-		//put css new layout here!!
-		/**
-		var $mainContainer = $(this).closest(".mainContainer");
-			$(".centerLayout").removeClass("centerLayout");
-			$mainContainer.find(".formContainer").addClass(".topLayout");
-		**/	
-
 	    var dataList = "<ul>";
 			var listContainer = document.getElementById("listContainer");
 		   	if( result.query == null || result.continue == null)
@@ -84,7 +77,6 @@ function formConHeight(){
 	});
 }
 function submitBtn(){
-	//put dynamic height function here..
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
