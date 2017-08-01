@@ -202,7 +202,7 @@ transition: border-color 0s ease-out 0.5s,
 width 0.25s ease-out 0.5s,
 height 0.25s ease-out 0.75s;
 }
-#inputWrap:hover::before, .inputanimate{
+#inputWrap:hover::before, #inputWrap:hover::after, .inputanimate{
 width: 100% !important;
 height: 100% !important;
 }
