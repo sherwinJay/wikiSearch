@@ -197,11 +197,11 @@ left: 0;
 bottom: 0;
 right: 0;
 }
-#inputWrap:hover::before, #inputWrap:hover::after{
+#inputWrap:hover::before, #inputWrap:hover::after, .inputAnimate{
 width: 100%;
 height: 100%;
 }
-#inputWrap:hover::before{
+#inputWrap:hover::before, .inputAnimate{
 animation: topLeft;
 border-top-color: #333;
 border-right-color: #333;
@@ -209,7 +209,7 @@ transition: width 0.25s ease-out,
 	height 0.25s ease-out 0.25s;
 
 }
-#inputWrap:hover::after{
+#inputWrap:hover::after, .inputAnimate{
 animation: bottomLeft;
 border-bottom-color: #333;
 border-left-color: #333;
