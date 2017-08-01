@@ -79,11 +79,11 @@ function formConHeight(){
 
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
+		$(".inputAnimate").removeClass("inputAnimate");
+		$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
-		$(".inputAnimate").removeClass("inputAnimate");
-		$(".centerLayout").removeClass("centerLayout").slideUp();
 		
 		$mainContainer.find(".formContainer").addClass("topLayout").fadeIn();
 		
