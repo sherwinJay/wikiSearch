@@ -1,6 +1,5 @@
 $(document).ready(function() {
-	let windowHeight = $(window).innerHeight();
-	formConHeight(windowHeight);
+	formConHeight();
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
@@ -13,7 +12,7 @@ $(document).ready(function() {
 	});	
 	
 	$(window).on("resize", function(){
-		formConHeight(windowHeight);
+		formConHeight();
 	});
 });
 function dynamicSearch(inputText){
@@ -71,9 +70,10 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
    		}	 
 	});
 }
-function formConHeight(formHeight){
+function formConHeight(){
+	let windowHeight = $(window).innerHeight();
 	return $(".centerLayout").css({
-		"min-height" : formHeight + "px"		
+		"min-height" : windowHeight + "px"		
 	});
 }
 
@@ -81,7 +81,6 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		dynamicSearch();
-		formConHeight(0);
 		var $mainContainer = $(this).closest(".mainContainer");
 		$(".inputAnimate").removeClass("inputAnimate");
 		$(".centerLayout").removeClass("centerLayout").slideUp();
