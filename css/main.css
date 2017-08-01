@@ -186,10 +186,7 @@ flex-basis: 0;
 	left: 0;	
 	}
 	100%{
-	border-top-color: #2e2e2e;
-	border-right-color: #2e2e2e;
-		transition: width 0.25s ease-out, 
-	height 0.25s ease-out 0.25s;
+	
 	}
 }
 @keyframe bottomRight{
@@ -198,11 +195,7 @@ flex-basis: 0;
 	right: 0;	
 	}
 	100%{
-	border-bottom-color: #2e2e2e;
-	border-left-color: #2e2e2e;
-		transition: border-color 0s ease-out 0.5s,
-      width 0.25s ease-out 0.5s,
-      height 0.25s ease-out 0.75s;
+
 	}
 }
 #inputWrap::before, #inputWrap::after{
@@ -214,33 +207,38 @@ content: "";
 position: absolute;
 z-index: -1;
 }
-/**#inputWrap::before{
+#inputWrap::before{
 top: 0;
 left: 0;
 }
 #inputWrap::after{
 bottom: 0;
 right: 0;
-}**/
+}
 #inputWrap:hover::before, #inputWrap:hover::after{
 width: 100%;
 height: 100%;
 }
 #inputWrap:hover::before{
 animation: topLeft;
-/**border-top-color: #2e2e2e;
-border-right-color: #2e2e2e;**/
+border-top-color: #2e2e2e;
+border-right-color: #2e2e2e;
+transition: width 0.25s ease-out, 
+	height 0.25s ease-out 0.25s;
 
 }
 #inputWrap:hover::after{
 animation: bottomLeft;
-/**border-bottom-color: #2e2e2e;
-border-left-color: #2e2e2e;**/
+border-bottom-color: #2e2e2e;
+border-left-color: #2e2e2e;
+transition: border-color 0s ease-out 0.5s,
+	width 0.25s ease-out 0.5s,
+	height 0.25s ease-out 0.75s;
 
 }
 .centerLayout input:focus{
 border:#2e2e2e 2px solid;
-transition: border-color 0.75s ease-in-out 1s;
+transition: border-color 0.75s ease-in-out;
 margin: 0;
 }
 .centerLayout input:hover, .centerLayout input:focus{
