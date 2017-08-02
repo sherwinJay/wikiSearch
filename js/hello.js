@@ -8,7 +8,7 @@ $(document).ready(function() {
 		inputVal2 = encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
 			dynamicSearch(inputVal2);
-			submitBtn();
+			//submitBtn();
 		}			
 	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
