@@ -5,7 +5,7 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		submitBtn(inputVal);
+		//submitBtn(inputVal);
 		if(e.keyCode == 13){
 			submitBtn(inputVal);
 		}			
