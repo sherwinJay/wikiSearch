@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//put submit function inside of key event and try to get inputText.
 	formConHeight();
-	submitBtn();
+	//submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
