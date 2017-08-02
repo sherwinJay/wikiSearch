@@ -26,7 +26,7 @@ function dynamicSearch(inputText){
 		action: "query", 
 		formatversion: 2, 
 		generator: "search", 
-		gsrsearch: $("input").val(),
+		gsrsearch: inputText,
 		gsrlimit: 10,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
@@ -80,12 +80,14 @@ function formConHeight(){
 	});
 }
 
-function submitBtn(){
+function submitBtn(test){
 	$(".srchBtn").on("click", function(e){
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
+		var a = $(this).closest(".formContainer").find("input").val();
+		
 		e.preventDefault();
 		$(".hide").removeClass("hide");
-		dynamicSearch();
+		dynamicSearch(a);
 		var $mainContainer = $(this).closest(".mainContainer");
 		
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
