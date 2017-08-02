@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	//put submit function inside of key event and try to get inputText.
-	//var inputVal = $("input").val();
 	formConHeight();
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
@@ -82,9 +80,7 @@ function formConHeight(){
 
 function submitBtn(test){
 	$(".srchBtn").on("click", function(e){
-		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		var a = $(this).closest(".formContainer").find("input").val();
-		
 		e.preventDefault();
 		$(".hide").removeClass("hide");
 		dynamicSearch(a);
