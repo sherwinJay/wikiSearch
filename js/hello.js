@@ -80,8 +80,8 @@ function formConHeight(){
 
 function submitBtn(test){
 	$(".srchBtn").on("click", function(e){
-		var a = $(this).closest(".formContainer").find("input").val();
 		e.preventDefault();
+		var a = $(this).closest(".formContainer").find("input").val();
 		$(".hide").removeClass("hide");
 		dynamicSearch(a);
 		var $mainContainer = $(this).closest(".mainContainer");
