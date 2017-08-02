@@ -1,14 +1,14 @@
 $(document).ready(function() {
 	//put submit function inside of key event and try to get inputText.
-	var inputVal = $("input").val();
+	//var inputVal = $("input").val();
 	formConHeight();
-	dynamicTest(inputVal);
+	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal2 = $(this).val();
 		inputVal2 = encodeURIComponent(inputVal.trim());
-		submitBtn(inputVal2);
+		dynamicSearch(inputVal2);
 		if(e.keyCode == 13){
-			submitBtn(inputVal2);
+			submitBtn();
 		}			
 	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
@@ -81,12 +81,12 @@ function formConHeight(){
 	});
 }
 
-function submitBtn(test){
+function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		$(".hide").removeClass("hide");
-		dynamicSearch(test);
+		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
