@@ -120,7 +120,7 @@ margin: 2px
 .centerLayout button{
 margin-top: 15px;
 }
-.topLayout #myForm, .centerLayout #myForm{
+.topLayout #headerForm, .centerLayout #myForm{
 margin: 0 auto;
 }
 .topLayout{
