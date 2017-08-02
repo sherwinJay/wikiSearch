@@ -5,6 +5,7 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
+		dynamicSearch(inputVal);
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
@@ -25,7 +26,7 @@ function dynamicSearch(inputText){
 		action: "query", 
 		formatversion: 2, 
 		generator: "search", 
-		gsrsearch:$("input").val(),
+		gsrsearch:inputText,
 		gsrlimit: 10,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
@@ -78,12 +79,12 @@ function formConHeight(){
 	});
 }
 
-function submitBtn(){
+function submitBtn(inputVal){
 	$(".srchBtn").on("click", function(e){
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		$(".hide").removeClass("hide");
-		dynamicSearch();
+		//dynamicSearch(inputVal);
 		var $mainContainer = $(this).closest(".mainContainer");
 		
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
