@@ -6,7 +6,6 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal2 = $(this).val();
 		inputVal2 = encodeURIComponent(inputVal.trim());
-		dynamicSearch(inputVal2);
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
@@ -27,7 +26,7 @@ function dynamicSearch(inputText){
 		action: "query", 
 		formatversion: 2, 
 		generator: "search", 
-		gsrsearch: inputText,
+		gsrsearch: $("input").val(),
 		gsrlimit: 10,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
