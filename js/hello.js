@@ -7,7 +7,7 @@ $(document).ready(function() {
 		var inputVal2 = $(this).val();
 		inputVal2 = encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-			submitBtn();
+			submitBtn(inputVal);
 		}			
 	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
