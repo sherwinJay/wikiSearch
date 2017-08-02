@@ -4,10 +4,10 @@ $(document).ready(function() {
 	formConHeight();
 	submitBtn(inputVal);
 	$("form").on("keyup", "input", function(e){
-		var inputVal = $(this).val();
-		inputVal= encodeURIComponent(inputVal.trim());
+		var inputVal2 = $(this).val();
+		inputVal2 = encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-			submitBtn(inputVal);
+			submitBtn(inputVal2);
 		}			
 	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
