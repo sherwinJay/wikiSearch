@@ -22,18 +22,22 @@
                 <div class="formContainer topLayout hide" >
                     <form id="headerForm" name="headerForm" action="/wikiSearch" method="get">
                         <h1 class="tc">WikiSearch</h1>
-                    <input placeholder="Search" name="myForm" type="text">
-                    <button class="srchBtn" type="submit">Search Me</button>
-                    <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Article</a>
+                        <input placeholder="Search" name="myForm" type="text">
+                        <div class="buttonWrapper">
+                        <button class="srchBtn" type="submit">Search Me</button>
+                        <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Article</a>
+                        </div>
                     </form>
                 </div>
             </header>
             <div class="formContainer centerLayout" >
                 <form id="myForm" name="myForm" action="/wikiSearch" method="get">
-                     <h1 class="tc">WikiSearch</h1>
+                    <h1 class="tc">WikiSearch</h1>
                     <div id="inputWrap"><input placeholder="Search" name="myForm" type="text"></div>
+                    <div class="buttonWrapper">
                     <button class="srchBtn" type="submit">Search Me</button>
                     <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Article</a>
+                    </div>
                 </form>
             </div>
             <div id="listContainer"></div>
