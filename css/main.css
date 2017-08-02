@@ -95,7 +95,7 @@ top: 100%;
 .centerLayout, .topLayout{
 transition: all 0.35s ease-in-out;
 }
-.centerLayout, .topLayout, .topLayout #myForm, .listBg a, #inputWrap{
+.centerLayout, .topLayout, .topLayout #headerForm, .listBg a, #inputWrap{
 display: flex !important;
 }
 .centerLayout{
