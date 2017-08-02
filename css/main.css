@@ -105,7 +105,7 @@ justify-content: center;
 .centerLayout h1{
 margin-top: -100px;
 }
-.centerLayout #headerForm{
+.centerLayout #myForm{
 width: 650px;
 }
 .centerLayout input{
@@ -138,7 +138,7 @@ font-size: 26px;
 line-height: 32px;
 color: #fff;
 }
-.topLayout #myForm{
+.topLayout #headerForm{
 width: 1200px;
 flex-direction: row;
 }
