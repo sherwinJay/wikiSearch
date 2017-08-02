@@ -81,11 +81,11 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
-		/**$(".hide").removeClass("hide");
+		$(".hide").removeClass("hide");
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		
-		$mainContainer.find(".centerLayout").addClass("hide").slideUp();**/
+		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
 		
 	});
 }
