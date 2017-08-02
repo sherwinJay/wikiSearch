@@ -78,12 +78,12 @@ function formConHeight(){
 	});
 }
 
-function submitBtn(inputValue){
+function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		$(".hide").removeClass("hide");
-		dynamicSearch(inputValue);
+		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
