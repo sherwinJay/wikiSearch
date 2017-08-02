@@ -2,7 +2,7 @@ $(document).ready(function() {
 	//put submit function inside of key event and try to get inputText.
 	var inputVal = $("input").val();
 	formConHeight();
-	//submitBtn();
+	submitBtn(inputVal);
 	$("form").on("keyup", "input", function(e){
 		var inputVal2 = $(this).val();
 		inputVal2 = encodeURIComponent(inputVal.trim());
@@ -43,7 +43,8 @@ function dynamicSearch(inputText){
 	   success: function(result)
 	   {
 console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true");
-	    var dataList = "<ul>";
+	    console.log(inputText);
+		   var dataList = "<ul>";
 			var listContainer = document.getElementById("listContainer");
 		   	if( result.query == null || result.continue == null)
 			{
