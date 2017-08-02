@@ -6,9 +6,9 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal2 = $(this).val();
 		inputVal2 = encodeURIComponent(inputVal.trim());
-		submitBtn(inputVal2);
 		if(e.keyCode == 13){
-			submitBtn(inputVal2);
+			dynamicSearch(inputVal2);
+			submitBtn();
 		}			
 	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
