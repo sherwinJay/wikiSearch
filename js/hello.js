@@ -26,7 +26,7 @@ function dynamicSearch(inputText){
 		action: "query", 
 		formatversion: 2, 
 		generator: "search", 
-		gsrsearch:$("#myForm, #headerForm").find("input").val(),
+		gsrsearch: inputText,
 		gsrlimit: 10,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
