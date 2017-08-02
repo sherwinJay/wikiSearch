@@ -5,9 +5,9 @@ $(document).ready(function() {
 	$("form").on("keyup", "input", function(e){
 		var inputVal = $(this).val();
 		inputVal= encodeURIComponent(inputVal.trim());
-		dynamicSearch(inputVal);
+		submitBtn(inputVal);
 		if(e.keyCode == 13){
-			submitBtn();
+			submitBtn(inputVal);
 		}			
 	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
@@ -84,7 +84,7 @@ function submitBtn(inputVal){
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		$(".hide").removeClass("hide");
-		//dynamicSearch(inputVal);
+		dynamicSearch(inputVal);
 		var $mainContainer = $(this).closest(".mainContainer");
 		
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
