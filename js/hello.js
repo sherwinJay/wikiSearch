@@ -79,13 +79,13 @@ function formConHeight(){
 
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
-		$(".inputAnimate").removeClass("inputAnimate");
-		$(".centerLayout").removeClass("centerLayout").slideUp();
+		$(".hide").removeClass("hide");
+		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		
-		$mainContainer.find(".formContainer").addClass("topLayout").fadeIn();
+		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
 		
 	});
 }
