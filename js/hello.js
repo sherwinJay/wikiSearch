@@ -2,12 +2,12 @@ $(document).ready(function() {
 	//put submit function inside of key event and try to get inputText.
 	var inputVal = $("input").val();
 	formConHeight();
-	submitBtn(inputVal);
+	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		var inputVal2 = $(this).val();
 		inputVal2 = encodeURIComponent(inputVal.trim());
 		if(e.keyCode == 13){
-			submitBtn(inputVal);
+			submitBtn();
 		}			
 	}).on("mouseenter", "input", function(){
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
@@ -26,7 +26,7 @@ function dynamicSearch(inputText){
 		action: "query", 
 		formatversion: 2, 
 		generator: "search", 
-		gsrsearch: inputText,
+		gsrsearch: $("input").val(),
 		gsrlimit: 10,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
@@ -79,12 +79,12 @@ function formConHeight(){
 	});
 }
 
-function submitBtn(search){
+function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		$(".hide").removeClass("hide");
-		dynamicSearch(search);
+		dynamicSearch();
 		var $mainContainer = $(this).closest(".mainContainer");
 		
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
