@@ -79,9 +79,9 @@ function formConHeight(){
 	});
 }
 
-function submitBtn(inputVal){
+function submitBtn(inputValue){
 	$(".srchBtn").on("click", function(e){
-		dynamicSearch(inputVal);
+		dynamicSearch(inputValue);
 		//$(".centerLayout").removeClass("centerLayout").slideUp();
 		e.preventDefault();
 		$(".hide").removeClass("hide");
