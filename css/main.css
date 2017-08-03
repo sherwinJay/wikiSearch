@@ -241,7 +241,7 @@ display: flex;
 .buttonWrapper button, .buttonWrapper a{
 font-family: 'Montserrat';
 font-size: 12px;
-padding: 10px 15px;
+padding: 8px 12px;
 border: none;
 border-radius: 2px;
 }
