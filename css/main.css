@@ -181,15 +181,15 @@ z-index: -1;
 #inputWrap::before{
 top: 0;
 left: 0;
-transition: width 0.2s ease-out, 
-height 0.2s ease-out 0.2s;
+transition: width 0.25s ease-out, 
+height 0.25s ease-out 0.25s;
 }
 #inputWrap::after{
 bottom: 0;
 right: 0;
-transition: border-color 0s ease-out 0.4s,
-width 0.2s ease-out 0.4s,
-height 0.2s ease-out 0.6s;
+transition: border-color 0s ease-out 0.5s,
+width 0.25s ease-out 0.5s,
+height 0.25s ease-out 0.75s;
 }
 #inputWrap:hover::before, #inputWrap:hover::after, .inputAnimate::before, .inputAnimate::after{
 width: 100% !important;
