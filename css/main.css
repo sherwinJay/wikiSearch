@@ -119,8 +119,9 @@ margin: 2px
 .topLayout #headerForm, .centerLayout #myForm{
 margin: 0 auto;
 }
+/** #27292b **/
 .topLayout{
-background-color: #27292b;
+background-color: #26262f;
 padding: 10px;
 }
 .topLayout h1{
