@@ -247,7 +247,7 @@ border: none;
 border-radius: 2px;
 }
 .centerLayout button, .centerLayout .buttonWrapper a{
-background-color: #333;
+background-color: #27292b;
 color: #fff;
 align-item center;
 margin: 15px 7px 0;
@@ -255,6 +255,6 @@ justify-content: center;
 border-radius: 0;
 }
 .topLayout .buttonWrapper a{
-background-color: #27292b;
+background-color: #dedede;
 margin-left: auto;
 }
