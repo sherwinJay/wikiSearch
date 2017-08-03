@@ -85,13 +85,12 @@ float: left;
 .col-right{
 float: right;
 }
-/**.mainContainer{
+.mainContainer{
 position: relative;
 }
 #listContainer{
 position: absolute;
-top: 100%;
-}**/
+}
 .centerLayout, .topLayout{
 transition: all 0.35s ease-in-out;
 }
@@ -142,7 +141,7 @@ margin: 0 5px;
 }
 .topLayout input{
 padding: 0 5px;
-width: 250px;
+width: 320px;
 border: none; 
 border-radius: 2px;
 }
@@ -150,7 +149,7 @@ border-radius: 2px;
 border: none;
 border-radius: 2px;
 }
-.centerLayout button, centerLayout a{
+.centerLayout button, .centerLayout a{
 background-color: #333;
 padding: 10px 15px;
 color: #fff;
