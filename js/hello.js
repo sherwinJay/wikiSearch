@@ -82,11 +82,9 @@ function submitBtn(test){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		var a = $(this).closest(".formContainer").find("input").val();
-		$(".hide").removeClass("hide");
 		dynamicSearch(a);
+		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
-		
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
-		
 	});
 }
