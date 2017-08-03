@@ -110,7 +110,7 @@ width: 650px;
 .centerLayout input{
 flex-grow: 1;
 padding: 12px;
-box-shadow: #ccc 0 1px 4px 1px;
+box-shadow: #bbb 0 1px 4px 1px;
 border:none;
 font-size: 18px;
 line-height: 26px;
@@ -212,7 +212,7 @@ font-size: 65px;
 color: rgba(175,175,175, 0.8);
 line-height: 80px;
 font-weight: bold;
-text-shadow: 1px 2px 4px #fff, 0 0 0 #000, 1px 2px 4px #fff;
+text-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
 }
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #bbb;
