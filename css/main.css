@@ -149,7 +149,7 @@ border-radius: 2px;
 border: none;
 border-radius: 2px;
 }
-.centerLayout button, .centerLayout a{
+.centerLayout button, .centerLayout .buttonWrapper a{
 background-color: #333;
 padding: 10px 15px;
 color: #fff;
