@@ -249,7 +249,8 @@ border-radius: 2px;
 background-color: #333;
 color: #fff;
 align-item center;
-margin-top: 15px;
+margin: 15px 7px 0;
+justify-content: center;
 }
 .topLayout .buttonWrapper a{
 background-color: #dedede;
