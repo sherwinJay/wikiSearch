@@ -237,15 +237,11 @@ display: none !important;
 .buttonWrapper{
 width: 100%;
 display: flex;
+}
+.buttonWrapper button, .buttonWrapper a{
 font-family: 'Montserrat';
 font-size: 12px;
 padding: 10px 15px;
-}
-.topLayout .buttonWrapper a{
-background-color: #dedede;
-margin-left: auto;
-}
-.centerLayout button, .topLayout button, .centerLayout .buttonWrapper a{
 border: none;
 border-radius: 2px;
 }
@@ -254,4 +250,8 @@ background-color: #333;
 color: #fff;
 align-item center;
 margin-top: 15px;
+}
+.topLayout .buttonWrapper a{
+background-color: #dedede;
+margin-left: auto;
 }
