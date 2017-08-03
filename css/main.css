@@ -250,9 +250,11 @@ display: none !important;
 .buttonWrapper{
 width: 100%;
 display: flex;
-background-color: #dedede;
+font-family: 'Montserrat';
+font-size: 12px;
 }
 .buttonWrapper a{
+background-color: #dedede;
 display: inline-block;
 margin-left: auto;
 padding: 10px 15px;
