@@ -116,9 +116,6 @@ font-size: 18px;
 line-height: 26px;
 margin: 2px
 }
-.centerLayout button{
-margin-top: 15px;
-}
 .topLayout #headerForm, .centerLayout #myForm{
 margin: 0 auto;
 }
@@ -144,16 +141,6 @@ padding: 0 5px;
 width: 320px;
 border: none; 
 border-radius: 2px;
-}
-.centerLayout button, .topLayout button{
-border: none;
-border-radius: 2px;
-}
-.centerLayout button, .centerLayout .buttonWrapper a{
-background-color: #333;
-padding: 10px 15px;
-color: #fff;
-align-item center;
 }
 #listContainer{
 width: 1000px;
@@ -252,10 +239,19 @@ width: 100%;
 display: flex;
 font-family: 'Montserrat';
 font-size: 12px;
+padding: 10px 15px;
 }
 .topLayout .buttonWrapper a{
 background-color: #dedede;
-display: inline-block;
 margin-left: auto;
-padding: 10px 15px;
+}
+.centerLayout button, .topLayout button, .centerLayout .buttonWrapper a{
+border: none;
+border-radius: 2px;
+}
+.centerLayout button, .centerLayout .buttonWrapper a{
+background-color: #333;
+color: #fff;
+align-item center;
+margin-top: 15px;
 }
