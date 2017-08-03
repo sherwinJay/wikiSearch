@@ -55,7 +55,7 @@ h1{
 font-size: 65px;
 line-height: 78px;
 font-weight: bold;
-color: #454545;
+color: #27292b;
 margin-bottom: 15px;
 }
 h2{
@@ -247,14 +247,13 @@ border: none;
 border-radius: 2px;
 }
 .centerLayout button, .centerLayout .buttonWrapper a{
-background-color: #27292b;
+background-color: #555;
 color: #fff;
-align-item center;
 margin: 22px 5px 0;
-justify-content: center;
 border-radius: 0;
 }
 .topLayout .buttonWrapper a{
 background-color: #dedede;
 margin-left: auto;
+line-height: normal;
 }
