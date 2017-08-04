@@ -88,12 +88,9 @@ float: right;
 .mainContainer{
 position: relative;
 }
-#listContainer{
-position: absolute;
-}
-.centerLayout, .topLayout{
+/**.centerLayout, .topLayout{
 transition: all 0.35s ease-in-out;
-}
+}**/
 .centerLayout, .topLayout, .topLayout #headerForm, .listBg a, #inputWrap{
 display: flex !important;
 }
@@ -123,6 +120,9 @@ margin: 0 auto;
 .topLayout{
 background-color: #26262f;
 padding: 10px;
+width: 100%;
+position: fixed;
+z-index: 999;
 }
 .topLayout h1{
 font-size: 26px;
@@ -148,6 +148,8 @@ width: 1000px;
 right: 0;
 left: 0;
 margin: auto;
+position: absolute;
+padding-top: 60px;
 }
 .listBg{
 background-color: #efefef;
@@ -163,6 +165,7 @@ margin: 0 10px;
 .listBg a img{
 flex-shrink: 0;
 align-self: center;
+min-width: 120px;
 }
 #inputWrap{
 position: relative;
