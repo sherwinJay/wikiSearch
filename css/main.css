@@ -160,10 +160,6 @@ flex-direction: row;
 .snippet-container{
 margin: 0 10px;
 }
-.listBg a img{
-flex-shrink: 0;
-align-self: center;
-}
 #inputWrap{
 position: relative;
 box-sizing: border-box;
@@ -266,5 +262,7 @@ border-radius: 4px;
 max-height: 120px;
 min-width: 120px;
 overflow: hidden;
+flex-shrink: 0;
+align-self: center;
 }
 /**#24292e**/
