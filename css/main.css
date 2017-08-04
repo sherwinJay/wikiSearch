@@ -118,7 +118,7 @@ margin: 0 auto;
 /** #27292b **/
 .topLayout{
 background-color: #26262f;
-padding: 10px;
+padding: 12px 0;
 width: 100%;
 position: fixed;
 z-index: 999;
@@ -127,7 +127,7 @@ z-index: 999;
 font-size: 26px;
 line-height: 32px;
 align-self: center;
-margin: 0 10px;
+margin: 0;
 }
 .topLayout h1 a{
 color: #fff !important;
@@ -141,6 +141,7 @@ padding: 0 5px;
 width: 320px;
 border: none; 
 border-radius: 4px 0 0 4px;
+margin-left: 12px;
 }
 #listContainer{
 width: 1000px;
