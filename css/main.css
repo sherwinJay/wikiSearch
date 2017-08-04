@@ -134,9 +134,9 @@ align-self: center;
 width: 1200px;
 flex-direction: row;
 }
-.topLayout h1, .topLayout input{
+/**.topLayout h1, .topLayout input{
 margin: 0 5px;
-}
+}**/
 .topLayout input{
 padding: 0 5px;
 width: 320px;
