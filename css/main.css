@@ -149,7 +149,6 @@ right: 0;
 left: 0;
 margin: auto;
 position: absolute;
-padding-top: 60px;
 }
 .listBg{
 background-color: #efefef;
@@ -269,5 +268,8 @@ min-width: 120px;
 overflow: hidden;
 flex-shrink: 0;
 align-self: center;
+}
+.mainHeader{
+height: 52px;
 }
 /**#24292e**/
