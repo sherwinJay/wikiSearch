@@ -52,6 +52,7 @@ h1, h2, h3, p, a{
 display: block;
 }
 h1, h2, h3{
+font-style: 'Montserrat';
 font-weight: bold;
 }
 h1{
@@ -66,7 +67,7 @@ margin-bottom: 4px;
 }
 body {
 height: 100%;
-font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
 font-size:14px;
 line-height:24px;
 color: #8c8c8c;
