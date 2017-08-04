@@ -263,4 +263,8 @@ border-radius: 0 4px 4px 0;
 .topLayout a{
 border-radius: 4px;
 }
+.imgContainer{
+max-height: 120px;
+overflow: hidden;
+}
 /**#24292e**/
