@@ -64,7 +64,6 @@ margin-bottom: 15px;
 h3{
 font-size: 18px;
 margin-bottom: 4px;
-color: #fff;
 }
 body {
 height: 100%;
@@ -127,9 +126,11 @@ z-index: 999;
 .topLayout h1{
 font-size: 26px;
 line-height: 32px;
-color: #fff;
 align-self: center;
 margin: 0 10px;
+}
+.topLayout h1 a{
+color: #fff !important;
 }
 .topLayout #headerForm{
 width: 1200px;
