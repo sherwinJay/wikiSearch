@@ -129,6 +129,7 @@ font-size: 26px;
 line-height: 32px;
 color: #fff;
 align-self: center;
+margin: 0 10px;
 }
 .topLayout #headerForm{
 width: 1200px;
