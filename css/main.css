@@ -257,6 +257,9 @@ border-radius: 0 4px 4px 0;
 .topLayout a{
 border-radius: 4px;
 }
+button{
+cursor: pointer;
+}
 .imgContainer{
 max-height: 120px;
 min-width: 120px;
