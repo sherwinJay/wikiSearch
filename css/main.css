@@ -142,7 +142,7 @@ margin: 0 5px;
 padding: 0 5px;
 width: 320px;
 border: none; 
-border-radius: 2px;
+border-radius: 4px 0 0 4px;
 }
 #listContainer{
 width: 1000px;
@@ -260,5 +260,11 @@ border-radius: 0;
 background-color: #dedede;
 margin-left: auto;
 line-height: normal;
+}
+.topLayout button{
+border-radius: 0 4px 4px 0;
+}
+.topLayout a{
+border-radius: 4px;
 }
 /**#24292e**/
