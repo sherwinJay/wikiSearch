@@ -163,7 +163,6 @@ margin: 0 10px;
 .listBg a img{
 flex-shrink: 0;
 align-self: center;
-min-width: 120px;
 }
 #inputWrap{
 position: relative;
@@ -265,6 +264,7 @@ border-radius: 4px;
 }
 .imgContainer{
 max-height: 120px;
+min-width: 120px;
 overflow: hidden;
 }
 /**#24292e**/
