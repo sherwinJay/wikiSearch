@@ -87,9 +87,6 @@ float: right;
 .mainContainer{
 position: relative;
 }
-/**.centerLayout, .topLayout{
-transition: all 0.35s ease-in-out;
-}**/
 .centerLayout, .topLayout, .topLayout #headerForm, .listBg a, #inputWrap{
 display: flex !important;
 }
@@ -112,10 +109,9 @@ font-size: 18px;
 line-height: 26px;
 margin: 1px
 }
-.topLayout #headerForm, .centerLayout #myForm{
+.topLayout #headerForm, .centerLayout #myForm, #listContainer{
 margin: 0 auto;
 }
-/** #27292b **/
 .topLayout{
 background-color: #26262f;
 padding: 12px 0;
@@ -133,7 +129,7 @@ margin: 0;
 color: #fff !important;
 }
 .topLayout #headerForm{
-width: 1200px;
+width: 1100px;
 flex-direction: row;
 }
 .topLayout input{
@@ -147,15 +143,15 @@ margin-left: 12px;
 width: 1000px;
 right: 0;
 left: 0;
-margin: auto;
 position: absolute;
 }
 .listBg{
-background-color: #efefef;
 margin: 7px 0;
-padding: 10px;
+background-color: #efefef;
+position: relative;
 }
 .listBg a{
+padding: 10px;
 flex-direction: row;
 }
 .snippet-container{
@@ -255,6 +251,11 @@ line-height: normal;
 }
 .topLayout button{
 border-radius: 0 4px 4px 0;
+padding: 0;
+}
+.topLayout button a{
+background: url(images/99676-200.png) center center no-repeat;
+width: 11px;
 }
 .topLayout a{
 border-radius: 4px;
@@ -270,6 +271,57 @@ flex-shrink: 0;
 align-self: center;
 }
 .mainHeader{
-height: 52px;
+height: 60px;
 }
-/**#24292e**/
+.listBg a{
+	position: relative;
+}
+.listBg a::before{
+	content: "";
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 1px;
+	height: 100%;
+	opacity: 0;
+	background-color: #26262f;
+	transition: all 0.25s ease-in-out;
+	transform: translateX(-10px);
+}
+.listBg a:hover::before{
+opacity: 1;
+width: 4px;
+transform: translateX(0px);
+}
+@media (max-width: 1150px){
+	.topLayout #headerForm, #listContainer{
+		width: 900px;
+	}
+}
+@media (max-width: 950px){
+	.topLayout #headerForm, #listContainer{
+		width: 650px;
+	}
+	.centerLayout #myForm{
+		width: 500px;
+	}
+	.centerLayout h1{
+		font-size: 50px;
+		margin-bottom: 7px;
+		line-height: 55px
+	}
+}
+@media (max-width: 670px){
+	.topLayout #headerForm, #listContainer{
+		width: 500px;
+	}
+	h3{
+		font-size: 16px;
+	}
+	body{
+		font-size: 13px;
+	}
+	.listBg img{
+		min-width: 100px;
+	}
+}

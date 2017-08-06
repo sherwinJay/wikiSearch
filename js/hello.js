@@ -2,8 +2,6 @@ $(document).ready(function() {
 	formConHeight();
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
-		/**var inputVal2 = $(this).val();
-		inputVal2 = encodeURIComponent(inputVal.trim());**/
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
@@ -18,7 +16,6 @@ $(document).ready(function() {
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
 	$.ajax({
-//"https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true&rvprop=timestamp&format=json"
 	   url: $url,
 	   data: {
 		action: "query", 
