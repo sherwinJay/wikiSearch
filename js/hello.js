@@ -2,8 +2,8 @@ $(document).ready(function() {
 	formConHeight();
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
-		var inputVal2 = $(this).val();
-		inputVal2 = encodeURIComponent(inputVal.trim());
+		/**var inputVal2 = $(this).val();
+		inputVal2 = encodeURIComponent(inputVal.trim());**/
 		if(e.keyCode == 13){
 			submitBtn();
 		}			
