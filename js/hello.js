@@ -77,7 +77,7 @@ function formConHeight(){
 	});
 }
 
-function submitBtn(test){
+function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		var a = $(this).closest(".formContainer").find("input").val();
