@@ -325,11 +325,17 @@ transform: translateX(0px);
 		min-width: 100px;
 	}
 }
-@media (max-width: 550px){
-	.topLayout #headerForm, #listContainer{
-		width: 420px;
+@media (max-width: 540px){
+	.topLayout #headerForm, #listContainer, .centerLayout #myForm{
+		width: 390px;
 	}
-	.centerLayout #myForm{
-		width: 420px;
+	.topLayout h1{
+		font-size: 22px;
+	}
+	.topLayout input{
+		width: 120px;
+	}
+	.buttonWrapper button, .buttonWrapper a {
+		padding: 8px 6px;
 	}
 }
