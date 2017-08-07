@@ -333,7 +333,8 @@ transform: translateX(0px);
 		font-size: 22px;
 	}
 	.topLayout input{
-		width: 110px;
+		max-height: 100px;
+min-width: 100px;
 	}
 	.buttonWrapper button, .buttonWrapper a {
 		padding: 8px 6px;
@@ -341,6 +342,7 @@ transform: translateX(0px);
 }
 @media (max-width: 460px){
 	.imgContainer, .imgContainer img{
-		width: 80px;
+		max-height: 80px;
+		min-width: 80px;
 	}
 }
