@@ -325,7 +325,6 @@ transform: translateX(0px);
 		max-height: 100px !important;
 		min-width: 100px !important;
 		width: 100px !important;
-		height: 100px !important;
 	}
 }
 @media (max-width: 580px){
@@ -346,7 +345,6 @@ transform: translateX(0px);
 	.imgContainer, .imgContainer img{
 		max-height: 80px !important;
 		min-width: 80px !important;
-		width: 100px !important;
-		height: 100px !important;
+		width: 80px !important;
 	}
 }
