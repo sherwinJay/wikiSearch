@@ -325,3 +325,11 @@ transform: translateX(0px);
 		min-width: 100px;
 	}
 }
+@media (max-width: 550px){
+	.topLayout #headerForm, #listContainer{
+		width: 420px;
+	}
+	.centerLayout #myForm{
+		width: 420px;
+	}
+}
