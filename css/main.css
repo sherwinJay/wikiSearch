@@ -311,9 +311,9 @@ transform: translateX(0px);
 		line-height: 55px
 	}
 }
-@media (max-width: 670px){
+@media (max-width: 680px){
 	.topLayout #headerForm, #listContainer{
-		width: 500px;
+		width: 550px;
 	}
 	h3{
 		font-size: 16px;
@@ -322,20 +322,28 @@ transform: translateX(0px);
 		font-size: 13px;
 	}
 	.listBg img{
-		min-width: 100px;
+		width: 100px;
 	}
 }
-@media (max-width: 540px){
+@media (max-width: 580px){
 	.topLayout #headerForm, #listContainer, .centerLayout #myForm{
-		width: 390px;
+		width: 90%;
 	}
 	.topLayout h1{
 		font-size: 22px;
 	}
 	.topLayout input{
-		width: 120px;
+		width: 110px;
 	}
 	.buttonWrapper button, .buttonWrapper a {
 		padding: 8px 6px;
+	}
+}
+@media (max-width: 460px){
+	.listBg img{
+		width: 80px;
+	}
+	.topLayout h1{
+		content: "WS";
 	}
 }
