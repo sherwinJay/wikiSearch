@@ -321,7 +321,7 @@ transform: translateX(0px);
 	body{
 		font-size: 13px;
 	}
-	.listBg img{
+	.imgContainer{
 		width: 100px;
 	}
 }
@@ -340,10 +340,7 @@ transform: translateX(0px);
 	}
 }
 @media (max-width: 460px){
-	.listBg img{
+	.imgContainer{
 		width: 80px;
-	}
-	.topLayout h1 a{
-		content: "WS";
 	}
 }
