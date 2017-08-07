@@ -321,7 +321,7 @@ transform: translateX(0px);
 	body{
 		font-size: 13px;
 	}
-	.imgContainer{
+	.imgContainer, .imgContainer img{
 		width: 100px;
 	}
 }
@@ -340,7 +340,7 @@ transform: translateX(0px);
 	}
 }
 @media (max-width: 460px){
-	.imgContainer{
+	.imgContainer, .imgContainer img{
 		width: 80px;
 	}
 }
