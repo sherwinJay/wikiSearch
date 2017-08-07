@@ -334,9 +334,6 @@ transform: translateX(0px);
 	.topLayout h1{
 		font-size: 22px;
 	}
-	.topLayout input{
-		width: 100px
-	}
 	.buttonWrapper button, .buttonWrapper a {
 		padding: 8px 6px;
 	}
