@@ -343,7 +343,7 @@ transform: translateX(0px);
 	.listBg img{
 		width: 80px;
 	}
-	.topLayout h1{
+	.topLayout h1 a{
 		content: "WS";
 	}
 }
