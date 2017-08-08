@@ -249,6 +249,9 @@ background-color: #dedede;
 margin-left: auto;
 line-height: normal;
 }
+.topLayout button{
+padding: 0;
+}
 .topLayout button a{
 padding: 0;
 background: url(images/99676-200.png) center center no-repeat;
