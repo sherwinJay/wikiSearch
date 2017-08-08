@@ -249,10 +249,8 @@ background-color: #dedede;
 margin-left: auto;
 line-height: normal;
 }
-.topLayout button{
+.topLayout button a{
 padding: 0;
-}
-.randomWiki{
 background: url(images/99676-200.png) center center no-repeat;
 width: 11px;
 }
