@@ -50,14 +50,14 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 				let lists =  result.query.pages;
 				for(var i =0; i < lists.length; i++)
 				{
-					for( key in lists ){//check if the lists has property of thumbnail
+					/**for( key in lists ){//check if the lists has property of thumbnail
 						if(lists[key].thumbnail == undefined ){
 							console.log("true");
 							lists[key].thumbnail = {};
 							lists[key].thumbnail.source = "images/no-thumbnail.jpg";
 						}
-					}   
-					if(lists[i].hasOwnProperty("thumbnail")){
+					} **/  
+					if(lists[i].thumbnail == undefined){
 					console.log("TRUE");
 					}
 				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
