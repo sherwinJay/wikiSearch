@@ -57,7 +57,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 							lists[key].thumbnail.source = "images/no-thumbnail.jpg";
 						}
 					}   
-					if(lists[i].hasOwnProperty("thumnail")){
+					if(lists[i].hasOwnProperty("thumbnail")){
 					console.log("TRUE");
 					}
 				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
