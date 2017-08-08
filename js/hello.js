@@ -50,18 +50,18 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 				let lists =  result.query.pages;
 				for(var i =0; i < lists.length; i++)
 				{
-					/**for( key in lists ){//check if the lists has property of thumbnail
+					for( key in lists ){//check if the lists has property of thumbnail
 						if(lists[key].thumbnail == undefined ){
 							console.log("true");
 							lists[key].thumbnail = {};
 							lists[key].thumbnail.source = "images/no-thumbnail.jpg";
 						}
-					} **/  
-					if( lists[i].hasOwnProperty("thumbnail")  == false ){
+					} 
+					/**if( lists[i].hasOwnProperty("thumbnail")  == false ){
 					console.log("TRUE");
 					lists[i].thumbnail = {};
 					lists[i].thumbnail.source = "images/no-thumbnail.jpg";
-					}
+					}**/
 				dataList += "<li class='listBg'>"  + "<a href='" + "https://en.wikipedia.org/?curid=" + lists[i].pageid + "' target='_blank'>"
 				+ "<div class='imgContainer'>" +  "<img src='" + lists[i].thumbnail.source + "'>" + "</div>" + "<div class='snippet-container'>" 
 				+ "<h3>" + lists[i].title + "</h3>" + "<p>" + lists[i].extract + "</p>" + "</div>" + "</a>" + "</li>";	
