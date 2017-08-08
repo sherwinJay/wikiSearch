@@ -57,7 +57,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 							lists[key].thumbnail.source = "images/no-thumbnail.jpg";
 						}
 					} **/  
-					if(lists[i].thumbnail == undefined){
+					if(!lists.hasOwnProperty("thumbnail")){
 					console.log("TRUE");
 					lists[i].thumbnail = {};
 					lists[i].thumbnail.source = "images/no-thumbnail.jpg";
