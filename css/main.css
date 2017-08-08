@@ -136,7 +136,6 @@ flex-direction: row;
 padding: 0 5px;
 width: 320px;
 border: none; 
-border-radius: 4px 0 0 4px;
 margin-left: 12px;
 }
 #listContainer{
@@ -254,7 +253,6 @@ padding: 0;
 background: #fff;
 }
 .topLayout button a{
-padding: 0;
 background: url(images/99676-200.png) center center no-repeat;
 width: 11px;
 }
