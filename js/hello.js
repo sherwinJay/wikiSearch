@@ -80,7 +80,6 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		var a = $(this).closest(".formContainer").find("input").val();
-		if( $(window).innerWidth <)
 		sentenceLmt();
 		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
