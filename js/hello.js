@@ -13,7 +13,7 @@ $(document).ready(function() {
 		formConHeight();
 	});
 });
-function dynamicSearch(inputText){
+function dynamicSearch(inputText, sntnceLimit){
 	var $url = "https://en.wikipedia.org/w/api.php?";
 	$.ajax({
 	   url: $url,
@@ -27,7 +27,7 @@ function dynamicSearch(inputText){
 		piprop: "thumbnail", 
 		pithumbsize: 120, 
 		exintro: "true", 
-		exsentences: 2, 
+		exsentences: sntnceLimit, 
 		explaintext: "true",
 		format: "json"
 	   	},
@@ -80,9 +80,19 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		var a = $(this).closest(".formContainer").find("input").val();
-		dynamicSearch(a);
+		if( $(window).innerWidth <)
+		sentenceLmt();
 		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
+		
+		//check innerWidth here
+		function sentenceLmt(){
+			if($(window).innerWidth() < 500 ){
+				return dynamicSearch(a, 0);
+			}else{
+				return dynamicSearch(a, 2);
+			}
+		}
 	});
 }
