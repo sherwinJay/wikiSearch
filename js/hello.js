@@ -11,6 +11,7 @@ $(document).ready(function() {
 	
 	$(window).on("resize", function(){
 		formConHeight();
+		sentenceLmt();
 	});
 });
 function dynamicSearch(inputText, sntnceLimit){
