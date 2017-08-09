@@ -88,6 +88,7 @@ function submitBtn(){
 		//check innerWidth here
 		function sentenceLmt(){
 			if($(window).innerWidth() < 500 ){
+				console.log("BADLY TRUE");
 				dynamicSearch(a, 1);
 			}else{
 				dynamicSearch(a, 2);
