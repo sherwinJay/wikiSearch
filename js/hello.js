@@ -88,7 +88,7 @@ function submitBtn(){
 		//check innerWidth here
 		function sentenceLmt(){
 			if($(window).innerWidth() < 500 ){
-				return dynamicSearch(a, 0);
+				return dynamicSearch(a, 1);
 			}else{
 				return dynamicSearch(a, 2);
 			}
