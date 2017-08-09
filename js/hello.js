@@ -81,19 +81,18 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		var a = $(this).closest(".formContainer").find("input").val();
-		sentenceLmt();
+		sentenceLmt(a);
 		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
-		//check innerWidth here
-		function sentenceLmt(){
-			if($(window).innerWidth() < 500 ){
-				console.log("BADLY TRUE");
-				dynamicSearch(a, 1);
-			}else{
-				dynamicSearch(a, 2);
-			}
-		}
 	});
-	
+	//check innerWidth here
+	function sentenceLmt(word, num){
+		if($(window).innerWidth() < 500 ){
+			console.log("BADLY TRUE");
+			dynamicSearch(a, 1);
+		}else{
+			dynamicSearch(a, 2);
+		}
+	}
 }
