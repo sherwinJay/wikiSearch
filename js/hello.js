@@ -11,7 +11,7 @@ $(document).ready(function() {
 	
 	$(window).on("resize", function(){
 		formConHeight();
-		sentenceLmt();
+		submitBtn();
 	});
 });
 function dynamicSearch(inputText, sntnceLimit){
@@ -84,16 +84,16 @@ function submitBtn(){
 		sentenceLmt();
 		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
-		$mainContainer.find(".centerLayout").addClass("hide").slideUp();	
+		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
+		//check innerWidth here
+		function sentenceLmt(){
+			if($(window).innerWidth() < 500 ){
+				console.log("BADLY TRUE");
+				dynamicSearch(a, 1);
+			}else{
+				dynamicSearch(a, 2);
+			}
+		}
 	});
 	
-	//check innerWidth here
-	function sentenceLmt(){
-		if($(window).innerWidth() < 500 ){
-			console.log("BADLY TRUE");
-			dynamicSearch(a, 1);
-		}else{
-			dynamicSearch(a, 2);
-		}
-	}
 }
