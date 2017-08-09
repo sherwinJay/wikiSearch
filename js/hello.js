@@ -11,10 +11,9 @@ $(document).ready(function() {
 	
 	$(window).on("resize", function(){
 		formConHeight();
-		submitBtn();
 	});
 });
-function dynamicSearch(inputText, sntnceLimit){
+function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
 	$.ajax({
 	   url: $url,
@@ -28,7 +27,7 @@ function dynamicSearch(inputText, sntnceLimit){
 		piprop: "thumbnail", 
 		pithumbsize: 120, 
 		exintro: "true", 
-		exsentences: sntnceLimit, 
+		exsentences: 1, 
 		explaintext: "true",
 		format: "json"
 	   	},
@@ -81,18 +80,10 @@ function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		var a = $(this).closest(".formContainer").find("input").val();
-		sentenceLmt(a);
+		dynamicSearch(a, 1);
 		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").addClass("hide").slideUp();
 	});
-	//check innerWidth here
-	function sentenceLmt(word, num){
-		if($(window).innerWidth() < 500 ){
-			console.log("BADLY TRUE");
-			dynamicSearch(a, 1);
-		}else{
-			dynamicSearch(a, 2);
-		}
-	}
+
 }
