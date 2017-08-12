@@ -262,6 +262,7 @@ cursor: pointer;
 .imgContainer{
 max-height: 100px;
 min-width: 100px;
+overflow: hidden;
 flex-shrink: 0;
 align-self: center;
 }
