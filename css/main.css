@@ -260,8 +260,8 @@ button{
 cursor: pointer;
 }
 .imgContainer{
-max-height: 120px;
-min-width: 120px;
+max-height: 100px;
+min-width: 100px;
 overflow: hidden;
 flex-shrink: 0;
 align-self: center;
@@ -316,11 +316,6 @@ transform: translateX(0px);
 	}
 	body{
 		font-size: 13px;
-	}
-	.imgContainer, .imgContainer img{
-		max-height: 100px !important;
-		min-width: 100px !important;
-		width: 100px !important;
 	}
 }
 @media (max-width: 580px){
