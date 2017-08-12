@@ -17,7 +17,7 @@ function dynamicSearch(inputText){
 		gpssearch: inputText, 
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
-		pithumbsize: 120, 
+		pithumbsize: 100, 
 		exintro: "true", 
 		exsentences: 2, 
 		explaintext: "true",
