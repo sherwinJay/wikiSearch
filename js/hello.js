@@ -25,7 +25,7 @@ function dynamicSearch(inputText){
 		gsrlimit: 10,
 		prop: "pageimages|extracts", 
 		piprop: "thumbnail", 
-		pithumbsize: 120, 
+		pithumbsize: 100, 
 		exintro: "true", 
 		exsentences: 1, 
 		explaintext: "true",
