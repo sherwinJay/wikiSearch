@@ -259,11 +259,14 @@ width: 11px;
 button{
 cursor: pointer;
 }
-.imgContainer, .imgContainer img{
+.imgContainer{
 max-height: 100px;
 min-width: 100px;
 flex-shrink: 0;
 align-self: center;
+}
+.imgContainer img{
+width: 100px;
 }
 .mainHeader{
 height: 60px;
