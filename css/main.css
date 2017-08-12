@@ -259,10 +259,9 @@ width: 11px;
 button{
 cursor: pointer;
 }
-.imgContainer{
+.imgContainer, .imgContainer img{
 max-height: 100px;
 min-width: 100px;
-overflow: hidden;
 flex-shrink: 0;
 align-self: center;
 }
