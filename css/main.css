@@ -146,14 +146,10 @@ left: 0;
 position: absolute;
 }
 .listBg{
-margin: 7px 0;
+margin: 10px 0;
 background-color: #fff;
 position: relative;
-box-shadow: #2e2e2e 0 0 1px 1px;
-}
-.listBg a{
-padding: 10px;
-flex-direction: row;
+box-shadow: #bbb 0 1px 1px 0;
 }
 .snippet-container{
 margin: 0 10px;
@@ -275,7 +271,9 @@ width: 100px;
 height: 60px;
 }
 .listBg a{
-	position: relative;
+padding: 10px;
+flex-direction: row;	
+position: relative;
 }
 .listBg a::before{
 	content: "";
