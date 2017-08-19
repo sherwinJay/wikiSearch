@@ -71,6 +71,7 @@ font-family: 'Open Sans', sans-serif;
 font-size:14px;
 line-height:24px;
 color: #8c8c8c;
+background-color: #f6f6f8;
 }
 ul, ol{
 list-style: none;
@@ -146,8 +147,9 @@ position: absolute;
 }
 .listBg{
 margin: 7px 0;
-background-color: #efefef;
+background-color: #fff;
 position: relative;
+box-shadow: #2e2e2e 0 0 1px 1px;
 }
 .listBg a{
 padding: 10px;
