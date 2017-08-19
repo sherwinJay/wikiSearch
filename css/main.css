@@ -195,7 +195,7 @@ border-right-color: #444d56 !important;
 border-bottom-color: #444d56 !important;
 border-left-color: #444d56 !important;
 }
-.inputAnimate input, .listBg{
+.inputAnimate input{
 box-shadow: none;
 transition: all .2s ease-out;
 }
