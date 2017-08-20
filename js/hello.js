@@ -82,7 +82,7 @@ function submitBtn(){
 		var a = $(this).closest(".formContainer").find("input").val();
 		dynamicSearch(a, 1);
 		$(".hide").removeClass("hide");
-		$(".windowHeight").removeClass("windowHeight");
+		$(".mainContainer").toggleClass("windowHeight");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
 	});
