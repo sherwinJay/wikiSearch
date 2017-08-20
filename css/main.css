@@ -68,6 +68,9 @@ margin-bottom: 4px;
 html, body, .windowHeight{
 height: 100%;
 }
+.mainContainer, .windowHeight{
+transition: all 0.2s ease-in-out;
+}
 body {
 font-family: 'Open Sans', sans-serif;
 font-size:14px;
