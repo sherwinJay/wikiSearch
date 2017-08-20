@@ -61,7 +61,11 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 				}
 			}
 		  	dataList += "</ul>";
-		   	listContainer.innerHTML = dataList;	  		
+		   	listContainer.innerHTML = dataList;	
+		   
+		   $("#listContainer").css({
+			"top": 0
+			});
    		}	 
 	});
 }
@@ -76,9 +80,7 @@ function submitBtn(){
 		$(".mainContainer").removeClass("windowHeight");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
-		$("#listContainer").css({
-			"top": 0
-		});
+		
 	});
 
 }
