@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	//formConHeight();
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		if(e.keyCode == 13){
@@ -9,9 +8,6 @@ $(document).ready(function() {
 	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
 	});	
 	
-	$(window).on("resize", function(){
-		formConHeight();
-	});
 });
 function dynamicSearch(inputText){
 	var $url = "https://en.wikipedia.org/w/api.php?";
@@ -69,12 +65,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
    		}	 
 	});
 }
-/**function formConHeight(){
-	let windowHeight = $(window).innerHeight();
-	return $(".windowHeight").css({
-		"min-height" : windowHeight + "px"		
-	});
-}**/
+
 
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
