@@ -91,10 +91,6 @@ position: relative;
 .mainContainer, .topLayout #headerForm, .listBg a, #inputWrap{
 display: flex !important;
 }
-.centerLayout{
-flex-direction: column;
-justify-content: center;
-}
 .centerLayout h1{
 margin-top: -100px;
 }
@@ -110,8 +106,13 @@ font-size: 18px;
 line-height: 26px;
 margin: 1px
 }
-.topLayout #headerForm, .centerLayout #myForm, #listContainer{
+.centerLayout, .topLayout #headerForm, .centerLayout #myForm, #listContainer{
 margin: 0 auto;
+}
+.buttonWrapper{
+width: 100%;
+display: flex;
+justify-content: center;
 }
 .topLayout{
 background-color: #26262f;
@@ -224,11 +225,6 @@ text-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
 }
 .hide{
 display: none !important;
-}
-.buttonWrapper{
-width: 100%;
-display: flex;
-justify-content: center;
 }
 .buttonWrapper button, .buttonWrapper a{
 font-family: 'Montserrat';
