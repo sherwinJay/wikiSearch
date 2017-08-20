@@ -85,6 +85,9 @@ float: left;
 .col-right{
 float: right;
 }
+.windowHeight{
+transition: all 0.25s ease-in-out;
+}
 .mainContainer{
 position: relative;
 }
@@ -143,6 +146,7 @@ width: 1000px;
 right: 0;
 left: 0;
 position: absolute;
+margin-top: 60px;
 }
 .listBg{
 margin: 10px 0;
