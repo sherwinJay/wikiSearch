@@ -71,7 +71,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 }
 function formConHeight(){
 	let windowHeight = $(window).innerHeight();
-	return $(".mainContainer").css({
+	return $(".windowHeight").css({
 		"min-height" : windowHeight + "px"		
 	});
 }
@@ -82,9 +82,9 @@ function submitBtn(){
 		var a = $(this).closest(".formContainer").find("input").val();
 		dynamicSearch(a, 1);
 		$(".hide").removeClass("hide");
+		$(".windowHeight").removeClass("windowHeight");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
-		$(".listBg").fadeIn();
 	});
 
 }
