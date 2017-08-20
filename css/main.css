@@ -87,9 +87,6 @@ float: left;
 .col-right{
 float: right;
 }
-.windowHeight{
-transition-duration: 2s;
-}
 .mainContainer{
 position: relative;
 }
