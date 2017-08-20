@@ -69,12 +69,12 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
    		}	 
 	});
 }
-function formConHeight(){
+/**function formConHeight(){
 	let windowHeight = $(window).innerHeight();
 	return $(".windowHeight").css({
 		"min-height" : windowHeight + "px"		
 	});
-}
+}**/
 
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
