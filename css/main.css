@@ -68,9 +68,6 @@ margin-bottom: 4px;
 html, body, .mainContainer{
 height: 100%;
 }
-.mainContainer{
-transition: all 0.2s ease-in-out;
-}
 body {
 font-family: 'Open Sans', sans-serif;
 font-size:14px;
@@ -150,6 +147,7 @@ left: 0;
 top: 100%;
 position: absolute;
 margin-top: 60px;
+transition: all 0.3s ease-in-out;
 }
 .listBg{
 margin: 10px 0;
