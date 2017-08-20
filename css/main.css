@@ -94,8 +94,6 @@ display: flex !important;
 .centerLayout{
 flex-direction: column;
 justify-content: center;
-
-transition: all 0.25s ease-in-out;
 }
 .centerLayout h1{
 margin-top: -100px;
@@ -146,8 +144,6 @@ width: 1000px;
 right: 0;
 left: 0;
 position: absolute;
-
-transition: all 0.25s ease-in-out;
 }
 .listBg{
 margin: 10px 0;
