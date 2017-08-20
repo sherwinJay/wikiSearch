@@ -84,10 +84,7 @@ function submitBtn(){
 		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
-		$("#listContainer").css({
-			"top": 0,
-			"transition": "all ." + 5 + "s ease-in-out"
-		});
+		$(".listBg").fadeIn();
 	});
 
 }
