@@ -224,6 +224,7 @@ text-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
 }
 .hide{
 display: none !important;
+transition: all 0.2s ease-in-out;
 }
 .buttonWrapper{
 width: 100%;
