@@ -84,7 +84,7 @@ function submitBtn(){
 		$(".hide").removeClass("hide");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
-		$(".topLayout").css({
+		$("#listContainer").css({
 			"top": 0
 		});
 	});
