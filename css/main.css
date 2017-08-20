@@ -65,7 +65,7 @@ h3{
 font-size: 18px;
 margin-bottom: 4px;
 }
-html, body, .windowHeight{
+html, body, .windowHeight, .mainContainer{
 height: 100%;
 }
 .mainContainer, .windowHeight{
@@ -149,6 +149,7 @@ right: 0;
 left: 0;
 position: absolute;
 margin-top: 60px;
+transition: all 0.2s ease-in-out;
 }
 .listBg{
 margin: 10px 0;
