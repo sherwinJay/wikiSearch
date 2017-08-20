@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	formConHeight();
+	//formConHeight();
 	submitBtn();
 	$("form").on("keyup", "input", function(e){
 		if(e.keyCode == 13){
@@ -82,7 +82,7 @@ function submitBtn(){
 		var a = $(this).closest(".formContainer").find("input").val();
 		dynamicSearch(a, 1);
 		$(".hide").removeClass("hide");
-		$(".mainContainer").toggleClass("windowHeight");
+		$(".mainContainer").removeClass("windowHeight");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
 	});
