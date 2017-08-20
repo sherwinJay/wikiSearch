@@ -79,10 +79,10 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		var a = $(this).closest(".formContainer").find("input").val();
-		dynamicSearch(a, 1);
+		var search = $(this).closest(".formContainer").find("input").val();
+		dynamicSearch(search);
 		$(".hide").removeClass("hide");
-		$(".mainContainer").toggleClass("windowHeight");
+		$(".mainContainer").removeClass("windowHeight");
 		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
 	});
