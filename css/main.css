@@ -144,7 +144,6 @@ right: 0;
 left: 0;
 top: 100%;
 position: absolute;
-transition: all .5s ease-in-out;
 }
 .listBg{
 margin: 10px 0;
