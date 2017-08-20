@@ -65,8 +65,10 @@ h3{
 font-size: 18px;
 margin-bottom: 4px;
 }
-body {
+html, body, .windowHeight{
 height: 100%;
+}
+body {
 font-family: 'Open Sans', sans-serif;
 font-size:14px;
 line-height:24px;
