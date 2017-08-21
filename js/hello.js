@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	submitBtn();
+	submit();
 	$("form").on("keyup", "input", function(e){
 		if(e.keyCode == 13){
 			submitBtn();
@@ -69,7 +69,7 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 	});
 }
 
-function submitBtn(){
+function submit(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
 		var search = $(this).closest(".formContainer").find("input").val(),
