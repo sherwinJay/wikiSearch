@@ -81,5 +81,4 @@ function submitBtn(){
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
 		
 	});
-
 }
