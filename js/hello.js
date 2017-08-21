@@ -32,10 +32,9 @@ function dynamicSearch(inputText){
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(result)
 	   {
-console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=prefixsearch&gpssearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=120&redirects=&exintro=true&exsentences=2&explaintext=true");
-	    console.log(result);
-		   var dataList = "<ul>";
-			var listContainer = document.getElementById("listContainer");
+console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&generator=search&gsrsearch=" + inputText + "&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=100&redirects=&exintro=true&exsentences=2&explaintext=true");
+		   var dataList = "<ul>",
+		       listContainer = document.getElementById("listContainer");
 		   	if( result.query == null || result.continue == null)
 			{
 				result.errors = "Nothing Found";
@@ -73,11 +72,10 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
 		e.preventDefault();
-		var search = $(this).closest(".formContainer").find("input").val();
+		var search = $(this).closest(".formContainer").find("input").val(),
+		    $mainContainer = $(this).closest(".mainContainer");
 		dynamicSearch(search);
 		$(".hide").removeClass("hide");
-		$(".mainContainer").removeClass("windowHeight");
-		var $mainContainer = $(this).closest(".mainContainer");
 		$mainContainer.find(".centerLayout").slideUp().addClass("hide");
 		
 	});
