@@ -5,7 +5,7 @@ $(document).ready(function() {
 			submitBtn();
 		}			
 	}).on("mouseenter", "input", function(){
-	$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
+		$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
 	});	
 	
 });
@@ -69,7 +69,6 @@ console.log("https://en.wikipedia.org/w/api.php?action=query&formatversion=2&gen
    		}	 
 	});
 }
-
 
 function submitBtn(){
 	$(".srchBtn").on("click", function(e){
