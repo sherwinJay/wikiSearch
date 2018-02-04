@@ -28,7 +28,7 @@ function dynamicSearch(inputText){
 		format: "json"
 	   	},
 	   dataType: "jsonp",	
-	   type: "POST",
+	   type: "GET",
 	   header: {"Api-User-Agent" : "wikiSearch"},
 	   success: function(result)
 	   {
