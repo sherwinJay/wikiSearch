@@ -2,7 +2,7 @@ $(document).ready(function() {
 	submit();
 	$("form").on("keyup", "input", function(e){
 		if(e.keyCode == 13){
-			submitBtn();
+			submit();
 		}			
 	}).on("mouseenter", "input", function(){
 		$(this).closest(".centerLayout").find("#inputWrap").addClass("inputAnimate");
