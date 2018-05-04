@@ -275,8 +275,9 @@ flex-direction: row;
 position: relative;
 }
 .listBg a::before{
+	position: absolute;
 	content: "";
-top:0;
+	top:0;
  	left: 0;
 	width: 1px;
 	height: 100%;
@@ -289,7 +290,6 @@ top:0;
 opacity: 1;
 width: 4px;
 transform: translateX(0px);
-background-color: #26262f;
 }
 @media (max-width: 1150px){
 	.topLayout #headerForm, #listContainer{
