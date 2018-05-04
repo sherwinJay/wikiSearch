@@ -294,6 +294,7 @@ transform: translateX(0px);
 	.topLayout #headerForm, #listContainer{
 		width: 900px;
 	}
+}
 @media (max-width: 950px){
 	.topLayout #headerForm, #listContainer{
 		width: 650px;
@@ -306,6 +307,7 @@ transform: translateX(0px);
 		margin-bottom: 7px;
 		line-height: 55px
 	}
+	}
 @media (max-width: 680px){
 	.topLayout #headerForm, #listContainer{
 		width: 550px;
@@ -315,6 +317,7 @@ transform: translateX(0px);
 	}
 	body{
 		font-size: 13px;
+	}
 	}
 @media (max-width: 580px){
 	.topLayout #headerForm, #listContainer, .centerLayout #myForm{
@@ -326,9 +329,11 @@ transform: translateX(0px);
 	.buttonWrapper button, .buttonWrapper a {
 		padding: 8px 6px;
 	}
+	}
 @media (max-width: 460px){
 	.imgContainer, .imgContainer img{
 		max-height: 80px !important;
 		min-width: 80px !important;
 		width: 80px !important;
+	}
 	}
