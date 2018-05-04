@@ -289,6 +289,7 @@ top:0;
 opacity: 1;
 width: 4px;
 transform: translateX(0px);
+background-color: #26262f;
 }
 @media (max-width: 1150px){
 	.topLayout #headerForm, #listContainer{
