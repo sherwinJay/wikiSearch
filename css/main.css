@@ -46,222 +46,289 @@ blockquote, q {
 * html .cfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 a{
-	text-decoration: none;
+text-decoration: none;
+color: #2e2e2e;
 }
 h1, h2, h3, p, a{
-	display: block;
+display: block;
 }
 h1, h2, h3{
-	font-weight: bold;
-}
-h1, .logo h1 a{
-	color: #111;
+font-family: 'Montserrat', sans-serif !important;
+font-weight: bold;
 }
 h1{
-	font-size: 40px;
-	font-weight: bold;
-}
-h2{
-	font-size: 30px;
-	color: #fff;
-	font-family: sans-serif;
-	line-height: 40px;
+font-size: 65px;
+line-height: 78px;
+color: #27292b;
+margin-bottom: 15px;
 }
 h3{
-	font-size: 28px;
-	color: #fff;
-	margin-bottom: 20px;
+font-size: 18px;
+margin-bottom: 4px;
 }
-h4{
-	font-size: 	24px;
-	font-weight: bold;
+html, body, .mainContainer{
+height: 100%;
 }
 body {
-	background: #222;
-	width: 100%;
-	height: 100%;
-	font-family: "PT Sans",'open_sansregular', Helvetica, sans-serif;
-	font-size:16px;
-	line-height:24px;
-	color: #111;
+font-family: 'Open Sans', sans-serif;
+font-size:14px;
+line-height:24px;
+color: #8c8c8c;
+background-color: #f6f6f8;
 }
 ul, ol{
-	list-style: none !important;
-}
-.mainHeader{
-	background-color: #fff;
-}
-.searchBox{
-	width: 350px;
-	float: right;
-	position: relative;
-}
-.searchBar{	
-	width: 100%;
-	border-top: 0;
-	border-right: 0;
-	border-bottom: 1px #222 solid;
-	border-left: 0;
-	background-color: rgba(255,255,255,0.1);
-	padding: 8px 12px;
-}
-
-.suggestBox{
-	width: 100%;
-    position: absolute;
-    background-color: #fff;
-    z-index: 99;
-    left: 0;
-    top: 35px;
-
-}
-.suggestedList{
-	padding: 8px 20px;
-	color: #222;
-}
-.suggestedList:hover{
-	background-color: #dedede;
-}
-.logo, .movieCategoryList, .columnLeft, .cast li, .crew li{
-	float: left;
-}
-.movieCategoryList{
-	background-color: #111;
-	margin: 10px;
-	color: #fff;
-	overflow: hidden;
+list-style: none;
 }
 .tc{
-	text-align: center;
+text-align: center;
 }
-.upComingMovies{
-	margin-top: 50px;
+.col-left{
+float: left;
 }
-.headerWrapper{
-	width: 100%;
-	background: #ccc url("images/tomb-raider.jpg") no-repeat;
-	background-size: cover;
-	height: 100vh;
-	opacity: 0.65;
+.col-right{
+float: right;
 }
-.centerWrapper{
-	width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
+.mainContainer{
+position: relative;
 }
-.movieInfoWrapper{
-	width: 1000px;
-	margin: 0 auto;
-	padding: 20px 0;
-	color: #fff;
+.mainContainer, .topLayout #headerForm, .listBg a, #inputWrap{
+display: flex !important;
 }
-#moviePoster{
-	width: 270px !important;
-	float: left;
-	margin-right: 20px;	
-	background-color: #ccc;
+.centerLayout h1{
+margin-top: -100px;
 }
-
-/***************************
-****************************
-***************************/
-.information{
-	width: 650px;
+.centerLayout #myForm{
+width: 650px;
 }
-.comment-name{
-	font-weight: bold;
+.centerLayout input{
+flex-grow: 1;
+padding: 12px;
+box-shadow: #bbb 0 1px 4px 1px;
+border:none;
+font-size: 18px;
+line-height: 26px;
+margin: 1px
 }
-.commentForm{
-	padding: 10px 20px;
-	background-color: #9ecbd2;
-	margin: 15px 0;	
+.centerLayout, .topLayout #headerForm, .centerLayout #myForm, #listContainer{
+margin: auto;
 }
-.comment{
-	padding: 15px 0;
-	border-bottom: 1px #dedede solid;
+.buttonWrapper{
+width: 100%;
+display: flex;
+justify-content: center;
 }
-.confirmButtonsContainer a{
-	display: inline;
-	font-size: 	14px !important;
-	color: #555;
+.topLayout{
+background-color: #26262f;
+padding: 12px 0;
+width: 100%;
+position: fixed;
+z-index: 999;
 }
-#one{
-	background-image: url("images/maxresdefault.jpg");
+.topLayout h1{
+font-size: 26px;
+line-height: 32px;
+margin: 0;
 }
-#two{
-background-image: url("images/dims.jpg");
+.topLayout h1 a{
+color: #fff !important;
 }
-#three{
-background-image: url("images/thelast-jedi-novelization-cover-tall-817x350.jpg");
+.topLayout #headerForm{
+width: 1100px;
 }
-#four{
-background-image: url("images/BabyDriver2.jpg");
+.topLayout input{
+padding: 0 5px;
+width: 320px;
+border: none; 
+margin-left: 12px;
 }
-#five{
-	background-image: url("images/images.jpg");
+#listContainer{
+width: 1000px;
+right: 0;
+left: 0;
+top: 100%;
+position: absolute;
+margin-top: 60px;
+transition: all 0.3s ease-in-out;
 }
-#one, #two, #three, #four, #five{
-	background-position: center;
-	background-repeat: no-repeat; 
+.listBg{
+margin: 10px 0;
+background-color: #fff;
+box-shadow: #bbb 0 1px 1px 0;
 }
-.landingPageInfo{
-	width: 650px;
-	margin-top: 200px;
-	font-size: 16px;
-	color: #fff;
+.snippet-container{
+margin: 0 10px;
 }
-.landingPageInfo h2{
-	font-size: 48px;
-	color: #111;
+#inputWrap{
+position: relative;
+box-sizing: border-box;
+flex-basis: 0;
 }
-.moviesBox{
-	position: relative;
-	overflow: hidden;
-	display: block;
-	color: #fff;
+#inputWrap::before, #inputWrap::after{
+box-sizing: inherit;
+border: 2px solid transparent;
+width: 0;
+height: 0;
+content: "";
+position: absolute;
+z-index: -1;
 }
-.movieBoxInfo{
-	position: absolute;
-	top: 100%;
-	left: 0;
-	transition: all 0.25s ease-in-out;
-	background-color: rgba(0,0,0,0.65);
-	padding: 0 10px;
+#inputWrap::before{
+top: 0;
+left: 0;
+transition: width 0.25s ease-out, 
+height 0.25s ease-out 0.25s;
+}
+#inputWrap::after{
+bottom: 0;
+right: 0;
+transition: border-color 0s ease-out 0.5s,
+width 0.25s ease-out 0.5s,
+height 0.25s ease-out 0.75s;
+}
+#inputWrap:hover::before, #inputWrap:hover::after, .inputAnimate::before, .inputAnimate::after{
+width: 100% !important;
+height: 100% !important;
+}
+#inputWrap:hover::before, .inputAnimate::before{
+border-top-color: #444d56 !important;
+border-right-color: #444d56 !important;
+}
+#inputWrap:hover::after, .inputAnimate::after{
+border-bottom-color: #444d56 !important;
+border-left-color: #444d56 !important;
+}
+.inputAnimate input{
+box-shadow: none;
+transition: all .2s ease-out;
+}
+.nothingFound{
+margin-top: 100px;
+font-size: 65px;
+color: rgba(175,175,175, 0.8);
+line-height: 80px;
+font-weight: bold;
+text-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #cecece;
+}
+::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #cecece;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #cecece;
+   opacity:  1;
+}
+::-ms-input-placeholder { /* Internet Explorer 10-11 */
+-   color:    #cecece;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color:    #cecece;
+}
+.hide{
+display: none !important;
+}
+.buttonWrapper button, .buttonWrapper a{
+font-family: 'Montserrat';
+font-size: 12px;
+padding: 8px 12px;
+border: none;
+}
+.centerLayout button, .centerLayout .buttonWrapper a{
+background-color: #555;
+color: #fff;
+margin: 22px 5px 0;
+}
+.randomWiki{
+background-color: #dedede;
+margin-left: auto;
+line-height: normal;
+}
+.topLayout button{
+padding: 0;
+background: #fff;
+}
+.topLayout button a{
+background: url(images/99676-200.png) center center no-repeat;
+width: 11px;
+}
+button{
+cursor: pointer;
+}
+.imgContainer{
+max-height: 100px;
+min-width: 100px;
+overflow: hidden;
+flex-shrink: 0;
+align-self: center;
+}
+.imgContainer img{
+width: 100px;
+}
+.mainHeader{
+height: 60px;
+}
+.listBg a{
+padding: 10px;
+flex-direction: row;	
+position: relative;
+}
+.listBg a::before{
+	content: "";
+top:0;
+ 	left: 0;
+	width: 1px;
 	height: 100%;
-	display: flex;
-    align-items: center;
+	opacity: 0;
+	background-color: #26262f;
+ 	transition: all 0.25s ease-in-out;
+	transform: translateX(-10px);
 }
-a.moviesBox:hover > .movieBoxInfo{
-	top: 0;
+.listBg a:hover::before{
+opacity: 1;
+width: 4px;
+transform: translateX(0px);
 }
-.boxTitle{
-	font-size: 18px;
-	margin-bottom: 5px;
-}
-.boxOverview{
-	font-size: 12px;
-	line-height: 17px;
-}
-.cast li{
-	width: 180px;
-	padding-right: 15px;
-}
-.crew li{
-	width: 160px;
-}
-.name{
-	font-weight: bold;
-}
-.moreInfo .info{
-	display: flex;
-	margin: 15px 0;
-}
-.moreInfo img{
-	margin-right: 4px;
-}
-.moreInfo img, .moreInfo p{
-display: inline-block;
-}
-.movieInfoColumn{
-	width: 325px;
-}
+@media (max-width: 1150px){
+	.topLayout #headerForm, #listContainer{
+		width: 900px;
+	}
+@media (max-width: 950px){
+	.topLayout #headerForm, #listContainer{
+		width: 650px;
+	}
+	.centerLayout #myForm{
+		width: 500px;
+	}
+	.centerLayout h1{
+		font-size: 50px;
+		margin-bottom: 7px;
+		line-height: 55px
+	}
+@media (max-width: 680px){
+	.topLayout #headerForm, #listContainer{
+		width: 550px;
+	}
+	h3{
+		font-size: 16px;
+	}
+	body{
+		font-size: 13px;
+	}
+@media (max-width: 580px){
+	.topLayout #headerForm, #listContainer, .centerLayout #myForm{
+		width: 90%;
+	}
+	.topLayout h1{
+		font-size: 22px;
+	}
+	.buttonWrapper button, .buttonWrapper a {
+		padding: 8px 6px;
+	}
+@media (max-width: 460px){
+	.imgContainer, .imgContainer img{
+		max-height: 80px !important;
+		min-width: 80px !important;
+		width: 80px !important;
+	}
